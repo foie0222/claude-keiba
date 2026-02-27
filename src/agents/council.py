@@ -119,15 +119,15 @@ class CouncilProcess:
     ) -> dict:
         """レイヤー3: 投票判断"""
         _phase("レイヤー3: 投票判断 (betting)")
-        odds_instruction = ""
+        data_instruction = ""
         if prefetch_path:
-            odds_instruction = (
-                f"\n\n【オッズデータ】事前取得済みオッズが {prefetch_path}/odds.json にあります。"
-                f"Readツールで読み込んでください。"
+            data_instruction = (
+                f"\n\n【オッズデータ】{prefetch_path}/odds.json をReadツールで読み込んでください。"
+                f"\n【IPAT残高】{prefetch_path}/balance.json をReadツールで読み込んでください。"
             )
         return await self.runner.run(
             "betting",
-            f"以下の統括判断結果を基に、オッズを照合し、馬券種・買い目・金額を決定してください:\n\n{json.dumps(judgment, ensure_ascii=False, indent=2)}{odds_instruction}",
+            f"以下の統括判断結果を基に、オッズと残高を照合し、馬券種・買い目・金額を決定してください:\n\n{json.dumps(judgment, ensure_ascii=False, indent=2)}{data_instruction}",
         )
 
     async def execute(self, race_id: RaceId, prefetch_path: str | None = None) -> dict:
