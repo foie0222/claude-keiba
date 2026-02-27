@@ -22,7 +22,7 @@ class Orchestrator:
         self.council = CouncilProcess(self.runner)
         self.logger = RaceLogger(base_dir=logs_dir)
 
-    async def predict_and_bet(self, date: str, venue: str, race_number: int) -> dict:
+    async def predict_and_bet(self, date: str, venue: str, race_number: int, *, live: bool = False) -> dict:
         race_id = RaceId(date=date, venue=venue, race_number=race_number)
         rid = str(race_id)
 
@@ -52,25 +52,27 @@ class Orchestrator:
         for agent_name, agent_result in result.get("analyses", {}).items():
             self.logger.save_agent_log(rid, agent_name, agent_result)
 
-        # 投票チェック (betchk)
+        # 投票
         bet_decision = result.get("bet_decision", {})
         bets = bet_decision.get("bets", [])
         if bets and not bet_decision.get("pass_races", False):
             from data.api.bet import place_bet
             total = bet_decision.get("total_amount", 0)
+            check_only = not live
+            mode = "本番投票" if live else "投票チェック (betchk)"
             print(f"\n{'='*60}", file=sys.stderr, flush=True)
-            print(f"  [{time.strftime('%H:%M:%S')}] 投票チェック (betchk)", file=sys.stderr, flush=True)
+            print(f"  [{time.strftime('%H:%M:%S')}] {mode}", file=sys.stderr, flush=True)
             print(f"{'='*60}", file=sys.stderr, flush=True)
             bet_result = place_bet(
-                date, venue, race_number, bets, total, check_only=True,
+                date, venue, race_number, bets, total, check_only=check_only,
             )
-            result["bet_check"] = bet_result
+            result["bet_result"] = bet_result
             if bet_result.get("ret") == 0:
-                print(f"  ✓ 投票チェックOK (buyeye: {bet_result['buyeye']})", file=sys.stderr, flush=True)
+                print(f"  ✓ {mode}OK (buyeye: {bet_result['buyeye']})", file=sys.stderr, flush=True)
             else:
-                print(f"  ✗ 投票チェックNG: {bet_result.get('msg')}", file=sys.stderr, flush=True)
+                print(f"  ✗ {mode}NG: {bet_result.get('msg')}", file=sys.stderr, flush=True)
         else:
-            result["bet_check"] = {"skipped": True, "reason": "見送り or 馬券なし"}
+            result["bet_result"] = {"skipped": True, "reason": "見送り or 馬券なし"}
             print(f"\n  投票見送り", file=sys.stderr, flush=True)
 
         return result
