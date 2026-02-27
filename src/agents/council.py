@@ -114,19 +114,27 @@ class CouncilProcess:
             "judge": judge_result,
         }
 
-    async def run_betting_layer(self, judgment: dict) -> dict:
+    async def run_betting_layer(
+        self, judgment: dict, prefetch_path: str | None = None,
+    ) -> dict:
         """レイヤー3: 投票判断"""
         _phase("レイヤー3: 投票判断 (betting)")
+        odds_instruction = ""
+        if prefetch_path:
+            odds_instruction = (
+                f"\n\n【オッズデータ】事前取得済みオッズが {prefetch_path}/odds.json にあります。"
+                f"Readツールで読み込んでください。"
+            )
         return await self.runner.run(
             "betting",
-            f"以下の統括判断結果を基に、最新オッズを取得し、馬券種・買い目・金額を決定してください:\n\n{json.dumps(judgment, ensure_ascii=False, indent=2)}",
+            f"以下の統括判断結果を基に、オッズを照合し、馬券種・買い目・金額を決定してください:\n\n{json.dumps(judgment, ensure_ascii=False, indent=2)}{odds_instruction}",
         )
 
     async def execute(self, race_id: RaceId, prefetch_path: str | None = None) -> dict:
         """全レイヤーを通して実行"""
         analyses = await self.run_analysis_layer(race_id, prefetch_path=prefetch_path)
         council = await self.run_council_layer(analyses)
-        bet_decision = await self.run_betting_layer(council["judge"])
+        bet_decision = await self.run_betting_layer(council["judge"], prefetch_path=prefetch_path)
         return {
             "race_id": str(race_id),
             "analyses": analyses,

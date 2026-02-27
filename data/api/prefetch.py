@@ -20,6 +20,7 @@ from jockey_stats import get_jockey_stats
 from trainer_stats import get_trainer_stats
 from past_results import get_past_results
 from training import get_training
+from odds import get_odds
 
 CACHE_DIR = ROOT / ".cache" / "prefetch"
 
@@ -34,6 +35,7 @@ def prefetch(race_id: str) -> dict:
         ("trainer_stats", lambda: get_trainer_stats(race_id)),
         ("past_results", lambda: get_past_results(race_id)),
         ("training", lambda: get_training(race_id)),
+        ("odds", lambda: get_odds(race_id)),
     ]
 
     for name, fn in apis:
