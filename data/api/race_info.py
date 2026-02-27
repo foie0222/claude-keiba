@@ -30,7 +30,7 @@ def parse_race_id(race_id: str) -> tuple[str, str, int]:
     return parts[0], VENUE_TO_CODE.get(parts[1], parts[1]), int(parts[2])
 
 
-def get_race_info(race_id: str) -> dict:
+def get_race_info(race_id: str, *, include_result: bool = False) -> dict:
     date, course_cd, race_no = parse_race_id(race_id)
     client = KBDBClient()
 
@@ -84,8 +84,7 @@ def get_race_info(race_id: str) -> dict:
             "weight_diff": rd.get("ZOGENSIGN", "").strip() + rd.get("ZOGENDIFF", "").strip(),
             "abnormal": int(rd.get("ABNMLCD", 0)),
         }
-        # 確定着順がある場合（レース終了後）
-        if rd.get("FIXPLC", "").strip():
+        if include_result and rd.get("FIXPLC", "").strip():
             horse["result"] = int(rd.get("FIXPLC", 0))
             horse["finish_time"] = int(rd.get("RUNTM", 0))
         horses.append(horse)
