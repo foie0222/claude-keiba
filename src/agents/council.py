@@ -21,15 +21,34 @@ class CouncilProcess:
     async def run_analysis_layer(self, race_id: RaceId) -> dict[str, dict]:
         """レイヤー1: 6つの分析エージェントを並列実行"""
         rid = str(race_id)
-        agents = [
+
+        # Chrome MCPツール不要のエージェント群
+        standard_agents = [
             ("bloodline",  f"以下のレースの血統分析をせよ: {rid}"),
             ("training",   f"以下のレースの調教分析をせよ: {rid}"),
             ("jockey",     f"以下のレースの騎手・厩舎分析をせよ: {rid}"),
             ("past_races", f"以下のレースの過去走分析をせよ: {rid}"),
             ("lap",        f"以下のレースのラップ・展開分析をせよ: {rid}"),
-            ("x_opinion",  f"以下のレースのX(Twitter)世論分析をせよ: {rid}"),
         ]
-        return await self.runner.run_parallel(agents)
+        standard_results = await self.runner.run_parallel(standard_agents)
+
+        # x_opinion: Chrome MCPツール付きで実行
+        x_opinion_result = await self.runner.run(
+            "x_opinion",
+            f"以下のレースのX(Twitter)世論分析をせよ: {rid}",
+            allowed_tools=[
+                "Bash", "Read", "Write",
+                "mcp__claude-in-chrome__tabs_context_mcp",
+                "mcp__claude-in-chrome__tabs_create_mcp",
+                "mcp__claude-in-chrome__navigate",
+                "mcp__claude-in-chrome__javascript_tool",
+                "mcp__claude-in-chrome__computer",
+                "mcp__claude-in-chrome__read_page",
+                "mcp__claude-in-chrome__find",
+            ],
+        )
+        standard_results["x_opinion"] = x_opinion_result
+        return standard_results
 
     async def run_council_layer(self, analyses: dict[str, dict]) -> dict:
         """レイヤー2: 合議（書記→監視→統括）"""
