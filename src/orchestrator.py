@@ -32,12 +32,12 @@ class Orchestrator:
         print(f"  {time.strftime('%Y-%m-%d %H:%M:%S')}", file=sys.stderr, flush=True)
         print(f"{'#'*60}\n", file=sys.stderr, flush=True)
 
-        # データ事前一括取得
-        from data.api.prefetch import prefetch, save_cache as save_prefetch
+        # データ事前一括取得（並列）
+        from data.api.prefetch import prefetch_async, save_cache as save_prefetch
         print(f"{'='*60}", file=sys.stderr, flush=True)
         print(f"  [{time.strftime('%H:%M:%S')}] データ事前取得", file=sys.stderr, flush=True)
         print(f"{'='*60}", file=sys.stderr, flush=True)
-        prefetch_data = prefetch(rid)
+        prefetch_data = await prefetch_async(rid)
         prefetch_path = save_prefetch(rid, prefetch_data)
         print(f"  → {prefetch_path}\n", file=sys.stderr, flush=True)
 
@@ -63,8 +63,21 @@ class Orchestrator:
             print(f"\n{'='*60}", file=sys.stderr, flush=True)
             print(f"  [{time.strftime('%H:%M:%S')}] {mode}", file=sys.stderr, flush=True)
             print(f"{'='*60}", file=sys.stderr, flush=True)
+
+            # 取消馬を抽出（race_info の horses から abnormal != 0 の馬番）
+            # NOTE: prefetch時点のデータを使用。直前の取消には対応できない
+            scratched = set()
+            race_info = prefetch_data.get("race_info", {})
+            for h in race_info.get("horses", []):
+                num = h.get("number")
+                if num is not None and h.get("abnormal", 0) != 0:
+                    scratched.add(num)
+            if scratched:
+                print(f"  ⚠ 取消馬: {sorted(scratched)}", file=sys.stderr, flush=True)
+
             bet_result = place_bet(
-                date, venue, race_number, bets, total, check_only=check_only,
+                date, venue, race_number, bets, total,
+                check_only=check_only, scratched_numbers=scratched,
             )
             result["bet_result"] = bet_result
             if bet_result.get("ret") == 0:

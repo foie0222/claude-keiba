@@ -59,12 +59,28 @@ def _build_buyeye_entry(
     return f"{date},{venue_code},{race_no:02d},{shikibetsu},NORMAL,{amount},{eye},"
 
 
-def build_buyeye(date: str, venue: str, race_no: int, bets: list[dict]) -> str:
-    """bet_decision の bets リストから buyeye 文字列を組み立てる。"""
+def build_buyeye(
+    date: str, venue: str, race_no: int, bets: list[dict],
+    scratched_numbers: set[int] | None = None,
+) -> str:
+    """bet_decision の bets リストから buyeye 文字列を組み立てる。
+
+    Args:
+        scratched_numbers: 取消馬の馬番セット。指定された場合、
+            取消馬を含む馬券を除外する。
+    """
     venue_code = VENUE_TO_CODE.get(venue, venue)
+    scratched = scratched_numbers or set()
     entries = []
     for bet in bets:
         if bet["type"] not in TYPE_TO_SHIKIBETSU:
+            continue
+        # 取消馬が含まれている馬券は除外
+        if scratched and any(h in scratched for h in bet["horses"]):
+            print(
+                f"  ⚠ 取消馬を含むため除外: {bet['type']} {bet['horses']}",
+                file=sys.stderr, flush=True,
+            )
             continue
         entries.append(_build_buyeye_entry(date, venue_code, race_no, bet))
     return ":".join(entries)
@@ -78,6 +94,7 @@ def place_bet(
     total_amount: int,
     *,
     check_only: bool = True,
+    scratched_numbers: set[int] | None = None,
 ) -> dict:
     """IPAT投票APIを呼び出す。
 
@@ -88,8 +105,9 @@ def place_bet(
         bets: betting エージェントの出力 bets リスト
         total_amount: 合計金額
         check_only: True=betchk (投票チェックのみ), False=bet (実際に投票)
+        scratched_numbers: 取消馬の馬番セット（除外用）
     """
-    buyeye = build_buyeye(date, venue, race_no, bets)
+    buyeye = build_buyeye(date, venue, race_no, bets, scratched_numbers)
     if not buyeye:
         return {"error": "有効な馬券がありません", "ret": -1}
 

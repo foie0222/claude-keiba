@@ -92,7 +92,21 @@ class CouncilProcess:
 
         standard_results, x_opinion_result = await asyncio.gather(
             standard_task, x_opinion_task,
+            return_exceptions=True,
         )
+
+        # standard_results が例外の場合は致命的 → 再送出
+        if isinstance(standard_results, BaseException):
+            raise standard_results
+
+        # x_opinion が例外の場合はエラー情報に置換して続行
+        if isinstance(x_opinion_result, BaseException):
+            print(
+                f"  ⚠ x_opinion failed: {x_opinion_result}",
+                file=sys.stderr, flush=True,
+            )
+            x_opinion_result = {"error": str(x_opinion_result)}
+
         standard_results["x_opinion"] = x_opinion_result
         return standard_results
 

@@ -43,3 +43,4 @@ class BetDecision(BaseModel):
     bets: list[Bet]
     total_amount: int
     reasoning: str
+    pass_races: bool = False

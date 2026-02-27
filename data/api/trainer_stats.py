@@ -7,6 +7,7 @@ Usage: python data/api/trainer_stats.py <race_id>
 """
 import json
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -28,7 +29,8 @@ def get_trainer_stats(race_id: str) -> dict:
     trnr_codes = list({r["TRNRCD"].strip() for r in entry_rows if r.get("TRNRCD", "").strip()})
     trnr_list = ",".join(f"'{c}'" for c in trnr_codes)
 
-    year_ago = str(int(date) - 10000)
+    dt = datetime.strptime(date, "%Y%m%d")
+    year_ago = (dt - timedelta(days=365)).strftime("%Y%m%d")
     stats_rows = client.query(
         f"SELECT TRNRCD, RCOURSECD, FIXPLC, ABNMLCD FROM RACEDTL "
         f"WHERE TRNRCD IN ({trnr_list}) AND OPDT>='{year_ago}' AND OPDT<'{date}' AND ABNMLCD='0';"
