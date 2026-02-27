@@ -1,17 +1,28 @@
 import subprocess
 import sys
 import json
+import pytest
+from pathlib import Path
 
-def test_race_info_stub():
+
+KBDB_AVAILABLE = Path.home().joinpath(".claude").exists()  # proxy check
+
+
+@pytest.mark.skipif(not KBDB_AVAILABLE, reason="KBDB API credentials not available")
+def test_race_info_real():
     result = subprocess.run(
-        [sys.executable, "data/api/race_info.py", "20260301_nakayama_11"],
+        [sys.executable, "data/api/race_info.py", "20260222_tokyo_11"],
         capture_output=True, text=True,
-        cwd="/home/inoue-d/dev/claude-keiba"
+        cwd="/home/inoue-d/dev/claude-keiba",
+        timeout=120,
     )
+    assert result.returncode == 0, f"stderr: {result.stderr}"
     data = json.loads(result.stdout)
     assert "race" in data
     assert "horses" in data
     assert len(data["horses"]) > 0
+    assert data["race"]["name"] == "フェブラリーステークス"
+
 
 def test_odds_stub():
     result = subprocess.run(
@@ -22,6 +33,7 @@ def test_odds_stub():
     data = json.loads(result.stdout)
     assert "win" in data
 
+
 def test_training_stub():
     result = subprocess.run(
         [sys.executable, "data/api/training.py", "20260301_nakayama_11"],
@@ -30,6 +42,7 @@ def test_training_stub():
     )
     data = json.loads(result.stdout)
     assert "horses" in data
+
 
 def test_x_search_stub():
     result = subprocess.run(

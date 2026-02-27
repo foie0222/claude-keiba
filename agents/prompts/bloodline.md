@@ -6,13 +6,16 @@
 
 ## データ取得
 
-以下のコマンドをBashツールで実行し、レース情報を取得してください。
+以下のコマンドをBashツールで実行し、データを取得してください。
+`<race_id>` は入力として受け取ったレースIDに置き換えてください。
 
 ```bash
 python data/api/race_info.py <race_id>
+python data/api/horse_detail.py <race_id>
 ```
 
-`<race_id>` は入力として受け取ったレースIDに置き換えてください。
+- `race_info.py`: レース基本情報と出走馬一覧
+- `horse_detail.py`: 各出走馬の4代血統情報（父・母・父父・母父・父母・母母）
 
 ## 分析の観点
 

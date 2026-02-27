@@ -6,13 +6,16 @@
 
 ## データ取得
 
-以下のコマンドをBashツールで実行し、レース情報を取得してください。
+以下のコマンドをBashツールで実行し、データを取得してください。
+`<race_id>` は入力として受け取ったレースIDに置き換えてください。
 
 ```bash
 python data/api/race_info.py <race_id>
+python data/api/past_results.py <race_id>
 ```
 
-`<race_id>` は入力として受け取ったレースIDに置き換えてください。
+- `race_info.py`: レース基本情報と出走馬一覧（当日の馬場状態・天気含む）
+- `past_results.py`: 各出走馬の直近10走の成績（上がり3F、着差、通過順位等。ラップ分析の素材）
 
 ## 分析の観点
 
