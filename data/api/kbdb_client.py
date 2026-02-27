@@ -6,6 +6,7 @@ Usage:
     rows = client.query("SELECT * FROM HORSE WHERE BLDNO='2002101448';")
 """
 import csv
+import fcntl
 import io
 import os
 import time
@@ -19,6 +20,8 @@ load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 BASE_URL = "https://api.gamble-os.net/systems/hrdb"
 POLL_INTERVAL = 2
 MAX_POLLS = 30
+RATE_LIMIT_INTERVAL = 3.0  # 秒
+LOCK_FILE = Path("/tmp/kbdb_api.lock")
 
 
 class KBDBClient:
@@ -29,8 +32,24 @@ class KBDBClient:
     def _auth(self) -> dict:
         return {"tncid": self.tncid, "tncpw": self.tncpw}
 
+    def _rate_limit(self) -> None:
+        """プロセス間レートリミット: 前回のsubmitから3秒以上空ける"""
+        LOCK_FILE.touch(exist_ok=True)
+        with open(LOCK_FILE, "r+") as f:
+            fcntl.flock(f, fcntl.LOCK_EX)
+            content = f.read().strip()
+            last_time = float(content) if content else 0
+            wait = RATE_LIMIT_INTERVAL - (time.time() - last_time)
+            if wait > 0:
+                time.sleep(wait)
+            f.seek(0)
+            f.write(str(time.time()))
+            f.truncate()
+            fcntl.flock(f, fcntl.LOCK_UN)
+
     def query(self, sql: str) -> list[dict]:
         """SQLを実行し、結果をdictのリストで返す。"""
+        self._rate_limit()
         qid = self._submit(sql)
         self._wait(qid)
         return self._fetch_csv(qid)

@@ -1,6 +1,8 @@
 from __future__ import annotations
 import asyncio
 import json
+import sys
+import time
 from pathlib import Path
 from src.models import RaceId
 from src.agents.runner import AgentRunner
@@ -24,14 +26,32 @@ class Orchestrator:
         race_id = RaceId(date=date, venue=venue, race_number=race_number)
         rid = str(race_id)
 
-        print(f"[{rid}] 分析開始...")
-        result = await self.council.execute(race_id)
+        t0 = time.time()
+        print(f"\n{'#'*60}", file=sys.stderr, flush=True)
+        print(f"  予想開始: {rid}", file=sys.stderr, flush=True)
+        print(f"  {time.strftime('%Y-%m-%d %H:%M:%S')}", file=sys.stderr, flush=True)
+        print(f"{'#'*60}\n", file=sys.stderr, flush=True)
+
+        # データ事前一括取得
+        from data.api.prefetch import prefetch, save_cache as save_prefetch
+        print(f"{'='*60}", file=sys.stderr, flush=True)
+        print(f"  [{time.strftime('%H:%M:%S')}] データ事前取得", file=sys.stderr, flush=True)
+        print(f"{'='*60}", file=sys.stderr, flush=True)
+        prefetch_data = prefetch(rid)
+        prefetch_path = save_prefetch(rid, prefetch_data)
+        print(f"  → {prefetch_path}\n", file=sys.stderr, flush=True)
+
+        result = await self.council.execute(race_id, prefetch_path=prefetch_path)
+
+        elapsed = time.time() - t0
+        print(f"\n{'#'*60}", file=sys.stderr, flush=True)
+        print(f"  予想完了: {rid} ({elapsed:.0f}s = {elapsed/60:.1f}min)", file=sys.stderr, flush=True)
+        print(f"{'#'*60}\n", file=sys.stderr, flush=True)
 
         self.logger.save(rid, result)
         for agent_name, agent_result in result.get("analyses", {}).items():
             self.logger.save_agent_log(rid, agent_name, agent_result)
 
-        print(f"[{rid}] 完了: {json.dumps(result.get('bet_decision', {}), ensure_ascii=False)}")
         return result
 
 

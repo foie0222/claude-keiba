@@ -17,67 +17,43 @@ python data/api/x_search.py <race_id>
 結果に`"error": "キャッシュなし"`が含まれていた場合、Step 2へ進んでください。
 キャッシュがあれば（postsが存在すれば）Step 4へスキップしてください。
 
-### Step 2: Chrome MCPでX検索
+### Step 2: Chrome DevTools MCPでX検索
 
-Step 1の結果に含まれる `search_url` を使い、Chrome MCPのnavigateツールでXの検索ページを開いてください。
-
-```
-navigate: search_url の値をそのまま使用
-```
-
-ページが読み込まれたら3秒待ち、スクロールして投稿を追加読み込みしてください。
+Step 1の結果に含まれる `search_url` を使い、`navigate_page`ツールでXの検索ページを開いてください。
 
 ```
-scroll: down を 3回繰り返す（各回の間に2秒wait）
+ツール: navigate_page
+引数: type="url", url=<search_urlの値>
+```
+
+ページが読み込まれたら、スクロールしてツイートを追加読み込みするため、`evaluate_script`で以下を実行してください。
+
+```
+ツール: evaluate_script
+function: "async () => { for (let i = 0; i < 3; i++) { window.scrollBy(0, 1000); await new Promise(r => setTimeout(r, 2000)); } return 'scrolled'; }"
 ```
 
 ### Step 3: スクレイピング＆キャッシュ保存
 
-javascript_toolで以下のスニペットを実行し、投稿を取得してください。
+`evaluate_script`ツールで以下のスニペットを実行し、投稿を取得してください。
 
-```javascript
-(() => {
-  const articles = document.querySelectorAll('article[data-testid="tweet"]');
-  const posts = [];
-  const seen = new Set();
-  articles.forEach(article => {
-    const textEl = article.querySelector('div[data-testid="tweetText"]');
-    const text = textEl ? textEl.innerText.trim() : '';
-    if (!text || seen.has(text)) return;
-    seen.add(text);
-    let user = '';
-    const userEl = article.querySelector('div[data-testid="User-Name"]');
-    if (userEl) {
-      for (const span of userEl.querySelectorAll('span')) {
-        if (span.innerText.startsWith('@')) { user = span.innerText; break; }
-      }
-    }
-    const timeEl = article.querySelector('time');
-    const createdAt = timeEl ? timeEl.getAttribute('datetime') : '';
-    posts.push({ user, text, created_at: createdAt });
-  });
-  return JSON.stringify({ count: posts.length, posts });
-})()
+```
+ツール: evaluate_script
+function: "() => { const articles = document.querySelectorAll('article[data-testid=\"tweet\"]'); const posts = []; const seen = new Set(); articles.forEach(article => { const textEl = article.querySelector('div[data-testid=\"tweetText\"]'); const text = textEl ? textEl.innerText.trim() : ''; if (!text || seen.has(text)) return; seen.add(text); let user = ''; const userEl = article.querySelector('div[data-testid=\"User-Name\"]'); if (userEl) { for (const span of userEl.querySelectorAll('span')) { if (span.innerText.startsWith('@')) { user = span.innerText; break; } } } const timeEl = article.querySelector('time'); const createdAt = timeEl ? timeEl.getAttribute('datetime') : ''; posts.push({ user, text, created_at: createdAt }); }); return JSON.stringify({ count: posts.length, posts }); }"
 ```
 
 取得結果をPythonでキャッシュに保存してください。
 
-```python
-import json, sys
-sys.path.insert(0, "data/api")
+```bash
+python -c "
+import json, sys; sys.path.insert(0, 'data/api')
 from x_search import save_cache
-
-data = {
-    "race_id": "<race_id>",
-    "query": "<Step1で得たquery>",
-    "search_url": "<Step1で得たsearch_url>",
-    "post_count": <取得件数>,
-    "posts": <取得したpostsリスト>
-}
-save_cache("<race_id>", data)
+data = {'race_id': '<race_id>', 'query': '<Step1で得たquery>', 'search_url': '<Step1で得たsearch_url>', 'post_count': <取得件数>, 'posts': <取得したpostsリスト>}
+save_cache('<race_id>', data)
+"
 ```
 
-**注意**: javascript_toolの結果が長くTRUNCATEされる場合は、`posts.slice(0,5)` と `posts.slice(5,10)` のように分割取得してください。
+**注意**: evaluate_scriptの結果が長い場合は、`posts.slice(0,5)` と `posts.slice(5,10)` のように分割取得してください。
 
 ### Step 4: 分析
 

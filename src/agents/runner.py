@@ -2,9 +2,17 @@ from __future__ import annotations
 import asyncio
 import json
 import re
+import sys
+import time
 from pathlib import Path
 from claude_agent_sdk import query, ClaudeAgentOptions
 from claude_agent_sdk.types import AssistantMessage, TextBlock, ResultMessage
+
+
+def _log(agent_name: str, msg: str) -> None:
+    """エージェントのプログレスログを出力"""
+    timestamp = time.strftime("%H:%M:%S")
+    print(f"  [{timestamp}] {agent_name:12s} | {msg}", file=sys.stderr, flush=True)
 
 
 def extract_json_from_messages(text: str) -> dict | None:
@@ -60,11 +68,16 @@ class AgentRunner:
         if output_schema:
             options.output_format = {"type": "json_schema", "schema": output_schema}
 
+        _log(agent_name, "開始")
+        t0 = time.time()
+        turn_count = 0
         collected_text = []
         result_data = None
 
         async for message in query(prompt=user_prompt, options=options):
             if isinstance(message, AssistantMessage):
+                turn_count += 1
+                _log(agent_name, f"step {turn_count}")
                 for block in message.content:
                     if isinstance(block, TextBlock):
                         collected_text.append(block.text)
@@ -72,14 +85,18 @@ class AgentRunner:
                 if message.structured_output:
                     result_data = message.structured_output
 
+        elapsed = time.time() - t0
         if result_data:
+            _log(agent_name, f"完了 ({elapsed:.0f}s, {turn_count}steps) ✓ structured")
             return result_data
 
         full_text = "\n".join(collected_text)
         extracted = extract_json_from_messages(full_text)
         if extracted:
+            _log(agent_name, f"完了 ({elapsed:.0f}s, {turn_count}steps) ✓ json extracted")
             return extracted
 
+        _log(agent_name, f"完了 ({elapsed:.0f}s, {turn_count}steps) ✗ JSON抽出失敗")
         return {"raw_text": full_text, "error": "JSON extraction failed"}
 
     async def run_parallel(
