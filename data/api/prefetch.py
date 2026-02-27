@@ -27,7 +27,21 @@ from balance import get_balance
 CACHE_DIR = ROOT / ".cache" / "prefetch"
 
 
-async def _run_api(name: str, fn) -> tuple[str, dict]:
+def _run_api_sync(name: str, fn) -> tuple[str, dict]:
+    """同期APIを実行し、名前と結果のタプルを返す"""
+    t0 = time.time()
+    try:
+        result = fn()
+        elapsed = time.time() - t0
+        print(f"  ✓ {name:16s} ({elapsed:.1f}s)", file=sys.stderr, flush=True)
+        return name, result
+    except Exception as e:
+        elapsed = time.time() - t0
+        print(f"  ✗ {name:16s} ({elapsed:.1f}s): {e}", file=sys.stderr, flush=True)
+        return name, {"error": str(e)}
+
+
+async def _run_api_thread(name: str, fn) -> tuple[str, dict]:
     """同期APIをスレッドで実行し、名前と結果のタプルを返す"""
     t0 = time.time()
     try:
@@ -41,46 +55,50 @@ async def _run_api(name: str, fn) -> tuple[str, dict]:
         return name, {"error": str(e)}
 
 
-async def _run_kbdb_sequential(race_id: str) -> list[tuple[str, dict]]:
-    """KBDB系APIをレート制限に配慮して順次実行"""
-    apis = [
+async def prefetch_async(race_id: str) -> dict:
+    """APIを取得。KBDB系は同一スレッドで直列、非KBDB系はスレッド並列。
+
+    KBDB APIは同時セッション数制限があるため、1クエリが完全に完了してから
+    次を開始する必要がある（submit/wait/fetch_csvの全工程が認証を消費）。
+
+    構成:
+      直列(メインスレッド): race_info → horse_detail → jockey_stats → trainer_stats → past_results
+      並列(別スレッド):     odds + training + balance (非KBDB、上記と同時実行)
+    """
+    results = {}
+
+    # 非KBDB系を別スレッドで並列実行開始
+    non_kbdb_task = asyncio.gather(
+        _run_api_thread("odds", lambda: get_odds(race_id)),
+        _run_api_thread("training", lambda: get_training(race_id)),
+        _run_api_thread("balance", get_balance),
+    )
+
+    # KBDB系をメインスレッドで直列実行（同時セッション制限を回避）
+    kbdb_apis = [
+        ("race_info", lambda: get_race_info(race_id)),
         ("horse_detail", lambda: get_horse_details(race_id)),
         ("jockey_stats", lambda: get_jockey_stats(race_id)),
         ("trainer_stats", lambda: get_trainer_stats(race_id)),
         ("past_results", lambda: get_past_results(race_id)),
     ]
-    results = []
-    for name, fn in apis:
-        results.append(await _run_api(name, fn))
-    return results
+    kbdb_task = asyncio.to_thread(_run_kbdb_all_sync, kbdb_apis)
 
-
-async def prefetch_async(race_id: str) -> dict:
-    """APIを並列で取得。KBDB系は順次、それ以外は並列実行。
-
-    Step1: race_info (KBDB) を最初に取得
-    Step2 並列: [KBDB系4つ(順次)] + [odds] + [training] + [balance]
-    """
-    # Step1: race_info を先に取得（他のKBDB APIと競合しないよう）
-    _, race_info_data = await _run_api("race_info", lambda: get_race_info(race_id))
-    results = {"race_info": race_info_data}
-
-    # Step2: KBDB系(順次) と 非KBDB系(並列) を同時実行
-    kbdb_task = _run_kbdb_sequential(race_id)
-    odds_task = _run_api("odds", lambda: get_odds(race_id))
-    training_task = _run_api("training", lambda: get_training(race_id))
-    balance_task = _run_api("balance", get_balance)
-
-    kbdb_results, odds_result, training_result, balance_result = await asyncio.gather(
-        kbdb_task, odds_task, training_task, balance_task,
-    )
+    kbdb_results, non_kbdb_results = await asyncio.gather(kbdb_task, non_kbdb_task)
 
     for name, data in kbdb_results:
         results[name] = data
-    results[odds_result[0]] = odds_result[1]
-    results[training_result[0]] = training_result[1]
-    results[balance_result[0]] = balance_result[1]
+    for name, data in non_kbdb_results:
+        results[name] = data
 
+    return results
+
+
+def _run_kbdb_all_sync(apis: list) -> list[tuple[str, dict]]:
+    """KBDB系APIを同一スレッドで直列実行（セッション制限対策）"""
+    results = []
+    for name, fn in apis:
+        results.append(_run_api_sync(name, fn))
     return results
 
 
