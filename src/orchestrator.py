@@ -52,6 +52,27 @@ class Orchestrator:
         for agent_name, agent_result in result.get("analyses", {}).items():
             self.logger.save_agent_log(rid, agent_name, agent_result)
 
+        # 投票チェック (betchk)
+        bet_decision = result.get("bet_decision", {})
+        bets = bet_decision.get("bets", [])
+        if bets and not bet_decision.get("pass_races", False):
+            from data.api.bet import place_bet
+            total = bet_decision.get("total_amount", 0)
+            print(f"\n{'='*60}", file=sys.stderr, flush=True)
+            print(f"  [{time.strftime('%H:%M:%S')}] 投票チェック (betchk)", file=sys.stderr, flush=True)
+            print(f"{'='*60}", file=sys.stderr, flush=True)
+            bet_result = place_bet(
+                date, venue, race_number, bets, total, check_only=True,
+            )
+            result["bet_check"] = bet_result
+            if bet_result.get("ret") == 0:
+                print(f"  ✓ 投票チェックOK (buyeye: {bet_result['buyeye']})", file=sys.stderr, flush=True)
+            else:
+                print(f"  ✗ 投票チェックNG: {bet_result.get('msg')}", file=sys.stderr, flush=True)
+        else:
+            result["bet_check"] = {"skipped": True, "reason": "見送り or 馬券なし"}
+            print(f"\n  投票見送り", file=sys.stderr, flush=True)
+
         return result
 
 

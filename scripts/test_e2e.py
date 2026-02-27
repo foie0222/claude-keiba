@@ -31,6 +31,9 @@ async def main():
     elapsed = time.time() - start
     print(f"\n=== 完了 ({elapsed:.1f}s) ===")
     print(json.dumps(result.get("bet_decision", {}), ensure_ascii=False, indent=2))
+    if "bet_check" in result:
+        print(f"\n--- 投票チェック ---")
+        print(json.dumps(result["bet_check"], ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
