@@ -41,7 +41,7 @@ class Orchestrator:
         prefetch_path = save_prefetch(rid, prefetch_data)
         print(f"  → {prefetch_path}\n", file=sys.stderr, flush=True)
 
-        result = await self.council.execute(race_id, prefetch_path=prefetch_path)
+        result = await self.council.execute(race_id, prefetch_path=prefetch_path, live=live)
 
         elapsed = time.time() - t0
         print(f"\n{'#'*60}", file=sys.stderr, flush=True)

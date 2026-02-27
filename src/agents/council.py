@@ -31,6 +31,7 @@ class CouncilProcess:
 
     async def run_analysis_layer(
         self, race_id: RaceId, prefetch_path: str | None = None,
+        *, live: bool = False,
     ) -> dict[str, dict]:
         """レイヤー1: 6つの分析エージェントを並列実行"""
         rid = str(race_id)
@@ -55,9 +56,16 @@ class CouncilProcess:
             ("lap",        f"以下のレースのラップ・展開分析をせよ: {rid}{data_instruction}"),
         ])
 
+        cutoff_note = ""
+        if not live:
+            cutoff_note = (
+                "\n\n【注意】テストモードです。x_search.py 呼び出し時に第2引数で 10 を指定してください: "
+                f"`python data/api/x_search.py {rid} 10`（発走10分前までのツイートを取得）"
+            )
+
         x_opinion_task = self.runner.run(
             "x_opinion",
-            f"以下のレースのX(Twitter)世論分析をせよ: {rid}",
+            f"以下のレースのX(Twitter)世論分析をせよ: {rid}{cutoff_note}",
             mcp_servers={
                 "chrome": {
                     "type": "stdio",
@@ -130,9 +138,9 @@ class CouncilProcess:
             f"以下の統括判断結果を基に、オッズと残高を照合し、馬券種・買い目・金額を決定してください:\n\n{json.dumps(judgment, ensure_ascii=False, indent=2)}{data_instruction}",
         )
 
-    async def execute(self, race_id: RaceId, prefetch_path: str | None = None) -> dict:
+    async def execute(self, race_id: RaceId, prefetch_path: str | None = None, *, live: bool = False) -> dict:
         """全レイヤーを通して実行"""
-        analyses = await self.run_analysis_layer(race_id, prefetch_path=prefetch_path)
+        analyses = await self.run_analysis_layer(race_id, prefetch_path=prefetch_path, live=live)
         council = await self.run_council_layer(analyses)
         bet_decision = await self.run_betting_layer(council["judge"], prefetch_path=prefetch_path)
         return {

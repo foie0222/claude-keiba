@@ -58,8 +58,14 @@ def save_cache(race_id: str, data: dict) -> None:
     _cache_path(race_id).write_text(json.dumps(data, ensure_ascii=False, indent=2))
 
 
-def get_race_time_info(race_id: str) -> dict:
-    """race_idからレース情報・検索パラメータを取得する。"""
+def get_race_time_info(race_id: str, *, cutoff_minutes: int = 0) -> dict:
+    """race_idからレース情報・検索パラメータを取得する。
+
+    Args:
+        cutoff_minutes: 発走何分前までを検索対象にするか。
+            0 = 発走時刻まで (本番用)
+            10 = 発走10分前まで (テスト用: 直前ツイートは取得不可のため)
+    """
     from race_info import get_race_info
 
     info = get_race_info(race_id)
@@ -75,12 +81,14 @@ def get_race_time_info(race_id: str) -> dict:
         int(date_str[:4]), int(date_str[4:6]), int(date_str[6:8]),
         hh, mm, tzinfo=JST,
     )
+    end_dt = post_dt - timedelta(minutes=cutoff_minutes)
     start_dt = post_dt - timedelta(hours=1)
 
     return {
         "venue": race["venue"],
         "race_number": race["race_number"],
         "post_dt": post_dt,
+        "end_dt": end_dt,
         "start_dt": start_dt,
     }
 
@@ -113,23 +121,24 @@ SCRAPE_JS = """
 """.strip()
 
 
-def search_x(race_id: str) -> dict:
+def search_x(race_id: str, *, cutoff_minutes: int = 0) -> dict:
     """キャッシュからX検索結果を読む。無い場合は検索URLを返す。"""
     cached = _cache_path(race_id)
     if cached.exists():
         return json.loads(cached.read_text())
 
-    time_info = get_race_time_info(race_id)
+    time_info = get_race_time_info(race_id, cutoff_minutes=cutoff_minutes)
     if "error" in time_info:
         return {"race_id": race_id, "posts": [], "error": time_info["error"]}
 
+    end_dt = time_info["end_dt"]
     url = build_search_url(
         time_info["venue"], time_info["race_number"],
-        time_info["start_dt"], time_info["post_dt"],
+        time_info["start_dt"], end_dt,
     )
     query = build_query(
         time_info["venue"], time_info["race_number"],
-        time_info["start_dt"], time_info["post_dt"],
+        time_info["start_dt"], end_dt,
     )
 
     return {
@@ -144,4 +153,5 @@ def search_x(race_id: str) -> dict:
 
 if __name__ == "__main__":
     race_id = sys.argv[1] if len(sys.argv) > 1 else "unknown"
-    print(json.dumps(search_x(race_id), ensure_ascii=False, indent=2))
+    cutoff = int(sys.argv[2]) if len(sys.argv) > 2 else 0
+    print(json.dumps(search_x(race_id, cutoff_minutes=cutoff), ensure_ascii=False, indent=2))
