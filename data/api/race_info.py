@@ -7,6 +7,14 @@ import json
 import sys
 from pathlib import Path
 
+
+def _safe_int(val, default: int = 0) -> int:
+    """空文字やNoneでもクラッシュしない int 変換"""
+    if val is None:
+        return default
+    s = str(val).strip()
+    return int(s) if s else default
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kbdb_client import KBDBClient
 
@@ -55,38 +63,38 @@ def get_race_info(race_id: str, *, include_result: bool = False) -> dict:
         "venue_code": course_cd,
         "race_number": race_no,
         "name": rm.get("RNMHON", "").strip(),
-        "distance": int(rm.get("DIST", 0)),
+        "distance": _safe_int(rm.get("DIST")),
         "surface": surface,
         "track_code": rm.get("TRACKCD", "").strip(),
         "weather": WEATHER_MAP.get(rm.get("WEATHERCD", "").strip(), ""),
         "turf_condition": CONDITION_MAP.get(rm.get("TSTATCD", "").strip(), ""),
         "dirt_condition": CONDITION_MAP.get(rm.get("DSTATCD", "").strip(), ""),
         "post_time": rm.get("POSTTM", "").strip(),
-        "entry_count": int(rm.get("ENTNUM", 0)),
-        "run_count": int(rm.get("RUNNUM", 0)),
+        "entry_count": _safe_int(rm.get("ENTNUM")),
+        "run_count": _safe_int(rm.get("RUNNUM")),
     }
 
     horses = []
     for rd in detail_rows:
         horse = {
-            "number": int(rd.get("UMANO", 0)),
-            "gate": int(rd.get("WAKNO", 0)),
+            "number": _safe_int(rd.get("UMANO")),
+            "gate": _safe_int(rd.get("WAKNO")),
             "name": rd.get("HSNM", "").strip(),
             "bldno": rd.get("BLDNO", "").strip(),
             "sex": SEX_MAP.get(rd.get("SEXCD", "").strip(), ""),
-            "age": int(rd.get("AGE", 0)),
-            "weight_carried": int(rd.get("FTNWGHT", 0)) / 10,
+            "age": _safe_int(rd.get("AGE")),
+            "weight_carried": _safe_int(rd.get("FTNWGHT")) / 10,
             "jockey_code": rd.get("JKYCD", "").strip(),
             "jockey": rd.get("JKYNM4", "").strip(),
             "trainer_code": rd.get("TRNRCD", "").strip(),
             "trainer": rd.get("TRNRNM4", "").strip(),
-            "body_weight": int(rd.get("WGHT", 0)) if rd.get("WGHT", "").strip() else None,
+            "body_weight": _safe_int(rd.get("WGHT")) if rd.get("WGHT", "").strip() else None,
             "weight_diff": rd.get("ZOGENSIGN", "").strip() + rd.get("ZOGENDIFF", "").strip(),
-            "abnormal": int(rd.get("ABNMLCD", 0)),
+            "abnormal": _safe_int(rd.get("ABNMLCD")),
         }
         if include_result and rd.get("FIXPLC", "").strip():
-            horse["result"] = int(rd.get("FIXPLC", 0))
-            horse["finish_time"] = int(rd.get("RUNTM", 0))
+            horse["result"] = _safe_int(rd.get("FIXPLC"))
+            horse["finish_time"] = _safe_int(rd.get("RUNTM"))
         horses.append(horse)
 
     return {"race": race, "horses": horses}

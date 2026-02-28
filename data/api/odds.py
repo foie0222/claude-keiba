@@ -104,23 +104,41 @@ def _fetch_odds_api(netkeiba_race_id: str, odds_type: str) -> tuple[dict, str]:
     return {}, ""
 
 
+def _safe_float(val) -> float | None:
+    """空文字やNoneでもクラッシュしない float 変換"""
+    if val is None:
+        return None
+    s = str(val).strip().replace(",", "")
+    if not s:
+        return None
+    return float(s)
+
+
+def _safe_int_str(val) -> str:
+    """空文字でもクラッシュしない int→str 変換 (馬番用)"""
+    s = str(val).strip()
+    if not s:
+        return "0"
+    return str(int(s))
+
+
 def _parse_win_place(raw_odds: dict) -> dict:
     """type=1のレスポンスから単勝・複勝を整形。"""
     result = {"win": {}, "place": {}}
     odds = raw_odds.get("odds", {})
 
     for umaban, vals in odds.get("1", {}).items():
-        num = str(int(umaban))
+        num = _safe_int_str(umaban)
         result["win"][num] = {
-            "odds": float(vals[0]) if vals[0] else None,
+            "odds": _safe_float(vals[0]),
             "popularity": vals[2] if len(vals) > 2 else None,
         }
 
     for umaban, vals in odds.get("2", {}).items():
-        num = str(int(umaban))
+        num = _safe_int_str(umaban)
         result["place"][num] = {
-            "odds_min": float(vals[0]) if vals[0] else None,
-            "odds_max": float(vals[1]) if vals[1] else None,
+            "odds_min": _safe_float(vals[0]),
+            "odds_max": _safe_float(vals[1]),
             "popularity": vals[2] if len(vals) > 2 else None,
         }
 
@@ -134,22 +152,19 @@ def _parse_pair_odds(raw_odds: dict, type_key: str, key_len: int) -> list:
 
     for combo, vals in odds.items():
         if key_len == 4:
-            h1, h2 = str(int(combo[:2])), str(int(combo[2:]))
+            h1, h2 = _safe_int_str(combo[:2]), _safe_int_str(combo[2:])
         elif key_len == 6:
-            h1, h2, h3 = str(int(combo[:2])), str(int(combo[2:4])), str(int(combo[4:]))
+            h1 = _safe_int_str(combo[:2])
+            h2 = _safe_int_str(combo[2:4])
+            h3 = _safe_int_str(combo[4:])
         else:
             continue
 
-        odds_val = vals[0]
-        if isinstance(odds_val, str):
-            odds_val = odds_val.replace(",", "")
-        entry = {"odds": float(odds_val) if odds_val else None}
+        entry = {"odds": _safe_float(vals[0])}
 
-        if vals[1] is not None:
-            odds_max = vals[1]
-            if isinstance(odds_max, str):
-                odds_max = odds_max.replace(",", "")
-            entry["odds_max"] = float(odds_max)
+        odds_max = _safe_float(vals[1])
+        if odds_max is not None:
+            entry["odds_max"] = odds_max
 
         if len(vals) > 2:
             entry["popularity"] = vals[2]
