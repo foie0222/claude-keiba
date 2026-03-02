@@ -1,5 +1,4 @@
 from __future__ import annotations
-import asyncio
 import json
 import sys
 import time
@@ -16,7 +15,7 @@ def _phase(msg: str) -> None:
 
 
 def format_analyses_for_secretary(analyses: dict[str, dict]) -> str:
-    """6つの分析結果を書記エージェント向けにフォーマット"""
+    """5つの分析結果を書記エージェント向けにフォーマット"""
     sections = []
     for name, result in analyses.items():
         sections.append(f"## {name} の分析\n\n{json.dumps(result, ensure_ascii=False, indent=2)}")
@@ -33,9 +32,9 @@ class CouncilProcess:
         self, race_id: RaceId, prefetch_path: str | None = None,
         *, live: bool = False,
     ) -> dict[str, dict]:
-        """レイヤー1: 6つの分析エージェントを並列実行"""
+        """レイヤー1: 5つの分析エージェントを並列実行"""
         rid = str(race_id)
-        _phase("レイヤー1: 分析エージェント (6並列)")
+        _phase("レイヤー1: 分析エージェント (5並列)")
 
         data_instruction = ""
         if prefetch_path:
@@ -47,68 +46,13 @@ class CouncilProcess:
                 f"追加データが必要な場合のみBashでAPIを呼んでください。"
             )
 
-        # 全6エージェントを同時起動
-        standard_task = self.runner.run_parallel([
+        return await self.runner.run_parallel([
             ("bloodline",  f"以下のレースの血統分析をせよ: {rid}{data_instruction}"),
             ("training",   f"以下のレースの調教分析をせよ: {rid}{data_instruction}"),
             ("jockey",     f"以下のレースの騎手・厩舎分析をせよ: {rid}{data_instruction}"),
             ("past_races", f"以下のレースの過去走分析をせよ: {rid}{data_instruction}"),
             ("lap",        f"以下のレースのラップ・展開分析をせよ: {rid}{data_instruction}"),
         ])
-
-        cutoff_note = ""
-        if not live:
-            cutoff_note = (
-                "\n\n【注意】テストモードです。x_search.py 呼び出し時に第2引数で 10 を指定してください: "
-                f"`python data/api/x_search.py {rid} 10`（発走10分前までのツイートを取得）"
-            )
-
-        x_opinion_task = self.runner.run(
-            "x_opinion",
-            f"以下のレースのX(Twitter)世論分析をせよ: {rid}{cutoff_note}",
-            mcp_servers={
-                "chrome": {
-                    "type": "stdio",
-                    "command": "npx",
-                    "args": ["-y", "chrome-devtools-mcp@latest",
-                             "--browserUrl=http://127.0.0.1:9222"],
-                },
-            },
-            allowed_tools=[
-                "Bash", "Read", "Write",
-                "mcp__chrome__navigate_page",
-                "mcp__chrome__new_page",
-                "mcp__chrome__evaluate_script",
-                "mcp__chrome__take_snapshot",
-                "mcp__chrome__take_screenshot",
-                "mcp__chrome__click",
-                "mcp__chrome__fill",
-                "mcp__chrome__press_key",
-                "mcp__chrome__wait_for",
-                "mcp__chrome__list_pages",
-                "mcp__chrome__select_page",
-            ],
-        )
-
-        standard_results, x_opinion_result = await asyncio.gather(
-            standard_task, x_opinion_task,
-            return_exceptions=True,
-        )
-
-        # standard_results が例外の場合は致命的 → 再送出
-        if isinstance(standard_results, BaseException):
-            raise standard_results
-
-        # x_opinion が例外の場合はエラー情報に置換して続行
-        if isinstance(x_opinion_result, BaseException):
-            print(
-                f"  ⚠ x_opinion failed: {x_opinion_result}",
-                file=sys.stderr, flush=True,
-            )
-            x_opinion_result = {"error": str(x_opinion_result)}
-
-        standard_results["x_opinion"] = x_opinion_result
-        return standard_results
 
     async def run_council_layer(self, analyses: dict[str, dict]) -> dict:
         """レイヤー2: 合議（書記→監視→統括）"""
@@ -117,7 +61,7 @@ class CouncilProcess:
 
         secretary_result = await self.runner.run(
             "secretary",
-            f"以下の6つの分析結果を整理・構造化してください:\n\n{formatted}",
+            f"以下の5つの分析結果を整理・構造化してください:\n\n{formatted}",
         )
 
         monitor_result = await self.runner.run(

@@ -16,7 +16,7 @@ from src.agents.runner import AgentRunner
 async def main():
     if len(sys.argv) < 3:
         print("Usage: python scripts/test_single_agent.py <agent_name> <race_id>")
-        print("  agents: bloodline, training, jockey, past_races, lap, x_opinion")
+        print("  agents: bloodline, training, jockey, past_races, lap")
         sys.exit(1)
 
     agent_name = sys.argv[1]

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Chrome をリモートデバッグポート付きで起動するスクリプト
-# x_opinion エージェントが chrome-devtools-mcp 経由でブラウザを操作するために必要
+# ブラウザ操作が必要なエージェント用
 
 PORT=9222
 
