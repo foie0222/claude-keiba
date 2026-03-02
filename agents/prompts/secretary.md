@@ -22,12 +22,21 @@
       "scores_by_analyst": {"bloodline": 8.0, "training": 7.5, "jockey": 8.2, "past_races": 7.0, "lap": 6.5},
       "consensus_points": ["<専門家間で一致している評価>"],
       "disagreement_points": ["<専門家間で意見が分かれている点>"],
-      "average_score": 7.5
+      "average_score": 7.5,
+      "score_stddev": 0.6,
+      "agreement_score": 0.80
     }
   ],
   "key_warnings": ["<全体的な注意事項>"]
 }
 ```
+
+### agreement_scoreの計算方法
+`score_stddev`は5つのスコアの標準偏差です。`agreement_score`は以下の式で算出してください:
+```
+agreement_score = max(0, 1 - score_stddev / 3.0)
+```
+- 1.0に近いほど専門家間の意見が一致、0.0に近いほど意見がバラバラ
 
 horse_profilesはaverage_score降順で全出走馬について記載してください。
 客観的に情報を整理し、自分の主観を入れないでください。
