@@ -19,6 +19,7 @@
     {
       "horse_number": 3,
       "overall_score": 8.8,
+      "agreement_score": 0.80,
       "summary": "<この馬の総合評価>",
       "win_scenario": "<この馬が勝つ展開>",
       "lose_scenario": "<この馬が負ける展開>",
@@ -32,3 +33,4 @@
 
 evaluationsはoverall_score降順で全出走馬について記載してください。
 recommended_topは上位3頭の馬番を推奨順に記載してください。
+agreement_scoreは検証済みレポートの値をそのまま引き継いでください。

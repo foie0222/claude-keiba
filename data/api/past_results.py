@@ -63,7 +63,7 @@ def get_past_results(race_id: str) -> dict:
                 "distance": int(p.get("DIST", 0)),
                 "surface": TRACK_MAP.get(track_cd, ""),
                 "condition": CONDITION_MAP.get(p.get("TSTATCD", "").strip(), "")
-                    if track_cd.startswith("1") else CONDITION_MAP.get(p.get("DSTATCD", "").strip(), ""),
+                    if TRACK_MAP.get(track_cd, "") in ("芝", "障害") else CONDITION_MAP.get(p.get("DSTATCD", "").strip(), ""),
                 "entry_count": int(p.get("ENTNUM", 0)),
                 "gate": int(p.get("WAKNO", 0)),
                 "number": int(p.get("UMANO", 0)),
