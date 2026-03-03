@@ -69,7 +69,8 @@ python data/api/horse_detail.py <race_id>
 
 ## confidence算出基準
 
-- 基準値: 0.65
-- sire_sire/sire_damが全馬取得できている → +0.1
-- GII以上の重賞 → +0.05（出走馬の実績データが豊富）
-- sire_sire/sire_damが50%以上欠損 → -0.15
+sire_sire/sire_damの取得率に基づいて算出する。
+
+- 取得率100% → 0.75
+- 取得率50〜99% → 0.65
+- 取得率50%未満 → 0.50
