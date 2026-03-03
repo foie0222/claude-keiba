@@ -1,103 +1,2070 @@
 {
-  "ディープインパクト": {"line": "サンデーサイレンス系", "via": "サンデーサイレンス → Halo → Hail to Reason"},
-  "キングカメハメハ": {"line": "Kingmambo系", "via": "Kingmambo → Mr. Prospector"},
-  "ハーツクライ": {"line": "サンデーサイレンス系", "via": "サンデーサイレンス → Halo → Hail to Reason"},
-  "ロードカナロア": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "ドゥラメンテ": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "エピファネイア": {"line": "Roberto系", "via": "シンボリクリスエス → Kris S. → Roberto"},
-  "モーリス": {"line": "Roberto系", "via": "スクリーンヒーロー → グラスワンダー → Silver Hawk → Roberto"},
-  "キタサンブラック": {"line": "サンデーサイレンス系", "via": "ブラックタイド → サンデーサイレンス → Halo"},
-  "ドレフォン": {"line": "Storm Cat系", "via": "Gio Ponti → Tale of the Cat → Storm Cat"},
-  "ルヴァンスレーヴ": {"line": "シンボリクリスエス系", "via": "シンボリクリスエス → Kris S. → Roberto"},
-  "ダンカーク": {"line": "Unbridled's Song系", "via": "Unbridled's Song → Unbridled → Mr. Prospector"},
-  "シンボリクリスエス": {"line": "Roberto系", "via": "Kris S. → Roberto → Hail to Reason"},
-  "サンデーサイレンス": {"line": "Halo系", "via": "Halo → Hail to Reason → Turn-to"},
-  "ステイゴールド": {"line": "サンデーサイレンス系", "via": "サンデーサイレンス → Halo → Hail to Reason"},
-  "オルフェーヴル": {"line": "サンデーサイレンス系", "via": "ステイゴールド → サンデーサイレンス → Halo"},
-  "ゴールドシップ": {"line": "サンデーサイレンス系", "via": "ステイゴールド → サンデーサイレンス → Halo"},
-  "ジャスタウェイ": {"line": "サンデーサイレンス系", "via": "ハーツクライ → サンデーサイレンス → Halo"},
-  "スワーヴリチャード": {"line": "サンデーサイレンス系", "via": "ハーツクライ → サンデーサイレンス → Halo"},
-  "ワールドプレミア": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "コントレイル": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "シャフリヤール": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "サトノダイヤモンド": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "フィエールマン": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "ダノンザキッド": {"line": "サンデーサイレンス系", "via": "ジャスタウェイ → ハーツクライ → サンデーサイレンス"},
-  "イクイノックス": {"line": "Kingmambo系", "via": "キタサンブラック → ブラックタイド → サンデーサイレンス"},
-  "ダイワメジャー": {"line": "サンデーサイレンス系", "via": "サンデーサイレンス → Halo → Hail to Reason"},
-  "アドマイヤマーズ": {"line": "サンデーサイレンス系", "via": "ダイワメジャー → サンデーサイレンス → Halo"},
-  "ネロ": {"line": "サンデーサイレンス系", "via": "ダイワメジャー → サンデーサイレンス → Halo"},
-  "スピルバーグ": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "リアルスティール": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "マカヒキ": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "ミッキーアイル": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "サトノアラジン": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "キズナ": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "ディーマジェスティ": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "ヘニーヒューズ": {"line": "Storm Cat系", "via": "Hennessy → Storm Cat → Storm Bird"},
-  "シニスターミニスター": {"line": "A.P. Indy系", "via": "Old Trieste → A.P. Indy → Seattle Slew"},
-  "パイロ": {"line": "A.P. Indy系", "via": "Pulpit → A.P. Indy → Seattle Slew"},
-  "マジェスティックウォリアー": {"line": "A.P. Indy系", "via": "A.P. Indy → Seattle Slew → Bold Reasoning"},
-  "カジノドライヴ": {"line": "A.P. Indy系", "via": "Mineshaft → A.P. Indy → Seattle Slew"},
-  "ホッコータルマエ": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "コパノリッキー": {"line": "Unbridled's Song系", "via": "ゴールドアリュール → サンデーサイレンス → Halo"},
-  "ゴールドアリュール": {"line": "サンデーサイレンス系", "via": "サンデーサイレンス → Halo → Hail to Reason"},
-  "スマートファルコン": {"line": "サンデーサイレンス系", "via": "ゴールドアリュール → サンデーサイレンス → Halo"},
-  "エスポワールシチー": {"line": "サンデーサイレンス系", "via": "ゴールドアリュール → サンデーサイレンス → Halo"},
-  "クロフネ": {"line": "Vice Regent系", "via": "French Deputy → Deputy Minister → Vice Regent"},
-  "フレンチデピュティ": {"line": "Vice Regent系", "via": "Deputy Minister → Vice Regent → Northern Dancer"},
-  "ルーラーシップ": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "レイデオロ": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "ラブリーデイ": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "ロゴタイプ": {"line": "Kingmambo系", "via": "ローエングリン → Singspiel → In The Wings"},
-  "タートルボウル": {"line": "Lyphard系", "via": "Dyhim Diamond → Indian Ridge → Ahonoora"},
-  "スクリーンヒーロー": {"line": "Roberto系", "via": "グラスワンダー → Silver Hawk → Roberto"},
-  "グラスワンダー": {"line": "Roberto系", "via": "Silver Hawk → Roberto → Hail to Reason"},
-  "ナカヤマフェスタ": {"line": "サンデーサイレンス系", "via": "ステイゴールド → サンデーサイレンス → Halo"},
-  "ブラックタイド": {"line": "サンデーサイレンス系", "via": "サンデーサイレンス → Halo → Hail to Reason"},
-  "ダノンシャーク": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "サトノクラウン": {"line": "Roberto系", "via": "Marju → Last Tycoon → Try My Best"},
-  "ジョーカプチーノ": {"line": "A.P. Indy系", "via": "マンハッタンカフェ → サンデーサイレンス → Halo"},
-  "マンハッタンカフェ": {"line": "サンデーサイレンス系", "via": "サンデーサイレンス → Halo → Hail to Reason"},
-  "ヨハネスブルグ": {"line": "Storm Cat系", "via": "Hennessy → Storm Cat → Storm Bird"},
-  "テイルオブザキャット": {"line": "Storm Cat系", "via": "Storm Cat → Storm Bird → Northern Dancer"},
-  "アイルハヴアナザー": {"line": "Mr. Prospector系", "via": "Flower Alley → Distorted Humor → Forty Niner → Mr. Prospector"},
-  "ミッキーロケット": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "サトノクロニクル": {"line": "サンデーサイレンス系", "via": "ハーツクライ → サンデーサイレンス → Halo"},
-  "リオンディーズ": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "レッドファルクス": {"line": "Storm Cat系", "via": "スウェプトオーヴァーボード → End Sweep → Forty Niner"},
-  "スウェプトオーヴァーボード": {"line": "Mr. Prospector系", "via": "End Sweep → Forty Niner → Mr. Prospector"},
-  "ビッグアーサー": {"line": "Danehill系", "via": "サクラバクシンオー → サクラユタカオー → テスコボーイ"},
-  "サクラバクシンオー": {"line": "Princely Gift系", "via": "サクラユタカオー → テスコボーイ → Princely Gift"},
-  "ディスクリートキャット": {"line": "Storm Cat系", "via": "Forestry → Storm Cat → Storm Bird"},
-  "カレンブラックヒル": {"line": "サンデーサイレンス系", "via": "ダイワメジャー → サンデーサイレンス → Halo"},
-  "リアルインパクト": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "ダノンプレミアム": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "サリオス": {"line": "サンデーサイレンス系", "via": "ハーツクライ → サンデーサイレンス → Halo"},
-  "シルバーステート": {"line": "サンデーサイレンス系", "via": "ディープインパクト → サンデーサイレンス → Halo"},
-  "デクラレーションオブウォー": {"line": "Danzig系", "via": "War Front → Danzig → Northern Dancer"},
-  "ニューイヤーズデイ": {"line": "A.P. Indy系", "via": "Street Cry → Machiavellian → Mr. Prospector"},
-  "タリスマニック": {"line": "Galileo系", "via": "Medaglia d'Oro → El Prado → Sadler's Wells"},
-  "サートゥルナーリア": {"line": "サンデーサイレンス系", "via": "ロードカナロア → キングカメハメハ → Kingmambo"},
-  "ダノンスマッシュ": {"line": "サンデーサイレンス系", "via": "ロードカナロア → キングカメハメハ → Kingmambo"},
-  "パンサラッサ": {"line": "サンデーサイレンス系", "via": "ロードカナロア → キングカメハメハ → Kingmambo"},
-  "ブリックスアンドモルタル": {"line": "Storm Cat系", "via": "Giant's Causeway → Storm Cat → Storm Bird"},
-  "ナダル": {"line": "A.P. Indy系", "via": "Blame → Arch → Kris S. → Roberto"},
-  "ラウダシオン": {"line": "Mr. Prospector系", "via": "リアルインパクト → ディープインパクト → サンデーサイレンス"},
-  "クリソベリル": {"line": "サンデーサイレンス系", "via": "ゴールドアリュール → サンデーサイレンス → Halo"},
-  "テーオーケインズ": {"line": "Roberto系", "via": "シニスターミニスター → Old Trieste → A.P. Indy"},
-  "カフェファラオ": {"line": "A.P. Indy系", "via": "American Pharoah → Pioneerof the Nile → Empire Maker → Unbridled"},
-  "オメガパフューム": {"line": "Storm Cat系", "via": "スウェプトオーヴァーボード → End Sweep → Forty Niner"},
-  "チュウワウィザード": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "アメリカンペイトリオット": {"line": "Danzig系", "via": "War Front → Danzig → Northern Dancer"},
-  "ゴールドドリーム": {"line": "サンデーサイレンス系", "via": "ゴールドアリュール → サンデーサイレンス → Halo"},
-  "モズアスコット": {"line": "Danzig系", "via": "Frankel → Galileo → Sadler's Wells"},
-  "インティ": {"line": "A.P. Indy系", "via": "ケイムホーム → Gone West → Mr. Prospector"},
-  "マインドユアビスケッツ": {"line": "Mr. Prospector系", "via": "Posse → Silver Deputy → Deputy Minister"},
-  "タイムフライヤー": {"line": "サンデーサイレンス系", "via": "ハーツクライ → サンデーサイレンス → Halo"},
-  "レモンポップ": {"line": "Mr. Prospector系", "via": "Lemon Drop Kid → Kingmambo → Mr. Prospector"},
-  "ウシュバテソーロ": {"line": "サンデーサイレンス系", "via": "オルフェーヴル → ステイゴールド → サンデーサイレンス"},
-  "メイショウハリオ": {"line": "サンデーサイレンス系", "via": "オルフェーヴル → ステイゴールド → サンデーサイレンス"},
-  "ジュンライトボルト": {"line": "Kingmambo系", "via": "キングカメハメハ → Kingmambo → Mr. Prospector"},
-  "バトルクライ": {"line": "Roberto系", "via": "シンボリクリスエス → Kris S. → Roberto"}
+  "Accelerate": {
+    "line": "Mr. Prospector系",
+    "via": "Lookin At Lucky → Smart Strike → Mr. Prospector"
+  },
+  "Adios Charlie": {
+    "line": "Donatello系",
+    "via": "Indian Charlie → In Excess → Siberian Express → Caro → Donatello"
+  },
+  "Adlerflug": {
+    "line": "Sadler's Wells系",
+    "via": "In The Wings → Sadler's Wells"
+  },
+  "Air Force Blue": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "Al Wukair": {
+    "line": "In Reality系",
+    "via": "Dream Ahead → Diktat → Warning → Known Fact → In Reality"
+  },
+  "Almanzor": {
+    "line": "Mr. Prospector系",
+    "via": "Wootton Bassett → Iffraaj → Zafonic → Gone West → Mr. Prospector"
+  },
+  "American Pharoah": {
+    "line": "Fappiano系",
+    "via": "Pioneerof the Nile → エンパイアメーカー → Unbridled → Fappiano"
+  },
+  "Army Mule": {
+    "line": "A.P. Indy系",
+    "via": "Friesan Fire → A.P. Indy"
+  },
+  "Arrogate": {
+    "line": "Fappiano系",
+    "via": "Unbridled's Song → Unbridled → Fappiano"
+  },
+  "Audible": {
+    "line": "Storm Cat系",
+    "via": "Into Mischief → Harlan's Holiday → Storm Cat"
+  },
+  "Australia": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "Authentic": {
+    "line": "Storm Cat系",
+    "via": "Into Mischief → Harlan's Holiday → Storm Cat"
+  },
+  "Bated Breath": {
+    "line": "Danehill系",
+    "via": "Dansili → Danehill"
+  },
+  "Bayern": {
+    "line": "Nearco系",
+    "via": "Offlee Wild → Wild Again → Icecapade → Nearctic → Nearco"
+  },
+  "Beau Liam": {
+    "line": "Kingmambo系",
+    "via": "Lemon Drop Kid → Kingmambo"
+  },
+  "Bernardini": {
+    "line": "A.P. Indy系",
+    "via": "A.P. Indy → Seattle Slew"
+  },
+  "Blame": {
+    "line": "Roberto系",
+    "via": "Arch → Kris S. → Roberto"
+  },
+  "Blue Point": {
+    "line": "Storm Cat系",
+    "via": "Shamardal → Giant's Causeway → Storm Cat"
+  },
+  "Bobby's Kitten": {
+    "line": "Sadler's Wells系",
+    "via": "Kitten's Joy → El Prado → Sadler's Wells"
+  },
+  "Bolt d'Oro": {
+    "line": "Sadler's Wells系",
+    "via": "Medaglia d'Oro → El Prado → Sadler's Wells"
+  },
+  "Cairo Prince": {
+    "line": "Fappiano系",
+    "via": "Pioneerof the Nile → エンパイアメーカー → Unbridled → Fappiano"
+  },
+  "Cajun Breeze": {
+    "line": "Cee's Tizzy系",
+    "via": "French Fifteen → Colonel John → Tiznow → Cee's Tizzy"
+  },
+  "Camelot": {
+    "line": "Sadler's Wells系",
+    "via": "Montjeu → Sadler's Wells"
+  },
+  "Candy Ride": {
+    "line": "Fappiano系",
+    "via": "Ride the Rails → Cryptoclearance → Fappiano"
+  },
+  "Capitalist": {
+    "line": "Northern Dancer系",
+    "via": "Written Tycoon → Iglesia → Last Tycoon → Try My Best → Northern Dancer"
+  },
+  "Caravaggio": {
+    "line": "Storm Cat系",
+    "via": "Scat Daddy → Johannesburg → Hennessy → Storm Cat"
+  },
+  "Catalina Cruiser": {
+    "line": "Northern Dancer系",
+    "via": "Union Rags → Dixie Union → Dixieland Band → Northern Dancer"
+  },
+  "Catholic Boy": {
+    "line": "Hail to Reason系",
+    "via": "More Than Ready → Southern Halo → Halo → Hail to Reason"
+  },
+  "Central Banker": {
+    "line": "Mr. Prospector系",
+    "via": "Speightstown → Gone West → Mr. Prospector"
+  },
+  "Charlatan": {
+    "line": "Mr. Prospector系",
+    "via": "Speightstown → Gone West → Mr. Prospector"
+  },
+  "Churchill": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "City Zip": {
+    "line": "Mr. Prospector系",
+    "via": "Carson City → Mr. Prospector"
+  },
+  "City of Light": {
+    "line": "Mr. Prospector系",
+    "via": "Quality Road → Elusive Quality → Gone West → Mr. Prospector"
+  },
+  "Classic Empire": {
+    "line": "Fappiano系",
+    "via": "Pioneerof the Nile → エンパイアメーカー → Unbridled → Fappiano"
+  },
+  "Cloud Computing": {
+    "line": "Mr. Prospector系",
+    "via": "Maclean's Music → Distorted Humor → Forty Niner → Mr. Prospector"
+  },
+  "Collected": {
+    "line": "Mr. Prospector系",
+    "via": "City Zip → Carson City → Mr. Prospector"
+  },
+  "Complexity": {
+    "line": "Mr. Prospector系",
+    "via": "Maclean's Music → Distorted Humor → Forty Niner → Mr. Prospector"
+  },
+  "Connect": {
+    "line": "Mr. Prospector系",
+    "via": "Curlin → Smart Strike → Mr. Prospector"
+  },
+  "Constitution": {
+    "line": "A.P. Indy系",
+    "via": "Tapit → Pulpit → A.P. Indy"
+  },
+  "Cracksman": {
+    "line": "Sadler's Wells系",
+    "via": "Frankel → Galileo → Sadler's Wells"
+  },
+  "Curlin": {
+    "line": "Mr. Prospector系",
+    "via": "Smart Strike → Mr. Prospector"
+  },
+  "Daaher": {
+    "line": "Northern Dancer系",
+    "via": "Awesome Again → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "Dabirsim": {
+    "line": "サンデーサイレンス系",
+    "via": "Hat Trick → サンデーサイレンス"
+  },
+  "Dandy Man": {
+    "line": "Danehill系",
+    "via": "Mozart → Danehill"
+  },
+  "Danon Ballade": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "Dansili": {
+    "line": "Danehill系",
+    "via": "Danehill → Danzig"
+  },
+  "Daredevil": {
+    "line": "Hail to Reason系",
+    "via": "More Than Ready → Southern Halo → Halo → Hail to Reason"
+  },
+  "Dark Angel": {
+    "line": "Northern Dancer系",
+    "via": "Acclamation → Royal Applause → Waajib → Try My Best → Northern Dancer"
+  },
+  "Dawn Approach": {
+    "line": "Sadler's Wells系",
+    "via": "New Approach → Galileo → Sadler's Wells"
+  },
+  "Declaration of War": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "Deep Field": {
+    "line": "Northern Dancer系",
+    "via": "Northern Meteor → Encosta de Lago → Fairy King → Northern Dancer"
+  },
+  "Deep Impact": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "Dialed In": {
+    "line": "A.P. Indy系",
+    "via": "Mineshaft → A.P. Indy"
+  },
+  "Disco Partner": {
+    "line": "Pleasant Colony系",
+    "via": "Disco Rico → Disco Flag → Pleasant Colony"
+  },
+  "Distorted Humor": {
+    "line": "Mr. Prospector系",
+    "via": "Forty Niner → Mr. Prospector"
+  },
+  "Dragon Pulse": {
+    "line": "Nureyev系",
+    "via": "Kyllachy → Pivotal → Polar Falcon → Nureyev"
+  },
+  "Dubawi": {
+    "line": "Mr. Prospector系",
+    "via": "Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "Dundeel": {
+    "line": "Sadler's Wells系",
+    "via": "High Chaparral → Sadler's Wells"
+  },
+  "Dutch Art": {
+    "line": "Mr. Prospector系",
+    "via": "Medicean → Machiavellian → Mr. Prospector"
+  },
+  "Earthlight": {
+    "line": "Storm Cat系",
+    "via": "Shamardal → Giant's Causeway → Storm Cat"
+  },
+  "English Channel": {
+    "line": "Mr. Prospector系",
+    "via": "Smart Strike → Mr. Prospector"
+  },
+  "Essential Quality": {
+    "line": "A.P. Indy系",
+    "via": "Tapit → Pulpit → A.P. Indy"
+  },
+  "Exceedance": {
+    "line": "Danehill系",
+    "via": "Exceed And Excel → Danehill"
+  },
+  "Farhh": {
+    "line": "Nureyev系",
+    "via": "Pivotal → Polar Falcon → Nureyev"
+  },
+  "Farnan": {
+    "line": "Danehill系",
+    "via": "Not A Single Doubt → Redoute's Choice → Danehill"
+  },
+  "Fastnet Rock": {
+    "line": "Danehill系",
+    "via": "Danehill → Danzig"
+  },
+  "Fort Larned": {
+    "line": "Mr. Prospector系",
+    "via": "E Dubai → Mr. Prospector"
+  },
+  "Frankel": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "Free Drop Billy": {
+    "line": "Northern Dancer系",
+    "via": "Union Rags → Dixie Union → Dixieland Band → Northern Dancer"
+  },
+  "Frosted": {
+    "line": "A.P. Indy系",
+    "via": "Tapit → Pulpit → A.P. Indy"
+  },
+  "Galileo": {
+    "line": "Sadler's Wells系",
+    "via": "Sadler's Wells → Northern Dancer"
+  },
+  "Game Winner": {
+    "line": "Fappiano系",
+    "via": "Candy Ride → Ride the Rails → Cryptoclearance → Fappiano"
+  },
+  "Ghaiyyath": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "Ghostzapper": {
+    "line": "Northern Dancer系",
+    "via": "Awesome Again → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "Gleneagles": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "Global Campaign": {
+    "line": "Mr. Prospector系",
+    "via": "Curlin → Smart Strike → Mr. Prospector"
+  },
+  "Golden Horn": {
+    "line": "Danzig系",
+    "via": "Cape Cross → Green Desert → Danzig"
+  },
+  "Goldencents": {
+    "line": "Storm Cat系",
+    "via": "Into Mischief → Harlan's Holiday → Storm Cat"
+  },
+  "Good Magic": {
+    "line": "Mr. Prospector系",
+    "via": "Curlin → Smart Strike → Mr. Prospector"
+  },
+  "Gun Runner": {
+    "line": "Fappiano系",
+    "via": "Candy Ride → Ride the Rails → Cryptoclearance → Fappiano"
+  },
+  "Hard Spun": {
+    "line": "Danzig系",
+    "via": "Danzig"
+  },
+  "Harry Angel": {
+    "line": "Northern Dancer系",
+    "via": "Dark Angel → Acclamation → Royal Applause → Waajib → Try My Best → Northern Dancer"
+  },
+  "Hat Trick": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "Havana Gold": {
+    "line": "Sadler's Wells系",
+    "via": "Teofilo → Galileo → Sadler's Wells"
+  },
+  "Havana Grey": {
+    "line": "Sadler's Wells系",
+    "via": "Havana Gold → Teofilo → Galileo → Sadler's Wells"
+  },
+  "Highland Reel": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "Honor A. P.": {
+    "line": "A.P. Indy系",
+    "via": "Honor Code → A.P. Indy"
+  },
+  "I Am Invincible": {
+    "line": "Danzig系",
+    "via": "Invincible Spirit → Green Desert → Danzig"
+  },
+  "Iffraaj": {
+    "line": "Mr. Prospector系",
+    "via": "Zafonic → Gone West → Mr. Prospector"
+  },
+  "Improbable": {
+    "line": "Mr. Prospector系",
+    "via": "City Zip → Carson City → Mr. Prospector"
+  },
+  "Intello": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "Into Mischief": {
+    "line": "Storm Cat系",
+    "via": "Harlan's Holiday → Storm Cat"
+  },
+  "Invincible Spirit": {
+    "line": "Danzig系",
+    "via": "Green Desert → Danzig"
+  },
+  "Justify": {
+    "line": "Storm Cat系",
+    "via": "Scat Daddy → Johannesburg → Hennessy → Storm Cat"
+  },
+  "Kameko": {
+    "line": "Sadler's Wells系",
+    "via": "Kitten's Joy → El Prado → Sadler's Wells"
+  },
+  "Kantharos": {
+    "line": "Storm Cat系",
+    "via": "Lion Heart → Tale of the Cat → Storm Cat"
+  },
+  "Karakontie": {
+    "line": "Storm Cat系",
+    "via": "Bernstein → Storm Cat"
+  },
+  "Khozan": {
+    "line": "Mr. Prospector系",
+    "via": "Distorted Humor → Forty Niner → Mr. Prospector"
+  },
+  "Kingman": {
+    "line": "Danzig系",
+    "via": "Invincible Spirit → Green Desert → Danzig"
+  },
+  "Kitten's Joy": {
+    "line": "Sadler's Wells系",
+    "via": "El Prado → Sadler's Wells"
+  },
+  "Klimt": {
+    "line": "Mr. Prospector系",
+    "via": "Quality Road → Elusive Quality → Gone West → Mr. Prospector"
+  },
+  "Knicks Go": {
+    "line": "Northern Dancer系",
+    "via": "Paynter → Awesome Again → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "Known Agenda": {
+    "line": "Mr. Prospector系",
+    "via": "Curlin → Smart Strike → Mr. Prospector"
+  },
+  "Le Havre": {
+    "line": "ナスルーラ系",
+    "via": "Noverre → Rahy → Blushing Groom → Red God → ナスルーラ"
+  },
+  "Lea": {
+    "line": "Storm Cat系",
+    "via": "First Samurai → Giant's Causeway → Storm Cat"
+  },
+  "Leinster": {
+    "line": "Danehill系",
+    "via": "Danehill → Danzig"
+  },
+  "Lemon Drop Kid": {
+    "line": "Kingmambo系",
+    "via": "Kingmambo → Mr. Prospector"
+  },
+  "Liam's Map": {
+    "line": "Fappiano系",
+    "via": "Unbridled's Song → Unbridled → Fappiano"
+  },
+  "Lonhro": {
+    "line": "Nearco系",
+    "via": "Octagonal → Zabeel → Sir Tristram → Sir Ivor → Sir Gaylord → Turn-to → Royal Charger → Nearco"
+  },
+  "Lope de Vega": {
+    "line": "Storm Cat系",
+    "via": "Shamardal → Giant's Causeway → Storm Cat"
+  },
+  "Lord Kanaloa": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "Lucky Vega": {
+    "line": "Storm Cat系",
+    "via": "Lope de Vega → Shamardal → Giant's Causeway → Storm Cat"
+  },
+  "Maclean's Music": {
+    "line": "Mr. Prospector系",
+    "via": "Distorted Humor → Forty Niner → Mr. Prospector"
+  },
+  "Magna Grecia": {
+    "line": "Danzig系",
+    "via": "Invincible Spirit → Green Desert → Danzig"
+  },
+  "Make Believe": {
+    "line": "Mr. Prospector系",
+    "via": "Makfi → Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "Malibu Moon": {
+    "line": "A.P. Indy系",
+    "via": "A.P. Indy → Seattle Slew"
+  },
+  "Masar": {
+    "line": "Sadler's Wells系",
+    "via": "New Approach → Galileo → Sadler's Wells"
+  },
+  "Massaat": {
+    "line": "Sadler's Wells系",
+    "via": "Teofilo → Galileo → Sadler's Wells"
+  },
+  "Mastercraftsman": {
+    "line": "Danehill系",
+    "via": "Danehill Dancer → Danehill"
+  },
+  "Mastery": {
+    "line": "Fappiano系",
+    "via": "Candy Ride → Ride the Rails → Cryptoclearance → Fappiano"
+  },
+  "Maurice": {
+    "line": "Roberto系",
+    "via": "スクリーンヒーロー → グラスワンダー → Silver Hawk → Roberto"
+  },
+  "Maxfield": {
+    "line": "Mr. Prospector系",
+    "via": "Street Sense → Street Cry → Machiavellian → Mr. Prospector"
+  },
+  "Maximum Security": {
+    "line": "Mr. Prospector系",
+    "via": "ニューイヤーズデイ → Street Sense → Street Cry → Machiavellian → Mr. Prospector"
+  },
+  "McKinzie": {
+    "line": "Mr. Prospector系",
+    "via": "Street Sense → Street Cry → Machiavellian → Mr. Prospector"
+  },
+  "Medaglia d'Oro": {
+    "line": "Sadler's Wells系",
+    "via": "El Prado → Sadler's Wells"
+  },
+  "Mendelssohn": {
+    "line": "Storm Cat系",
+    "via": "Scat Daddy → Johannesburg → Hennessy → Storm Cat"
+  },
+  "Mitole": {
+    "line": "Storm Cat系",
+    "via": "エスケンデレヤ → Giant's Causeway → Storm Cat"
+  },
+  "Mo Town": {
+    "line": "Donatello系",
+    "via": "Uncle Mo → Indian Charlie → In Excess → Siberian Express → Caro → Donatello"
+  },
+  "Modernist": {
+    "line": "Donatello系",
+    "via": "Uncle Mo → Indian Charlie → In Excess → Siberian Express → Caro → Donatello"
+  },
+  "Mohaymen": {
+    "line": "A.P. Indy系",
+    "via": "Tapit → Pulpit → A.P. Indy"
+  },
+  "Mor Spirit": {
+    "line": "Storm Cat系",
+    "via": "エスケンデレヤ → Giant's Causeway → Storm Cat"
+  },
+  "More Than Ready": {
+    "line": "Hail to Reason系",
+    "via": "Southern Halo → Halo → Hail to Reason"
+  },
+  "Munnings": {
+    "line": "Mr. Prospector系",
+    "via": "Speightstown → Gone West → Mr. Prospector"
+  },
+  "Nathaniel": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "New Approach": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "New Bay": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "Night of Thunder": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "No Nay Never": {
+    "line": "Storm Cat系",
+    "via": "Scat Daddy → Johannesburg → Hennessy → Storm Cat"
+  },
+  "Not This Time": {
+    "line": "Storm Cat系",
+    "via": "Giant's Causeway → Storm Cat"
+  },
+  "Nyquist": {
+    "line": "Donatello系",
+    "via": "Uncle Mo → Indian Charlie → In Excess → Siberian Express → Caro → Donatello"
+  },
+  "Ocean Park": {
+    "line": "Scenic系",
+    "via": "Thorn Park → Crown Jester → Scenic"
+  },
+  "Omaha Beach": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "Optimizer": {
+    "line": "Mr. Prospector系",
+    "via": "English Channel → Smart Strike → Mr. Prospector"
+  },
+  "Oscar Performance": {
+    "line": "Sadler's Wells系",
+    "via": "Kitten's Joy → El Prado → Sadler's Wells"
+  },
+  "Palace Malice": {
+    "line": "Mr. Prospector系",
+    "via": "Curlin → Smart Strike → Mr. Prospector"
+  },
+  "Palace Pier": {
+    "line": "Danzig系",
+    "via": "Kingman → Invincible Spirit → Green Desert → Danzig"
+  },
+  "Pinatubo": {
+    "line": "Storm Cat系",
+    "via": "Shamardal → Giant's Causeway → Storm Cat"
+  },
+  "Pioneerof the Nile": {
+    "line": "Fappiano系",
+    "via": "エンパイアメーカー → Unbridled → Fappiano"
+  },
+  "Pivotal": {
+    "line": "Nureyev系",
+    "via": "Polar Falcon → Nureyev"
+  },
+  "Postponed": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "Practical Joke": {
+    "line": "Storm Cat系",
+    "via": "Into Mischief → Harlan's Holiday → Storm Cat"
+  },
+  "Preservationist": {
+    "line": "Roberto系",
+    "via": "Arch → Kris S. → Roberto"
+  },
+  "Protectionist": {
+    "line": "Dschingis Khan系",
+    "via": "Monsun → Konigsstuhl → Dschingis Khan"
+  },
+  "Quality Road": {
+    "line": "Mr. Prospector系",
+    "via": "Elusive Quality → Gone West → Mr. Prospector"
+  },
+  "Race Day": {
+    "line": "A.P. Indy系",
+    "via": "Tapit → Pulpit → A.P. Indy"
+  },
+  "Raven's Pass": {
+    "line": "Mr. Prospector系",
+    "via": "Elusive Quality → Gone West → Mr. Prospector"
+  },
+  "Rey de Oro": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "Runhappy": {
+    "line": "Majestic Light系",
+    "via": "Super Saver → Maria's Mon → Wavering Monarch → Majestic Light"
+  },
+  "Saxon Warrior": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "Sea The Moon": {
+    "line": "Danzig系",
+    "via": "Sea The Stars → Cape Cross → Green Desert → Danzig"
+  },
+  "Sea The Stars": {
+    "line": "Danzig系",
+    "via": "Cape Cross → Green Desert → Danzig"
+  },
+  "Shackleford": {
+    "line": "Storm Cat系",
+    "via": "Forestry → Storm Cat"
+  },
+  "Shalaa": {
+    "line": "Danzig系",
+    "via": "Invincible Spirit → Green Desert → Danzig"
+  },
+  "Shamardal": {
+    "line": "Storm Cat系",
+    "via": "Giant's Causeway → Storm Cat"
+  },
+  "Shancelot": {
+    "line": "Storm Cat系",
+    "via": "シャンハイボビー → Harlan's Holiday → Storm Cat"
+  },
+  "Sharp Azteca": {
+    "line": "Fappiano系",
+    "via": "Midnight Lute → Real Quiet → Quiet American → Fappiano"
+  },
+  "Showcasing": {
+    "line": "Danzig系",
+    "via": "Oasis Dream → Green Desert → Danzig"
+  },
+  "Silver State": {
+    "line": "Danzig系",
+    "via": "Hard Spun → Danzig"
+  },
+  "Sioux Nation": {
+    "line": "Storm Cat系",
+    "via": "Scat Daddy → Johannesburg → Hennessy → Storm Cat"
+  },
+  "Siyouni": {
+    "line": "Nureyev系",
+    "via": "Pivotal → Polar Falcon → Nureyev"
+  },
+  "Snitzel": {
+    "line": "Danehill系",
+    "via": "Redoute's Choice → Danehill"
+  },
+  "Soldier's Call": {
+    "line": "Danzig系",
+    "via": "Showcasing → Oasis Dream → Green Desert → Danzig"
+  },
+  "Sottsass": {
+    "line": "Nureyev系",
+    "via": "Siyouni → Pivotal → Polar Falcon → Nureyev"
+  },
+  "Speightstown": {
+    "line": "Mr. Prospector系",
+    "via": "Gone West → Mr. Prospector"
+  },
+  "St Mark's Basilica": {
+    "line": "Nureyev系",
+    "via": "Siyouni → Pivotal → Polar Falcon → Nureyev"
+  },
+  "St Patrick's Day": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "Stormy Atlantic": {
+    "line": "Storm Cat系",
+    "via": "Storm Cat → Storm Bird"
+  },
+  "Street Boss": {
+    "line": "Mr. Prospector系",
+    "via": "Street Cry → Machiavellian → Mr. Prospector"
+  },
+  "Study of Man": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "Sweynesse": {
+    "line": "Storm Cat系",
+    "via": "Lope de Vega → Shamardal → Giant's Causeway → Storm Cat"
+  },
+  "Take Charge Indy": {
+    "line": "A.P. Indy系",
+    "via": "A.P. Indy → Seattle Slew"
+  },
+  "Tapit": {
+    "line": "A.P. Indy系",
+    "via": "Pulpit → A.P. Indy"
+  },
+  "Teofilo": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "The Autumn Sun": {
+    "line": "Danehill系",
+    "via": "Redoute's Choice → Danehill"
+  },
+  "Thousand Words": {
+    "line": "Fappiano系",
+    "via": "Pioneerof the Nile → エンパイアメーカー → Unbridled → Fappiano"
+  },
+  "Tiz the Law": {
+    "line": "A.P. Indy系",
+    "via": "Constitution → Tapit → Pulpit → A.P. Indy"
+  },
+  "Tom's d'Etat": {
+    "line": "Mr. Prospector系",
+    "via": "Smart Strike → Mr. Prospector"
+  },
+  "Too Darn Hot": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "Toronado": {
+    "line": "Sadler's Wells系",
+    "via": "High Chaparral → Sadler's Wells"
+  },
+  "Trapeze Artist": {
+    "line": "Danehill系",
+    "via": "Snitzel → Redoute's Choice → Danehill"
+  },
+  "Twilight Son": {
+    "line": "Nureyev系",
+    "via": "Kyllachy → Pivotal → Polar Falcon → Nureyev"
+  },
+  "Twirling Candy": {
+    "line": "Fappiano系",
+    "via": "Candy Ride → Ride the Rails → Cryptoclearance → Fappiano"
+  },
+  "U S Navy Flag": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "Ulysses": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "Uncle Mo": {
+    "line": "Donatello系",
+    "via": "Indian Charlie → In Excess → Siberian Express → Caro → Donatello"
+  },
+  "Unified": {
+    "line": "Fappiano系",
+    "via": "Candy Ride → Ride the Rails → Cryptoclearance → Fappiano"
+  },
+  "Union Rags": {
+    "line": "Northern Dancer系",
+    "via": "Dixie Union → Dixieland Band → Northern Dancer"
+  },
+  "Upstart": {
+    "line": "A.P. Indy系",
+    "via": "Flatter → A.P. Indy"
+  },
+  "Vekoma": {
+    "line": "Fappiano系",
+    "via": "Candy Ride → Ride the Rails → Cryptoclearance → Fappiano"
+  },
+  "Victor Ludorum": {
+    "line": "Storm Cat系",
+    "via": "Shamardal → Giant's Causeway → Storm Cat"
+  },
+  "Vino Rosso": {
+    "line": "Mr. Prospector系",
+    "via": "Curlin → Smart Strike → Mr. Prospector"
+  },
+  "Volatile": {
+    "line": "Sadler's Wells系",
+    "via": "Violence → Medaglia d'Oro → El Prado → Sadler's Wells"
+  },
+  "War Front": {
+    "line": "Danzig系",
+    "via": "Danzig"
+  },
+  "War of Will": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "Will Take Charge": {
+    "line": "Storm Cat系",
+    "via": "Scat Daddy → Johannesburg → Hennessy → Storm Cat"
+  },
+  "Wootton Bassett": {
+    "line": "Mr. Prospector系",
+    "via": "Iffraaj → Zafonic → Gone West → Mr. Prospector"
+  },
+  "Written Tycoon": {
+    "line": "Northern Dancer系",
+    "via": "Iglesia → Last Tycoon → Try My Best → Northern Dancer"
+  },
+  "Yaupon": {
+    "line": "Donatello系",
+    "via": "Uncle Mo → Indian Charlie → In Excess → Siberian Express → Caro → Donatello"
+  },
+  "Yoshida": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "Zarak": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "Zoustar": {
+    "line": "Northern Dancer系",
+    "via": "Northern Meteor → Encosta de Lago → Fairy King → Northern Dancer"
+  },
+  "アイファーソング": {
+    "line": "Storm Cat系",
+    "via": "ゴスホークケン → Bernstein → Storm Cat"
+  },
+  "アイルハヴアナザー": {
+    "line": "Mr. Prospector系",
+    "via": "Flower Alley → Distorted Humor → Forty Niner → Mr. Prospector"
+  },
+  "アグニシャイン": {
+    "line": "Mr. Prospector系",
+    "via": "サウスヴィグラス → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "アジアエクスプレス": {
+    "line": "Storm Cat系",
+    "via": "ヘニーヒューズ → Hennessy → Storm Cat"
+  },
+  "アスカクリチャン": {
+    "line": "サンデーサイレンス系",
+    "via": "グランプリボス → ダイワメジャー → サンデーサイレンス"
+  },
+  "アスクピーターパン": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "アドマイヤコジーン": {
+    "line": "Donatello系",
+    "via": "Cozzene → Caro → Donatello"
+  },
+  "アドマイヤマックス": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "アドマイヤマーズ": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "アドマイヤムーン": {
+    "line": "Mr. Prospector系",
+    "via": "エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "アドミラブル": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "アニマルキングダム": {
+    "line": "ナスルーラ系",
+    "via": "Leroidesanimaux → Candy Stripes → Blushing Groom → Red God → ナスルーラ"
+  },
+  "アポロキングダム": {
+    "line": "ナスルーラ系",
+    "via": "ビッグアーサー → サクラバクシンオー → サクラユタカオー → テスコボーイ → Princely Gift → ナスルーラ"
+  },
+  "アポロケンタッキー": {
+    "line": "Fappiano系",
+    "via": "エンパイアメーカー → Unbridled → Fappiano"
+  },
+  "アポロソニック": {
+    "line": "ナスルーラ系",
+    "via": "ビッグアーサー → サクラバクシンオー → サクラユタカオー → テスコボーイ → Princely Gift → ナスルーラ"
+  },
+  "アメリカンペイトリオット": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "アルアイン": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "アルデバラン２": {
+    "line": "Mr. Prospector系",
+    "via": "Aldebaran → Mr. Prospector"
+  },
+  "アルバート": {
+    "line": "Mr. Prospector系",
+    "via": "アドマイヤドン → ティンバーカントリー → Woodman → Mr. Prospector"
+  },
+  "アレスバローズ": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "アロマカフェ": {
+    "line": "サンデーサイレンス系",
+    "via": "エイシンサンディ → サンデーサイレンス"
+  },
+  "アンライバルド": {
+    "line": "サンデーサイレンス系",
+    "via": "ネオユニヴァース → サンデーサイレンス"
+  },
+  "アーネストリー": {
+    "line": "Roberto系",
+    "via": "グラスワンダー → Silver Hawk → Roberto"
+  },
+  "イスラボニータ": {
+    "line": "サンデーサイレンス系",
+    "via": "フジキセキ → サンデーサイレンス"
+  },
+  "インカンテーション": {
+    "line": "A.P. Indy系",
+    "via": "シニスターミニスター → Old Trieste → A.P. Indy"
+  },
+  "インディチャンプ": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "ウインバリアシオン": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "ウインブライト": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "ウォータービルド": {
+    "line": "Northern Dancer系",
+    "via": "ケンタッキアン → キングヘイロー → ダンシングブレーヴ → Lyphard → Northern Dancer"
+  },
+  "エイシンヒカリ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "エイシンフラッシュ": {
+    "line": "Danehill系",
+    "via": "キングズベスト → Danehill"
+  },
+  "エスケンデレヤ": {
+    "line": "Storm Cat系",
+    "via": "Giant's Causeway → Storm Cat"
+  },
+  "エスポワールシチー": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "エタリオウ": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "エピカリス": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "エピファネイア": {
+    "line": "Roberto系",
+    "via": "シンボリクリスエス → Kris S. → Roberto"
+  },
+  "エポカドーロ": {
+    "line": "サンデーサイレンス系",
+    "via": "オルフェーヴル → ステイゴールド → サンデーサイレンス"
+  },
+  "エンパイアペガサス": {
+    "line": "Fappiano系",
+    "via": "エンパイアメーカー → Unbridled → Fappiano"
+  },
+  "エンパイアメーカー": {
+    "line": "Fappiano系",
+    "via": "Unbridled → Fappiano"
+  },
+  "エーシントップ": {
+    "line": "Mr. Prospector系",
+    "via": "サウスヴィグラス → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "オウケンブルースリ": {
+    "line": "トニービン系",
+    "via": "ジャングルポケット → トニービン"
+  },
+  "オウケンワールド": {
+    "line": "トニービン系",
+    "via": "オウケンブルースリ → ジャングルポケット → トニービン"
+  },
+  "オルフェーヴル": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "オンファイア": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "オーシャンブルー": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "オーヴァルエース": {
+    "line": "サンデーサイレンス系",
+    "via": "マツリダゴッホ → サンデーサイレンス"
+  },
+  "カジノドライヴ": {
+    "line": "A.P. Indy系",
+    "via": "Mineshaft → A.P. Indy"
+  },
+  "カネヒキリ": {
+    "line": "サンデーサイレンス系",
+    "via": "フジキセキ → サンデーサイレンス"
+  },
+  "カフェラピード": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "カフジテイク": {
+    "line": "Kingmambo系",
+    "via": "リオンディーズ → キングカメハメハ → Kingmambo"
+  },
+  "カリズマティック": {
+    "line": "Northern Dancer系",
+    "via": "Summer Squall → Storm Bird → Northern Dancer"
+  },
+  "カリフォルニアクローム": {
+    "line": "A.P. Indy系",
+    "via": "Lucky Pulpit → Pulpit → A.P. Indy"
+  },
+  "カルストンライトオ": {
+    "line": "ナスルーラ系",
+    "via": "サクラバクシンオー → サクラユタカオー → テスコボーイ → Princely Gift → ナスルーラ"
+  },
+  "カレンブラックヒル": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "ガルボ": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "キズナ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "キセキ": {
+    "line": "Kingmambo系",
+    "via": "ルーラーシップ → キングカメハメハ → Kingmambo"
+  },
+  "キタサンブラック": {
+    "line": "サンデーサイレンス系",
+    "via": "ブラックタイド → サンデーサイレンス"
+  },
+  "キタサンミカヅキ": {
+    "line": "サンデーサイレンス系",
+    "via": "キタサンブラック → ブラックタイド → サンデーサイレンス"
+  },
+  "キタノコマンドール": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "キャプテンキング": {
+    "line": "Kingmambo系",
+    "via": "ロードカナロア → キングカメハメハ → Kingmambo"
+  },
+  "キャプテントゥーレ": {
+    "line": "サンデーサイレンス系",
+    "via": "アグネスタキオン → サンデーサイレンス"
+  },
+  "キングカメハメハ": {
+    "line": "Kingmambo系",
+    "via": "Kingmambo → Mr. Prospector"
+  },
+  "キングズベスト": {
+    "line": "Danehill系",
+    "via": "Danehill → Danzig"
+  },
+  "キングヘイロー": {
+    "line": "Northern Dancer系",
+    "via": "ダンシングブレーヴ → Lyphard → Northern Dancer"
+  },
+  "キングリオ": {
+    "line": "Northern Dancer系",
+    "via": "キングヘイロー → ダンシングブレーヴ → Lyphard → Northern Dancer"
+  },
+  "キンシャサノキセキ": {
+    "line": "サンデーサイレンス系",
+    "via": "フジキセキ → サンデーサイレンス"
+  },
+  "ギンザグリングラス": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "クラウンレガーロ": {
+    "line": "Mr. Prospector系",
+    "via": "サウスヴィグラス → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "クリエイター２": {
+    "line": "A.P. Indy系",
+    "via": "Tapit → Pulpit → A.P. Indy"
+  },
+  "クリソベリル": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "クリーンエコロジー": {
+    "line": "Northern Dancer系",
+    "via": "クロフネ → French Deputy → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "クレスコグランド": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "クロフネ": {
+    "line": "Northern Dancer系",
+    "via": "French Deputy → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "クワイトファイン": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "グァンチャーレ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "グラスワンダー": {
+    "line": "Roberto系",
+    "via": "Silver Hawk → Roberto"
+  },
+  "グランデッツァ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "グランプリボス": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "グレーターロンドン": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ケイムホーム": {
+    "line": "Mr. Prospector系",
+    "via": "Gone West → Mr. Prospector"
+  },
+  "ケープブランコ": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "コパノチャーリー": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "コパノリチャード": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "コパノリッキー": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "コントレイル": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ゴスホークケン": {
+    "line": "Storm Cat系",
+    "via": "Bernstein → Storm Cat"
+  },
+  "ゴルトマイスター": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "ゴールスキー": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "ゴールデンバローズ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ゴールデンマンデラ": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "ゴールドアクター": {
+    "line": "Roberto系",
+    "via": "スクリーンヒーロー → グラスワンダー → Silver Hawk → Roberto"
+  },
+  "ゴールドアリュール": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ゴールドシップ": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "ゴールドドリーム": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "ゴールドヘイロー": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "サイモンラムセス": {
+    "line": "Mr. Prospector系",
+    "via": "サウスヴィグラス → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "サウスヴィグラス": {
+    "line": "Mr. Prospector系",
+    "via": "エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "サクラオリオン": {
+    "line": "ナスルーラ系",
+    "via": "サクラバクシンオー → サクラユタカオー → テスコボーイ → Princely Gift → ナスルーラ"
+  },
+  "サトノアラジン": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "サトノアレス": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "サトノインプレッサ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "サトノクラウン": {
+    "line": "Northern Dancer系",
+    "via": "Marju → Last Tycoon → Try My Best → Northern Dancer"
+  },
+  "サトノジェネシス": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "サトノダイヤモンド": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "サムライハート": {
+    "line": "サンデーサイレンス系",
+    "via": "マーベラスサンデー → サンデーサイレンス"
+  },
+  "サングラス": {
+    "line": "サンデーサイレンス系",
+    "via": "ジャスタウェイ → ハーツクライ → サンデーサイレンス"
+  },
+  "サングレーザー": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "サンダースノー": {
+    "line": "Danehill系",
+    "via": "Helmet → Exceed And Excel → Danehill"
+  },
+  "サンライズソア": {
+    "line": "サンデーサイレンス系",
+    "via": "ゼンノロブロイ → サンデーサイレンス"
+  },
+  "サートゥルナーリア": {
+    "line": "Kingmambo系",
+    "via": "ロードカナロア → キングカメハメハ → Kingmambo"
+  },
+  "ザサンデーフサイチ": {
+    "line": "サンデーサイレンス系",
+    "via": "ダンスインザダーク → サンデーサイレンス"
+  },
+  "ザファクター": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "シゲルカガ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "シスキン": {
+    "line": "Fappiano系",
+    "via": "First Defence → Unbridled's Song → Unbridled → Fappiano"
+  },
+  "シニスターミニスター": {
+    "line": "A.P. Indy系",
+    "via": "Old Trieste → A.P. Indy"
+  },
+  "シビルウォー": {
+    "line": "A.P. Indy系",
+    "via": "マジェスティックウォリアー → A.P. Indy"
+  },
+  "シャンハイボビー": {
+    "line": "Storm Cat系",
+    "via": "Harlan's Holiday → Storm Cat"
+  },
+  "シュウジ": {
+    "line": "サンデーサイレンス系",
+    "via": "キンシャサノキセキ → フジキセキ → サンデーサイレンス"
+  },
+  "シュヴァルグラン": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "ショウナンカンプ": {
+    "line": "ナスルーラ系",
+    "via": "サクラバクシンオー → サクラユタカオー → テスコボーイ → Princely Gift → ナスルーラ"
+  },
+  "ショウナンバッハ": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "シルバーステート": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "シルポート": {
+    "line": "Roberto系",
+    "via": "シンボリクリスエス → Kris S. → Roberto"
+  },
+  "シンボリクリスエス": {
+    "line": "Roberto系",
+    "via": "Kris S. → Roberto"
+  },
+  "ジャスタウェイ": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "ジャングルポケット": {
+    "line": "トニービン系",
+    "via": "トニービン → Kampala"
+  },
+  "ジョーカプチーノ": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "スウェプトオーヴァーボード": {
+    "line": "Mr. Prospector系",
+    "via": "エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "スクリーンヒーロー": {
+    "line": "Roberto系",
+    "via": "グラスワンダー → Silver Hawk → Roberto"
+  },
+  "スクワートルスクワート": {
+    "line": "Mr. Prospector系",
+    "via": "Marquetry → Mr. Prospector"
+  },
+  "スズカコーズウェイ": {
+    "line": "サンデーサイレンス系",
+    "via": "フジキセキ → サンデーサイレンス"
+  },
+  "スズカフェニックス": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ステイゴールド": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ストロングリターン": {
+    "line": "Roberto系",
+    "via": "シンボリクリスエス → Kris S. → Roberto"
+  },
+  "ストーミングホーム": {
+    "line": "Mr. Prospector系",
+    "via": "Machiavellian → Mr. Prospector"
+  },
+  "ストーミーシー": {
+    "line": "Storm Cat系",
+    "via": "Storm Cat → Storm Bird"
+  },
+  "スノードラゴン": {
+    "line": "Donatello系",
+    "via": "アドマイヤコジーン → Cozzene → Caro → Donatello"
+  },
+  "スピリッツミノル": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "スピルバーグ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "スマートオーディン": {
+    "line": "サンデーサイレンス系",
+    "via": "ダノンバラード → ディープインパクト → サンデーサイレンス"
+  },
+  "スマートファルコン": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "スワーヴリチャード": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "セイウンコウセイ": {
+    "line": "Donatello系",
+    "via": "アドマイヤコジーン → Cozzene → Caro → Donatello"
+  },
+  "セイクリムズン": {
+    "line": "サンデーサイレンス系",
+    "via": "エイシンサンディ → サンデーサイレンス"
+  },
+  "セレスハント": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "ゼンノロブロイ": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "タイセイレジェンド": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "タイムパラドックス": {
+    "line": "Roberto系",
+    "via": "ブライアンズタイム → Roberto"
+  },
+  "タツゴウゲキ": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "タニノギムレット": {
+    "line": "Roberto系",
+    "via": "ブライアンズタイム → Roberto"
+  },
+  "タニノフランケル": {
+    "line": "Sadler's Wells系",
+    "via": "Frankel → Galileo → Sadler's Wells"
+  },
+  "タリスマニック": {
+    "line": "Sadler's Wells系",
+    "via": "Medaglia d'Oro → El Prado → Sadler's Wells"
+  },
+  "タワーオブロンドン": {
+    "line": "Mr. Prospector系",
+    "via": "Raven's Pass → Elusive Quality → Gone West → Mr. Prospector"
+  },
+  "タートルボウル": {
+    "line": "Lorenzaccio系",
+    "via": "Dyhim Diamond → Indian Ridge → Ahonoora → Lorenzaccio"
+  },
+  "ダイシンサンダー": {
+    "line": "Mr. Prospector系",
+    "via": "サンダーガルチ → Gulch → Mr. Prospector"
+  },
+  "ダイシンバルカン": {
+    "line": "Mr. Prospector系",
+    "via": "サウスヴィグラス → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "ダイワメジャー": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ダノンキングリー": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ダノンシャンティ": {
+    "line": "サンデーサイレンス系",
+    "via": "フジキセキ → サンデーサイレンス"
+  },
+  "ダノンシャーク": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ダノンスマッシュ": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "ダノンバラード": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ダノンプレミアム": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ダノンレジェンド": {
+    "line": "Great Above系",
+    "via": "Macho Uno → Holy Bull → Great Above"
+  },
+  "ダンカーク": {
+    "line": "Fappiano系",
+    "via": "Unbridled's Song → Unbridled → Fappiano"
+  },
+  "ダンスディレクター": {
+    "line": "Mr. Prospector系",
+    "via": "アルデバラン → Mr. Prospector"
+  },
+  "チェリークラウン": {
+    "line": "Hail to Reason系",
+    "via": "タイキシャトル → Devil's Bag → Halo → Hail to Reason"
+  },
+  "テーオーヘリオス": {
+    "line": "Mr. Prospector系",
+    "via": "サウスヴィグラス → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "ディスクリートキャット": {
+    "line": "Storm Cat系",
+    "via": "Forestry → Storm Cat"
+  },
+  "ディープインパクト": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ディープエクシード": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ディープスカイ": {
+    "line": "サンデーサイレンス系",
+    "via": "アグネスタキオン → サンデーサイレンス"
+  },
+  "ディープブリランテ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ディーマジェスティ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "デクラレーションオブウォー": {
+    "line": "Danzig系",
+    "via": "War Front → Danzig"
+  },
+  "トゥザグローリー": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "トゥザワールド": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "トウケイヘイロー": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドヘイロー → サンデーサイレンス"
+  },
+  "トビーズコーナー": {
+    "line": "Mr. Prospector系",
+    "via": "Bustin Stones → City Zip → Carson City → Mr. Prospector"
+  },
+  "トランセンド": {
+    "line": "Nearco系",
+    "via": "ワイルドラッシュ → Wild Again → Icecapade → Nearctic → Nearco"
+  },
+  "トーセンジョーダン": {
+    "line": "サンデーサイレンス系",
+    "via": "ゼンノロブロイ → サンデーサイレンス"
+  },
+  "トーセンファントム": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "トーセンブライト": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "トーセンホマレボシ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "トーセンラー": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "トーセンレーヴ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "トーホウジャッカル": {
+    "line": "サンデーサイレンス系",
+    "via": "スペシャルウィーク → サンデーサイレンス"
+  },
+  "ドゥラメンテ": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "ドリームジャーニー": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "ドリームバレンチノ": {
+    "line": "Hail to Reason系",
+    "via": "ロージズインメイ → Devil His Due → Devil's Bag → Halo → Hail to Reason"
+  },
+  "ドレフォン": {
+    "line": "Storm Cat系",
+    "via": "Gio Ponti → Tale of the Cat → Storm Cat"
+  },
+  "ナカヤマフェスタ": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "ナダル": {
+    "line": "Roberto系",
+    "via": "Blame → Arch → Kris S. → Roberto"
+  },
+  "ナムラタイタン": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "ニシケンモノノフ": {
+    "line": "Mr. Prospector系",
+    "via": "アイルハヴアナザー → Flower Alley → Distorted Humor → Forty Niner → Mr. Prospector"
+  },
+  "ニホンピロアワーズ": {
+    "line": "Roberto系",
+    "via": "ブライアンズタイム → Roberto"
+  },
+  "ニューイヤーズデイ": {
+    "line": "Mr. Prospector系",
+    "via": "Street Sense → Street Cry → Machiavellian → Mr. Prospector"
+  },
+  "ネオユニヴァース": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ネロ": {
+    "line": "Storm Cat系",
+    "via": "ヘニーヒューズ → Hennessy → Storm Cat"
+  },
+  "ノボジャック": {
+    "line": "Mr. Prospector系",
+    "via": "ティンバーカントリー → Woodman → Mr. Prospector"
+  },
+  "ノヴェリスト": {
+    "line": "Dschingis Khan系",
+    "via": "Monsun → Konigsstuhl → Dschingis Khan"
+  },
+  "ノーブルミッション": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "ハギノハイブリッド": {
+    "line": "ナスルーラ系",
+    "via": "サクラバクシンオー → サクラユタカオー → テスコボーイ → Princely Gift → ナスルーラ"
+  },
+  "ハクサンムーン": {
+    "line": "Mr. Prospector系",
+    "via": "アドマイヤムーン → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "ハッピースプリント": {
+    "line": "Mr. Prospector系",
+    "via": "サウスヴィグラス → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "ハーツクライ": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ハービンジャー": {
+    "line": "Danehill系",
+    "via": "Danehill → Danzig"
+  },
+  "バゴ": {
+    "line": "ナスルーラ系",
+    "via": "Nashwan → Blushing Groom → Red God → ナスルーラ"
+  },
+  "バトルプラン": {
+    "line": "Northern Dancer系",
+    "via": "クロフネ → French Deputy → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "バンドワゴン": {
+    "line": "サンデーサイレンス系",
+    "via": "ゼンノロブロイ → サンデーサイレンス"
+  },
+  "バンブーエール": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "バーディバーディ": {
+    "line": "サンデーサイレンス系",
+    "via": "ジョーカプチーノ → マンハッタンカフェ → サンデーサイレンス"
+  },
+  "パイロ": {
+    "line": "A.P. Indy系",
+    "via": "Pulpit → A.P. Indy"
+  },
+  "パドトロワ": {
+    "line": "Donatello系",
+    "via": "アドマイヤコジーン → Cozzene → Caro → Donatello"
+  },
+  "ビッグアーサー": {
+    "line": "ナスルーラ系",
+    "via": "サクラバクシンオー → サクラユタカオー → テスコボーイ → Princely Gift → ナスルーラ"
+  },
+  "ビーチパトロール": {
+    "line": "Kingmambo系",
+    "via": "Lemon Drop Kid → Kingmambo"
+  },
+  "ファインニードル": {
+    "line": "Mr. Prospector系",
+    "via": "アドマイヤムーン → エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "フィエールマン": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "フィレンツェファイア": {
+    "line": "Mr. Prospector系",
+    "via": "Poseidon's Warrior → Speightstown → Gone West → Mr. Prospector"
+  },
+  "フェノーメノ": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "フォーウィールドライブ": {
+    "line": "サンデーサイレンス系",
+    "via": "ゴールドアリュール → サンデーサイレンス"
+  },
+  "フサイチセブン": {
+    "line": "Northern Dancer系",
+    "via": "クロフネ → French Deputy → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "フリオーソ": {
+    "line": "Roberto系",
+    "via": "ブライアンズタイム → Roberto"
+  },
+  "ブラックタイド": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ブリックスアンドモルタル": {
+    "line": "Storm Cat系",
+    "via": "Giant's Causeway → Storm Cat"
+  },
+  "ブルドッグボス": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "プリサイスエンド": {
+    "line": "Mr. Prospector系",
+    "via": "エンドスウィープ → Forty Niner → Mr. Prospector"
+  },
+  "ヘニーハウンド": {
+    "line": "Storm Cat系",
+    "via": "ヘニーヒューズ → Hennessy → Storm Cat"
+  },
+  "ヘニーヒューズ": {
+    "line": "Storm Cat系",
+    "via": "Hennessy → Storm Cat"
+  },
+  "ヘンリーバローズ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ベストウォーリア": {
+    "line": "A.P. Indy系",
+    "via": "マジェスティックウォリアー → A.P. Indy"
+  },
+  "ベルシャザール": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "ベンバトル": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "ベーカバド": {
+    "line": "Danzig系",
+    "via": "Cape Cross → Green Desert → Danzig"
+  },
+  "ホッコータルマエ": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "ホークビル": {
+    "line": "Sadler's Wells系",
+    "via": "Kitten's Joy → El Prado → Sadler's Wells"
+  },
+  "ポアゾンブラック": {
+    "line": "Mr. Prospector系",
+    "via": "マイネルラヴ → Seeking the Gold → Mr. Prospector"
+  },
+  "ポエティックフレア": {
+    "line": "Sadler's Wells系",
+    "via": "Dawn Approach → New Approach → Galileo → Sadler's Wells"
+  },
+  "マインドユアビスケッツ": {
+    "line": "Northern Dancer系",
+    "via": "Posse → Silver Deputy → Deputy Minister → Vice Regent → Northern Dancer"
+  },
+  "マクフィ": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "マクマホン": {
+    "line": "Martino Alonso系",
+    "via": "Ramonti → Martino Alonso"
+  },
+  "マジェスティックウォリアー": {
+    "line": "A.P. Indy系",
+    "via": "A.P. Indy → Seattle Slew"
+  },
+  "マスクゾロ": {
+    "line": "Mr. Prospector系",
+    "via": "Roman Ruler → Fusaichi Pegasus → Mr. Prospector"
+  },
+  "マツリダゴッホ": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "マテラスカイ": {
+    "line": "Mr. Prospector系",
+    "via": "Speightstown → Gone West → Mr. Prospector"
+  },
+  "マルターズアポジー": {
+    "line": "Storm Cat系",
+    "via": "ゴスホークケン → Bernstein → Storm Cat"
+  },
+  "マンハッタンカフェ": {
+    "line": "サンデーサイレンス系",
+    "via": "サンデーサイレンス → Halo"
+  },
+  "ミスターメロディ": {
+    "line": "Storm Cat系",
+    "via": "Scat Daddy → Johannesburg → Hennessy → Storm Cat"
+  },
+  "ミスチヴィアスアレックス": {
+    "line": "Storm Cat系",
+    "via": "Into Mischief → Harlan's Holiday → Storm Cat"
+  },
+  "ミッキーアイル": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ミッキーグローリー": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ミッキースワロー": {
+    "line": "サンデーサイレンス系",
+    "via": "トーセンホマレボシ → ディープインパクト → サンデーサイレンス"
+  },
+  "ミッキーロケット": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "ミュゼスルタン": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ミラアイトーン": {
+    "line": "サンデーサイレンス系",
+    "via": "スズカフェニックス → サンデーサイレンス"
+  },
+  "メイショウサムソン": {
+    "line": "Sadler's Wells系",
+    "via": "オペラハウス → Sadler's Wells"
+  },
+  "メイショウボーラー": {
+    "line": "Hail to Reason系",
+    "via": "タイキシャトル → Devil's Bag → Halo → Hail to Reason"
+  },
+  "メジロダイボサツ": {
+    "line": "Donatello系",
+    "via": "メジロマックイーン → メジロティターン → メジロアサマ → パーソロン → Donatello"
+  },
+  "モズアスコット": {
+    "line": "Sadler's Wells系",
+    "via": "Frankel → Galileo → Sadler's Wells"
+  },
+  "モンテロッソ": {
+    "line": "Mr. Prospector系",
+    "via": "Dubawi → Dubai Millennium → Seeking the Gold → Mr. Prospector"
+  },
+  "モーニン": {
+    "line": "Storm Cat系",
+    "via": "ヘニーヒューズ → Hennessy → Storm Cat"
+  },
+  "モーリス": {
+    "line": "Roberto系",
+    "via": "スクリーンヒーロー → グラスワンダー → Silver Hawk → Roberto"
+  },
+  "ヤマカツエース": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "ヤマニンセラフィム": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "ヤングマンパワー": {
+    "line": "Danehill系",
+    "via": "スニッツェル → Redoute's Choice → Danehill"
+  },
+  "ユアーズトゥルーリ": {
+    "line": "Storm Cat系",
+    "via": "Storm Cat → Storm Bird"
+  },
+  "ラニ": {
+    "line": "A.P. Indy系",
+    "via": "Tapit → Pulpit → A.P. Indy"
+  },
+  "ラブリーデイ": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "リアルインパクト": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "リアルスティール": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "リオンディーズ": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "リオンリオン": {
+    "line": "Kingmambo系",
+    "via": "ルーラーシップ → キングカメハメハ → Kingmambo"
+  },
+  "リヤンドファミユ": {
+    "line": "Kingmambo系",
+    "via": "ルーラーシップ → キングカメハメハ → Kingmambo"
+  },
+  "リーチザクラウン": {
+    "line": "サンデーサイレンス系",
+    "via": "スペシャルウィーク → サンデーサイレンス"
+  },
+  "ルヴァンスレーヴ": {
+    "line": "Roberto系",
+    "via": "シンボリクリスエス → Kris S. → Roberto"
+  },
+  "ルーラーシップ": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "レイデオロ": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "レインボーライン": {
+    "line": "サンデーサイレンス系",
+    "via": "ステイゴールド → サンデーサイレンス"
+  },
+  "レオアクティブ": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "レガーロ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "レッドスパーダ": {
+    "line": "サンデーサイレンス系",
+    "via": "マンハッタンカフェ → サンデーサイレンス"
+  },
+  "レッドファルクス": {
+    "line": "サンデーサイレンス系",
+    "via": "ダイワメジャー → サンデーサイレンス"
+  },
+  "レッドベルジュール": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "レーヴミストラル": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ロゴタイプ": {
+    "line": "Sadler's Wells系",
+    "via": "ローエングリン → Singspiel → In The Wings → Sadler's Wells"
+  },
+  "ロジャーバローズ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ロジユニヴァース": {
+    "line": "サンデーサイレンス系",
+    "via": "ネオユニヴァース → サンデーサイレンス"
+  },
+  "ロンギングダンサー": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ロンドンタウン": {
+    "line": "サンデーサイレンス系",
+    "via": "カネヒキリ → フジキセキ → サンデーサイレンス"
+  },
+  "ローエングリン": {
+    "line": "Sadler's Wells系",
+    "via": "Singspiel → In The Wings → Sadler's Wells"
+  },
+  "ロージズインメイ": {
+    "line": "Hail to Reason系",
+    "via": "Devil His Due → Devil's Bag → Halo → Hail to Reason"
+  },
+  "ローズキングダム": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "ロードカナロア": {
+    "line": "Kingmambo系",
+    "via": "キングカメハメハ → Kingmambo"
+  },
+  "ロードバリオス": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ローレルゲレイロ": {
+    "line": "Northern Dancer系",
+    "via": "キングヘイロー → ダンシングブレーヴ → Lyphard → Northern Dancer"
+  },
+  "ワンアンドオンリー": {
+    "line": "サンデーサイレンス系",
+    "via": "ハーツクライ → サンデーサイレンス"
+  },
+  "ワンダーアキュート": {
+    "line": "Northern Dancer系",
+    "via": "カリズマティック → Summer Squall → Storm Bird → Northern Dancer"
+  },
+  "ワークフォース": {
+    "line": "Danehill系",
+    "via": "King's Best → Danehill"
+  },
+  "ワールドエース": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ワールドプレミア": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ヴァンキッシュラン": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ヴァンゴッホ": {
+    "line": "Sadler's Wells系",
+    "via": "Galileo → Sadler's Wells"
+  },
+  "ヴァンセンヌ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  },
+  "ヴィクトワールピサ": {
+    "line": "サンデーサイレンス系",
+    "via": "ネオユニヴァース → サンデーサイレンス"
+  },
+  "ヴィットリオドーロ": {
+    "line": "サンデーサイレンス系",
+    "via": "ディープインパクト → サンデーサイレンス"
+  }
 }
