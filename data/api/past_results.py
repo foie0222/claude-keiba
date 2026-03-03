@@ -11,7 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kbdb_client import KBDBClient
-from race_info import parse_race_id, CODE_TO_VENUE, TRACK_MAP, CONDITION_MAP, WEATHER_MAP
+from race_info import parse_race_id, CODE_TO_VENUE, TRACK_MAP, TRACK_DIRECTION_MAP, TRACK_COURSE_MAP, CONDITION_MAP, WEATHER_MAP
 
 
 def get_past_results(race_id: str) -> dict:
@@ -62,8 +62,10 @@ def get_past_results(race_id: str) -> dict:
                 "race_name": p.get("RNMHON", "").strip(),
                 "distance": int(p.get("DIST", 0)),
                 "surface": TRACK_MAP.get(track_cd, ""),
+                "direction": TRACK_DIRECTION_MAP.get(track_cd, ""),
+                "course": TRACK_COURSE_MAP.get(track_cd, ""),
                 "condition": CONDITION_MAP.get(p.get("TSTATCD", "").strip(), "")
-                    if track_cd.startswith("1") else CONDITION_MAP.get(p.get("DSTATCD", "").strip(), ""),
+                    if TRACK_MAP.get(track_cd, "") in ("芝", "障害") else CONDITION_MAP.get(p.get("DSTATCD", "").strip(), ""),
                 "entry_count": int(p.get("ENTNUM", 0)),
                 "gate": int(p.get("WAKNO", 0)),
                 "number": int(p.get("UMANO", 0)),
