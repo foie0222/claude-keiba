@@ -53,6 +53,22 @@ def get_horse_details(race_id: str) -> dict:
         )
         brd_map = {r["BRDNO"].strip(): r for r in brd_rows}
 
+    # 2次BRDクエリ: 祖父母のBRDNOを収集して名前を解決
+    grandparent_brdnos = set()
+    for brd in brd_map.values():
+        for key in ["FBRDNO", "MBRDNO"]:
+            val = brd.get(key, "").strip()
+            if val and val != "0000000000" and val not in brd_map:
+                grandparent_brdnos.add(val)
+
+    if grandparent_brdnos:
+        gp_list = ",".join(f"'{b}'" for b in grandparent_brdnos)
+        gp_rows = client.query(
+            f"SELECT BRDNO, HSNM, FBRDNO, MBRDNO FROM BRD WHERE BRDNO IN ({gp_list});"
+        )
+        for r in gp_rows:
+            brd_map[r["BRDNO"].strip()] = r
+
     horses = []
     for rd in detail_rows:
         bldno = rd["BLDNO"].strip()

@@ -46,8 +46,14 @@ class CouncilProcess:
                 f"追加データが必要な場合のみBashでAPIを呼んでください。"
             )
 
+        bloodline_instruction = (
+            f"{data_instruction}\n\n"
+            f"【種牡馬系統マスタ】data/sire_lines.json をReadツールで読み込み、"
+            f"系統分類の参照元としてください。"
+        )
+
         return await self.runner.run_parallel([
-            ("bloodline",  f"以下のレースの血統分析をせよ: {rid}{data_instruction}"),
+            ("bloodline",  f"以下のレースの血統分析をせよ: {rid}{bloodline_instruction}"),
             ("training",   f"以下のレースの調教分析をせよ: {rid}{data_instruction}"),
             ("jockey",     f"以下のレースの騎手・厩舎分析をせよ: {rid}{data_instruction}"),
             ("past_races", f"以下のレースの過去走分析をせよ: {rid}{data_instruction}"),
