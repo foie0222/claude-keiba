@@ -42,6 +42,7 @@ class CouncilProcess:
                 f"\n\n【データ】事前取得済みデータが {prefetch_path}/ ディレクトリにあります。"
                 f"各セクションは {prefetch_path}/<セクション名>.json として保存されています"
                 f"（例: race_info.json, horse_detail.json, past_results.json 等）。"
+                f"産駒成績データは {prefetch_path}/sire_stats.toon にあります（存在する場合）。"
                 f"Readツールで必要なファイルを読み、そのデータを使って分析してください。"
                 f"追加データが必要な場合のみBashでAPIを呼んでください。"
             )

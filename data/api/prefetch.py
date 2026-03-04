@@ -23,6 +23,7 @@ from past_results import get_past_results
 from training import get_training
 from odds import get_odds
 from balance import get_balance
+from sire_stats_filter import filter_for_race
 
 CACHE_DIR = ROOT / ".cache" / "prefetch"
 
@@ -117,6 +118,16 @@ def save_cache(race_id: str, data: dict) -> Path:
     for name, section_data in data.items():
         path = race_dir / f"{name}.json"
         path.write_text(json.dumps(section_data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    # 産駒成績フィルタ: horse_detailから種牡馬・母父を抽出しTOONファイルをフィルタ
+    horse_detail = data.get("horse_detail", {})
+    if "error" not in horse_detail:
+        sire_stats_toon = filter_for_race(horse_detail)
+        if sire_stats_toon:
+            toon_path = race_dir / "sire_stats.toon"
+            toon_path.write_text(sire_stats_toon, encoding="utf-8")
+            print(f"  ✓ sire_stats.toon (filtered)", file=sys.stderr, flush=True)
+
     return race_dir
 
 
