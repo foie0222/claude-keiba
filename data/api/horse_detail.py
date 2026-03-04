@@ -3,7 +3,8 @@
 Usage: python data/api/horse_detail.py <race_id>
   race_id format: YYYYMMDD_venue_RR  (例: 20260301_nakayama_11)
 
-race_info.pyで取得したBLDNOを使い、HORSEテーブルから4代血統を取得する。
+race_info.pyで取得したBLDNOを使い、HORSEテーブルから血統情報を取得する。
+父(sire)・母(dam)・母父(dam_sire)・母母(dam_dam)の4項目。
 """
 import json
 import sys
@@ -53,22 +54,6 @@ def get_horse_details(race_id: str) -> dict:
         )
         brd_map = {r["BRDNO"].strip(): r for r in brd_rows}
 
-    # 2次BRDクエリ: 祖父母のBRDNOを収集して名前を解決
-    grandparent_brdnos = set()
-    for brd in brd_map.values():
-        for key in ["FBRDNO", "MBRDNO"]:
-            val = brd.get(key, "").strip()
-            if val and val != "0000000000" and val not in brd_map:
-                grandparent_brdnos.add(val)
-
-    if grandparent_brdnos:
-        gp_list = ",".join(f"'{b}'" for b in grandparent_brdnos)
-        gp_rows = client.query(
-            f"SELECT BRDNO, HSNM, FBRDNO, MBRDNO FROM BRD WHERE BRDNO IN ({gp_list});"
-        )
-        for r in gp_rows:
-            brd_map[r["BRDNO"].strip()] = r
-
     horses = []
     for rd in detail_rows:
         bldno = rd["BLDNO"].strip()
@@ -97,21 +82,9 @@ def _build_pedigree(h: dict, brd_map: dict) -> dict:
         b = brd_map.get(brdno, {})
         return b.get("HSNM", "").strip() or ""
 
-    def _brd_parent(brdno: str, field: str) -> str:
-        b = brd_map.get(brdno, {})
-        parent_brdno = b.get(field, "").strip()
-        if parent_brdno:
-            return _brd_name(parent_brdno)
-        return ""
-
-    sire_brdno = _horse_field("FBRDNO")
-    dam_brdno = _horse_field("MBRDNO")
-
     return {
-        "sire": _horse_field("FHSNM") or _brd_name(sire_brdno),
-        "dam": _horse_field("MHSNM") or _brd_name(dam_brdno),
-        "sire_sire": _horse_field("FFHSNM") or _brd_parent(sire_brdno, "FBRDNO"),
-        "sire_dam": _horse_field("FMHSNM") or _brd_parent(sire_brdno, "MBRDNO"),
+        "sire": _horse_field("FHSNM") or _brd_name(_horse_field("FBRDNO")),
+        "dam": _horse_field("MHSNM") or _brd_name(_horse_field("MBRDNO")),
         "dam_sire": _horse_field("MFHSNM") or _brd_name(_horse_field("MFBRDNO")),
         "dam_dam": _horse_field("MMHSNM") or _brd_name(_horse_field("MMBRDNO")),
     }
