@@ -49,7 +49,7 @@ class CouncilProcess:
 
         bloodline_instruction = (
             f"{data_instruction}\n\n"
-            f"【種牡馬系統マスタ】data/sire_lines.json をReadツールで読み込み、"
+            f"【種牡馬系統マスタ】data/sire_lines.toon をReadツールで読み込み、"
             f"系統分類の参照元としてください。"
         )
 
