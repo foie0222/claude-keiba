@@ -11,7 +11,7 @@ class RaceId(BaseModel):
 
 class HorseRanking(BaseModel):
     horse_number: int
-    score: float
+    score: float | None  # null = データなし
     reason: str
 
 class AnalysisResult(BaseModel):

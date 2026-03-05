@@ -31,11 +31,19 @@
 }
 ```
 
+### nullスコアの処理
+- 専門家のスコアが `null` の場合、`scores_by_analyst` にはそのまま `null` で記載する
+- `average_score` は null を除いた残りのスコアの平均で算出する
+- `score_stddev` は null を除いた残りのスコアの標準偏差で算出する
+- null を除いたスコアが3つ以下の場合、`agreement_score` に 0.8 を乗じる（データ不足ペナルティ）
+- `disagreement_points` に「{analyst}のスコアがnull（データ不足）」を追記する
+
 ### agreement_scoreの計算方法
-`score_stddev`は5つのスコアの標準偏差です。`agreement_score`は以下の式で算出してください:
+`score_stddev`はnullを除いたスコアの標準偏差です。`agreement_score`は以下の式で算出してください:
 ```
 agreement_score = max(0, 1 - score_stddev / 3.0)
 ```
+- nullを除いたスコアが3つ以下の場合、上記の値にさらに 0.8 を乗じる
 - 1.0に近いほど専門家間の意見が一致、0.0に近いほど意見がバラバラ
 
 horse_profilesはaverage_score降順で全出走馬について記載してください。

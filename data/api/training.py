@@ -101,19 +101,41 @@ def get_training(race_id: str) -> dict:
         cells = rows[i].find_all(["th", "td"])
         cell_texts = [c.get_text(strip=True) for c in cells]
 
-        # 馬ヘッダ行: 枠(数字), 馬番(数字), 印, 馬名, コメント
-        if len(cell_texts) >= 4 and cell_texts[0].isdigit() and cell_texts[1].isdigit():
-            horse_number = int(cell_texts[1])
-            horse_name = re.sub(r'前走$', '', cell_texts[3])
-            comment = cell_texts[4] if len(cell_texts) > 4 else ""
+        if len(cell_texts) < 4 or not cell_texts[0].isdigit() or not cell_texts[1].isdigit():
+            i += 1
+            continue
 
+        horse_number = int(cell_texts[1])
+        horse_name = re.sub(r'前走$', '', cell_texts[3])
+
+        if len(cell_texts) >= 10:
+            # Format B: 1行/馬（コメントなし）
+            # [枠,馬番,印,馬名,日付,コース,馬場,乗り役,タイム,位置,脚色,評価,等級]
+            entry = {
+                "horse_number": horse_number,
+                "horse_name": horse_name,
+                "comment": "",
+                "date": cell_texts[4],
+                "course": cell_texts[5],
+                "condition": cell_texts[6],
+                "rider": cell_texts[7],
+                "position": cell_texts[9] if len(cell_texts) > 9 else "",
+                "leg_color": cell_texts[10] if len(cell_texts) > 10 else "",
+                "evaluation": cell_texts[11] if len(cell_texts) > 11 else "",
+                "grade": cell_texts[12] if len(cell_texts) > 12 else "",
+            }
+            if len(cell_texts) > 8:
+                entry["time_lap"] = _parse_time_lap(cell_texts[8])
+            i += 1
+        else:
+            # Format A: 2行/馬（コメント付き）
+            # Row1=[枠,馬番,印,馬名,コメント] Row2=[日付,コース,馬場,乗り役,タイム,位置,脚色,評価,等級]
+            comment = cell_texts[4] if len(cell_texts) > 4 else ""
             entry = {
                 "horse_number": horse_number,
                 "horse_name": horse_name,
                 "comment": comment,
             }
-
-            # 次行がタイムデータ行
             if i + 1 < len(rows):
                 data_cells = [c.get_text(strip=True) for c in rows[i + 1].find_all(["th", "td"])]
                 if data_cells:
@@ -131,9 +153,7 @@ def get_training(race_id: str) -> dict:
             else:
                 i += 1
 
-            entries.append(entry)
-        else:
-            i += 1
+        entries.append(entry)
 
     return {
         "race_id": race_id,
