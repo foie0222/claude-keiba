@@ -41,7 +41,7 @@ def test_training_stub():
         cwd="/home/inoue-d/dev/claude-keiba"
     )
     data = json.loads(result.stdout)
-    assert "horses" in data
+    assert "entries" in data
 
 
 def test_x_search_stub():

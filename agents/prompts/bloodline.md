@@ -82,7 +82,7 @@ python data/api/horse_detail.py <race_id>
 - `analyst`: 固定値 `"bloodline"`
 - `race_id`: 入力されたレースID
 - `analysis`: 血統的観点からのレース全体の総合分析（自然言語）
-- `rankings`: 全出走馬のスコア（0.0〜10.0）と根拠をスコア降順で記載
+- `rankings`: 全出走馬のスコア（0.0〜10.0またはnull）と根拠をスコア降順で記載。血統データが不十分な馬は `score: null` とし、末尾に配置する
 - `confidence`: 分析の確信度（0.0〜1.0）。下記の算出基準に従って調整
 - `warnings`: 血統分析上の注意点やリスク要因（該当がなければ空配列）
 
