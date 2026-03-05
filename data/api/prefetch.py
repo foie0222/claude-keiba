@@ -4,13 +4,14 @@ Usage:
     python data/api/prefetch.py <race_id>
     例: python data/api/prefetch.py 20260222_tokyo_03
 
-出力: .cache/prefetch/<race_id>.json
+出力: .cache/prefetch/<race_id>/<section>.toon
 """
 import asyncio
-import json
 import sys
 import time
 from pathlib import Path
+
+import toon
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "data" / "api"))
@@ -120,8 +121,8 @@ def save_cache(race_id: str, data: dict) -> Path:
     race_dir = CACHE_DIR / race_id
     race_dir.mkdir(parents=True, exist_ok=True)
     for name, section_data in data.items():
-        path = race_dir / f"{name}.json"
-        path.write_text(json.dumps(section_data, ensure_ascii=False, indent=2), encoding="utf-8")
+        path = race_dir / f"{name}.toon"
+        path.write_text(toon.encode(section_data), encoding="utf-8")
 
     # 産駒成績フィルタ: horse_detailから種牡馬・母父を抽出しTOONファイルをフィルタ
     horse_detail = data.get("horse_detail", {})
