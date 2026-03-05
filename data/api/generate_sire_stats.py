@@ -4,9 +4,9 @@ Usage:
     python data/api/generate_sire_stats.py
 
 出力:
-    data/sire_stats.toon  — 種牡馬 × 芝ダート × 距離帯
-    data/bms_stats.toon   — 母父(BMS) × 芝ダート × 距離帯
-    data/nicks.toon       — 父×母父ニックス（10走以上）
+    data/bloodline/sire_stats.toon  — 種牡馬 × 芝ダート × 距離帯
+    data/bloodline/bms_stats.toon   — 母父(BMS) × 芝ダート × 距離帯
+    data/bloodline/nicks.toon       — 父×母父ニックス（10走以上）
 """
 import sys
 from pathlib import Path
@@ -17,7 +17,7 @@ from kbdb_client import KBDBClient
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 import toon
 
-DATA_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = Path(__file__).resolve().parents[1] / "bloodline"
 
 # 種牡馬 × 芝ダート × 距離帯
 SQL_SIRE = """
