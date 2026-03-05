@@ -34,7 +34,7 @@ def get_jockey_stats(race_id: str) -> dict:
     dt = datetime.strptime(date, "%Y%m%d")
     year_ago = (dt - timedelta(days=365)).strftime("%Y%m%d")
     stats_rows = client.query(
-        f"SELECT JKYCD, RCOURSECD, FIXPLC, ABNMLCD FROM RACEDTL "
+        f"SELECT JKYCD, RCOURSECD, FIXPLC, ABNMLCD, LEGF FROM RACEDTL "
         f"WHERE JKYCD IN ({jky_list}) AND OPDT>='{year_ago}' AND OPDT<'{date}' AND ABNMLCD='0';"
     )
 
@@ -44,9 +44,14 @@ def get_jockey_stats(race_id: str) -> dict:
         jcd = r["JKYCD"].strip()
         ccd = r["RCOURSECD"].strip()
         plc = int(r["FIXPLC"]) if r.get("FIXPLC", "").strip() else 99
+        legf = r.get("LEGF", "").strip()
 
         if jcd not in jky_stats:
-            jky_stats[jcd] = {"total": 0, "win": 0, "top2": 0, "top3": 0, "by_course": {}}
+            jky_stats[jcd] = {
+                "total": 0, "win": 0, "top2": 0, "top3": 0,
+                "by_course": {},
+                "leg": {1: 0, 2: 0, 3: 0, 4: 0},
+            }
         s = jky_stats[jcd]
         s["total"] += 1
         if plc == 1:
@@ -55,6 +60,10 @@ def get_jockey_stats(race_id: str) -> dict:
             s["top2"] += 1
         if plc <= 3:
             s["top3"] += 1
+
+        # 脚質集計 (LEGF: 1=逃げ, 2=先行, 3=差し, 4=追込)
+        if legf in ("1", "2", "3", "4"):
+            s["leg"][int(legf)] += 1
 
         # コース別集計
         if ccd not in s["by_course"]:
@@ -69,7 +78,10 @@ def get_jockey_stats(race_id: str) -> dict:
     jockeys = []
     for entry in entry_rows:
         jcd = entry["JKYCD"].strip()
-        s = jky_stats.get(jcd, {"total": 0, "win": 0, "top2": 0, "top3": 0, "by_course": {}})
+        s = jky_stats.get(jcd, {
+            "total": 0, "win": 0, "top2": 0, "top3": 0,
+            "by_course": {}, "leg": {1: 0, 2: 0, 3: 0, 4: 0},
+        })
         total = s["total"] or 1
 
         course_stats = s["by_course"].get(course_cd)
@@ -82,6 +94,21 @@ def get_jockey_stats(race_id: str) -> dict:
                 "win_rate": round(course_stats["win"] / ct, 3),
                 "top3_rate": round(course_stats["top3"] / ct, 3),
             }
+
+        # 脚質分布
+        leg = s["leg"]
+        leg_total = leg[1] + leg[2] + leg[3] + leg[4]
+        lt = leg_total or 1
+        riding_style = {
+            "lead": leg[1],
+            "front": leg[2],
+            "stalk": leg[3],
+            "closer": leg[4],
+            "lead_rate": round(leg[1] / lt, 3),
+            "front_rate": round(leg[2] / lt, 3),
+            "stalk_rate": round(leg[3] / lt, 3),
+            "closer_rate": round(leg[4] / lt, 3),
+        }
 
         jockeys.append({
             "number": int(entry.get("UMANO", 0)),
@@ -96,6 +123,7 @@ def get_jockey_stats(race_id: str) -> dict:
                 "win_rate": round(s["win"] / total, 3),
                 "top3_rate": round(s["top3"] / total, 3),
             },
+            "riding_style": riding_style,
             "course_stats": course_info,
         })
 
