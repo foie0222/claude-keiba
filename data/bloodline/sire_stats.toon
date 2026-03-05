@@ -1,0 +1,2540 @@
+[2539,]{name,s,d,runs,wins,top3}:
+  Accelerate,d,mile,1,0,0
+  Accelerate,d,sprint,3,0,0
+  Adios Charlie,d,sprint,4,2,3
+  Adios Charlie,t,mile,1,0,0
+  Adlerflug,t,long,1,0,0
+  Air Force Blue,t,middle,2,0,0
+  Air Force Blue,t,mile,1,0,0
+  Air Force Blue,t,sprint,1,0,0
+  Al Wukair,t,middle,8,2,5
+  Al Wukair,t,mile,7,0,2
+  Al Wukair,t,sprint,1,0,0
+  Almanzor,d,mile,5,0,1
+  Almanzor,d,sprint,2,0,0
+  Almanzor,t,middle,3,0,0
+  Almanzor,t,mile,6,0,1
+  Almanzor,t,sprint,1,0,0
+  American Pharoah,d,long,6,0,0
+  American Pharoah,d,middle,24,3,6
+  American Pharoah,d,mile,133,20,40
+  American Pharoah,d,sprint,161,24,57
+  American Pharoah,t,long,4,0,0
+  American Pharoah,t,middle,9,0,1
+  American Pharoah,t,mile,30,2,7
+  American Pharoah,t,sprint,38,7,15
+  Army Mule,d,mile,1,0,0
+  Army Mule,d,sprint,18,3,8
+  Army Mule,t,sprint,1,0,0
+  Arrogate,d,long,2,0,1
+  Arrogate,d,middle,27,2,8
+  Arrogate,d,mile,81,16,29
+  Arrogate,d,sprint,8,0,0
+  Arrogate,t,middle,4,0,1
+  Arrogate,t,mile,7,0,0
+  Arrogate,t,sprint,1,0,0
+  Audible,d,sprint,1,0,0
+  Audible,t,sprint,1,0,0
+  Australia,d,sprint,1,0,0
+  Authentic,d,mile,17,1,5
+  Authentic,d,sprint,7,2,2
+  Authentic,t,middle,3,0,0
+  Authentic,t,mile,4,0,0
+  Authentic,t,sprint,2,0,0
+  Bated Breath,d,sprint,1,0,0
+  Bated Breath,t,middle,4,0,1
+  Bated Breath,t,mile,2,0,0
+  Bayern,d,mile,6,2,2
+  Bayern,d,sprint,1,0,0
+  Bayern,t,middle,3,0,0
+  Bayern,t,mile,6,1,1
+  Bayern,t,sprint,1,0,0
+  Beau Liam,d,mile,1,0,0
+  Beau Liam,d,sprint,6,1,2
+  Beau Liam,t,mile,1,0,0
+  Bernardini,d,mile,1,0,0
+  Bernardini,d,sprint,20,1,7
+  Bernardini,t,middle,1,0,0
+  Bernardini,t,mile,2,1,1
+  Bernardini,t,sprint,5,0,0
+  Blame,d,mile,1,0,0
+  Blame,d,sprint,4,0,0
+  Blame,t,mile,1,0,0
+  Blue Point,d,mile,1,0,0
+  Blue Point,d,sprint,2,0,0
+  Blue Point,t,middle,1,0,0
+  Blue Point,t,mile,3,0,0
+  Blue Point,t,sprint,20,3,8
+  Bobby's Kitten,d,middle,2,1,1
+  Bobby's Kitten,d,mile,5,0,1
+  Bobby's Kitten,d,sprint,12,0,5
+  Bobby's Kitten,t,middle,2,0,1
+  Bobby's Kitten,t,mile,2,0,1
+  Bolt d'Oro,d,mile,4,1,1
+  Bolt d'Oro,d,sprint,1,0,1
+  Bolt d'Oro,t,middle,1,0,0
+  Bolt d'Oro,t,mile,7,1,2
+  Bolt d'Oro,t,sprint,15,1,3
+  Cairo Prince,d,sprint,4,1,3
+  Cajun Breeze,d,sprint,14,3,5
+  Camelot,t,middle,2,0,1
+  Candy Ride,d,mile,1,0,0
+  Candy Ride,d,sprint,15,2,7
+  Candy Ride,t,sprint,1,0,0
+  Capitalist,t,sprint,8,2,4
+  Caravaggio,d,mile,4,0,1
+  Caravaggio,d,sprint,12,2,3
+  Caravaggio,t,middle,4,0,0
+  Caravaggio,t,mile,15,2,5
+  Caravaggio,t,sprint,26,5,9
+  Catalina Cruiser,d,mile,7,0,3
+  Catalina Cruiser,d,sprint,4,0,0
+  Catalina Cruiser,t,sprint,2,0,0
+  Catholic Boy,d,long,13,0,2
+  Catholic Boy,d,mile,7,1,1
+  Catholic Boy,d,sprint,9,1,3
+  Catholic Boy,t,long,1,0,0
+  Catholic Boy,t,middle,4,0,0
+  Catholic Boy,t,mile,3,0,0
+  Catholic Boy,t,sprint,8,0,1
+  Central Banker,d,sprint,35,4,11
+  Central Banker,t,mile,1,0,0
+  Central Banker,t,sprint,1,0,0
+  Charlatan,d,sprint,5,2,3
+  Charlatan,t,mile,1,0,0
+  Charlatan,t,sprint,5,0,3
+  Churchill,d,mile,2,0,0
+  Churchill,t,middle,1,0,0
+  Churchill,t,mile,3,0,0
+  City Zip,d,long,3,0,0
+  City Zip,d,sprint,16,1,6
+  City Zip,t,mile,26,0,3
+  City Zip,t,sprint,9,1,1
+  City of Light,d,long,1,0,0
+  City of Light,d,middle,1,0,0
+  City of Light,d,mile,11,0,0
+  City of Light,d,sprint,21,4,9
+  City of Light,t,sprint,1,0,0
+  Classic Empire,d,middle,1,0,0
+  Classic Empire,d,mile,3,0,0
+  Classic Empire,d,sprint,2,0,0
+  Classic Empire,t,sprint,1,0,0
+  Cloud Computing,d,mile,9,3,9
+  Collected,d,long,3,1,3
+  Collected,d,middle,1,0,0
+  Collected,d,mile,32,3,11
+  Collected,d,sprint,22,2,7
+  Collected,t,long,2,0,0
+  Collected,t,mile,3,0,0
+  Collected,t,sprint,1,0,0
+  Complexity,d,mile,1,0,0
+  Complexity,t,mile,9,1,3
+  Complexity,t,sprint,1,0,0
+  Connect,d,middle,1,0,0
+  Connect,d,mile,1,0,0
+  Connect,t,middle,1,0,0
+  Constitution,d,middle,2,0,2
+  Constitution,d,mile,20,4,10
+  Constitution,d,sprint,9,0,1
+  Constitution,t,long,7,2,4
+  Constitution,t,middle,2,0,0
+  Constitution,t,mile,5,1,1
+  Cracksman,d,mile,1,0,0
+  Cracksman,t,middle,4,1,1
+  Curlin,d,long,1,0,0
+  Curlin,d,middle,7,2,2
+  Curlin,d,mile,47,8,17
+  Curlin,d,sprint,7,0,0
+  Curlin,t,long,2,0,1
+  Curlin,t,middle,1,0,0
+  Curlin,t,mile,1,0,0
+  Curlin,t,sprint,1,0,0
+  Daaher,d,mile,2,1,1
+  Daaher,t,middle,1,0,0
+  Dabirsim,t,mile,3,0,0
+  Dabirsim,t,sprint,2,1,2
+  Dandy Man,d,mile,1,0,0
+  Dandy Man,d,sprint,18,2,6
+  Dandy Man,t,mile,2,0,1
+  Dandy Man,t,sprint,4,0,1
+  Danon Ballade,d,long,3,0,0
+  Danon Ballade,t,middle,1,0,0
+  Danon Ballade,t,mile,8,0,3
+  Danon Ballade,t,sprint,8,1,2
+  Dansili,d,long,5,1,3
+  Dansili,d,sprint,2,0,0
+  Dansili,t,mile,5,2,4
+  Dansili,t,sprint,22,2,7
+  Daredevil,d,sprint,3,0,0
+  Dark Angel,d,sprint,11,0,2
+  Dark Angel,t,middle,1,0,0
+  Dark Angel,t,mile,36,4,11
+  Dark Angel,t,sprint,82,13,25
+  Dawn Approach,d,mile,2,0,0
+  Dawn Approach,t,middle,5,0,0
+  Dawn Approach,t,mile,1,0,0
+  Declaration of War,d,mile,1,0,0
+  Declaration of War,t,middle,3,0,0
+  Declaration of War,t,mile,2,1,1
+  Declaration of War,t,sprint,24,3,7
+  Deep Field,t,sprint,1,0,0
+  Deep Impact,t,long,1,0,0
+  Dialed In,d,mile,4,1,2
+  Dialed In,d,sprint,18,1,5
+  Dialed In,t,mile,1,0,0
+  Dialed In,t,sprint,1,0,0
+  Disco Partner,t,mile,1,0,0
+  Disco Partner,t,sprint,1,1,1
+  Distorted Humor,d,sprint,36,3,10
+  Dragon Pulse,t,mile,2,0,0
+  Dubawi,d,sprint,3,0,1
+  Dubawi,t,middle,1,0,0
+  Dubawi,t,mile,6,0,2
+  Dubawi,t,sprint,1,0,0
+  Dundeel,d,mile,1,0,0
+  Dundeel,t,middle,1,0,0
+  Dundeel,t,mile,1,0,0
+  Dundeel,t,sprint,1,0,0
+  Dutch Art,d,sprint,10,2,5
+  Dutch Art,t,sprint,1,0,0
+  Earthlight,d,middle,1,0,0
+  Earthlight,d,mile,3,0,0
+  Earthlight,d,sprint,3,0,0
+  Earthlight,t,middle,2,0,1
+  Earthlight,t,mile,2,0,0
+  Earthlight,t,sprint,2,0,0
+  English Channel,d,sprint,1,0,0
+  English Channel,t,sprint,3,0,0
+  Essential Quality,d,middle,2,0,1
+  Essential Quality,d,mile,2,0,1
+  Essential Quality,d,sprint,1,0,0
+  Exceedance,d,sprint,2,1,2
+  Exceedance,t,mile,3,0,3
+  Exceedance,t,sprint,4,1,3
+  Farhh,t,mile,12,3,7
+  Farhh,t,sprint,5,1,3
+  Farnan,t,mile,1,0,0
+  Farnan,t,sprint,3,0,0
+  Fort Larned,d,long,2,0,0
+  Fort Larned,d,middle,1,0,0
+  Fort Larned,d,mile,14,2,5
+  Fort Larned,d,sprint,7,0,1
+  Frankel,d,middle,2,0,1
+  Frankel,d,mile,38,4,7
+  Frankel,d,sprint,12,0,2
+  Frankel,t,long,6,3,4
+  Frankel,t,middle,37,6,14
+  Frankel,t,mile,83,11,26
+  Frankel,t,sprint,107,13,34
+  Free Drop Billy,d,sprint,12,1,2
+  Free Drop Billy,t,sprint,3,0,1
+  Frosted,d,mile,6,0,1
+  Frosted,d,sprint,22,8,11
+  Frosted,t,mile,2,0,1
+  Frosted,t,sprint,51,13,21
+  Galileo,t,long,4,1,3
+  Galileo,t,middle,2,0,0
+  Galileo,t,mile,1,0,0
+  Game Winner,d,middle,1,0,0
+  Game Winner,d,mile,5,1,1
+  Game Winner,t,middle,1,0,0
+  Ghaiyyath,d,mile,1,0,1
+  Ghaiyyath,t,middle,2,0,1
+  Ghaiyyath,t,mile,1,1,1
+  Ghostzapper,d,mile,5,0,2
+  Ghostzapper,d,sprint,18,5,6
+  Ghostzapper,t,mile,1,0,0
+  Gleneagles,d,long,1,0,0
+  Gleneagles,d,mile,4,1,1
+  Gleneagles,d,sprint,15,3,5
+  Gleneagles,t,long,1,1,1
+  Gleneagles,t,middle,7,0,0
+  Gleneagles,t,mile,18,1,7
+  Gleneagles,t,sprint,1,0,0
+  Global Campaign,d,middle,3,1,1
+  Global Campaign,d,mile,9,0,3
+  Global Campaign,d,sprint,5,1,1
+  Golden Horn,d,long,8,2,6
+  Golden Horn,d,middle,3,0,2
+  Golden Horn,d,mile,33,3,12
+  Golden Horn,d,sprint,5,0,2
+  Golden Horn,t,long,6,0,3
+  Golden Horn,t,middle,20,0,8
+  Golden Horn,t,mile,4,0,0
+  Goldencents,d,mile,2,1,1
+  Goldencents,d,sprint,7,1,3
+  Goldencents,t,mile,4,1,3
+  Good Magic,d,long,5,2,5
+  Good Magic,d,middle,6,0,0
+  Good Magic,d,mile,16,1,5
+  Good Magic,d,sprint,6,1,2
+  Good Magic,t,middle,2,0,1
+  Gun Runner,d,long,1,0,0
+  Gun Runner,d,middle,9,1,4
+  Gun Runner,d,mile,64,9,30
+  Gun Runner,d,sprint,51,6,25
+  Gun Runner,t,middle,4,0,0
+  Gun Runner,t,mile,16,1,6
+  Gun Runner,t,sprint,2,0,0
+  Hard Spun,d,long,2,0,1
+  Hard Spun,d,middle,2,0,0
+  Hard Spun,d,mile,24,1,3
+  Hard Spun,d,sprint,27,4,9
+  Hard Spun,t,long,3,0,1
+  Hard Spun,t,middle,2,0,0
+  Hard Spun,t,sprint,1,0,0
+  Harry Angel,t,sprint,20,3,11
+  Hat Trick,t,middle,4,0,1
+  Hat Trick,t,mile,30,7,12
+  Havana Gold,d,mile,1,0,0
+  Havana Gold,t,middle,1,0,0
+  Havana Gold,t,mile,14,4,5
+  Havana Gold,t,sprint,6,1,1
+  Havana Grey,t,mile,1,0,0
+  Havana Grey,t,sprint,23,3,5
+  Highland Reel,d,mile,4,0,0
+  Highland Reel,d,sprint,1,0,0
+  Highland Reel,t,middle,2,0,0
+  Highland Reel,t,mile,1,0,0
+  Honor A. P.,d,middle,1,0,0
+  Honor A. P.,d,mile,3,0,0
+  I Am Invincible,d,long,4,0,1
+  I Am Invincible,d,mile,16,1,5
+  I Am Invincible,d,sprint,1,0,0
+  I Am Invincible,t,mile,1,0,0
+  I Am Invincible,t,sprint,3,1,1
+  Iffraaj,d,mile,2,0,0
+  Iffraaj,d,sprint,7,0,1
+  Iffraaj,t,mile,7,3,4
+  Iffraaj,t,sprint,42,5,17
+  Improbable,d,middle,1,0,0
+  Improbable,d,mile,2,1,1
+  Improbable,t,middle,2,0,0
+  Improbable,t,sprint,3,1,1
+  Intello,t,mile,2,0,0
+  Intello,t,sprint,10,2,5
+  Into Mischief,d,long,2,0,0
+  Into Mischief,d,middle,3,2,2
+  Into Mischief,d,mile,78,13,30
+  Into Mischief,d,sprint,131,33,69
+  Into Mischief,t,long,4,1,1
+  Into Mischief,t,middle,1,0,0
+  Into Mischief,t,mile,14,3,5
+  Into Mischief,t,sprint,15,1,6
+  Invincible Spirit,d,long,3,0,0
+  Invincible Spirit,d,sprint,12,0,0
+  Invincible Spirit,t,mile,5,0,1
+  Invincible Spirit,t,sprint,61,8,24
+  Justify,d,long,4,0,1
+  Justify,d,middle,12,3,5
+  Justify,d,mile,80,14,27
+  Justify,d,sprint,87,8,30
+  Justify,t,long,2,0,0
+  Justify,t,middle,4,0,0
+  Justify,t,mile,7,0,2
+  Justify,t,sprint,7,0,3
+  Kameko,d,long,2,0,0
+  Kameko,t,middle,1,0,0
+  Kameko,t,mile,3,0,0
+  Kantharos,d,middle,1,0,0
+  Kantharos,d,mile,12,2,7
+  Kantharos,d,sprint,29,4,18
+  Karakontie,d,mile,1,0,0
+  Karakontie,t,long,1,0,0
+  Karakontie,t,middle,3,0,0
+  Khozan,d,mile,15,5,10
+  Khozan,d,sprint,33,5,8
+  Khozan,t,sprint,5,0,2
+  Kingman,d,mile,4,0,0
+  Kingman,d,sprint,4,1,1
+  Kingman,t,long,2,0,0
+  Kingman,t,middle,36,7,13
+  Kingman,t,mile,45,4,8
+  Kingman,t,sprint,35,7,13
+  Kitten's Joy,d,long,5,1,2
+  Kitten's Joy,d,middle,5,0,0
+  Kitten's Joy,d,mile,10,3,5
+  Kitten's Joy,d,sprint,7,1,3
+  Kitten's Joy,t,long,4,0,0
+  Kitten's Joy,t,middle,4,0,1
+  Kitten's Joy,t,mile,7,1,2
+  Kitten's Joy,t,sprint,12,3,3
+  Klimt,d,sprint,9,0,2
+  Klimt,t,sprint,20,0,0
+  Knicks Go,d,sprint,1,0,1
+  Knicks Go,t,middle,1,0,0
+  Known Agenda,d,mile,1,0,0
+  Known Agenda,d,sprint,2,0,0
+  Le Havre,d,middle,1,0,0
+  Le Havre,d,mile,1,0,0
+  Le Havre,d,sprint,3,0,0
+  Le Havre,t,long,3,1,1
+  Le Havre,t,middle,5,0,0
+  Le Havre,t,mile,19,2,6
+  Le Havre,t,sprint,5,0,0
+  Lea,d,mile,4,1,2
+  Lea,t,middle,1,0,0
+  Lea,t,mile,9,3,4
+  Lea,t,sprint,1,0,0
+  Leinster,d,sprint,1,0,0
+  Leinster,t,sprint,4,1,2
+  Lemon Drop Kid,d,mile,5,4,5
+  Lemon Drop Kid,d,sprint,8,6,8
+  Liam's Map,d,long,4,0,0
+  Liam's Map,d,middle,4,0,0
+  Liam's Map,d,mile,29,3,10
+  Liam's Map,d,sprint,30,8,11
+  Liam's Map,t,long,1,0,0
+  Liam's Map,t,middle,1,0,0
+  Liam's Map,t,mile,2,0,0
+  Lonhro,d,sprint,4,0,1
+  Lonhro,t,sprint,5,0,4
+  Lope de Vega,d,middle,1,0,0
+  Lope de Vega,d,mile,1,0,0
+  Lope de Vega,t,middle,9,4,7
+  Lope de Vega,t,mile,1,0,0
+  Lord Kanaloa,d,mile,3,0,0
+  Lord Kanaloa,d,sprint,3,0,0
+  Lord Kanaloa,t,sprint,2,0,0
+  Lucky Vega,t,middle,3,0,1
+  Maclean's Music,d,mile,12,5,9
+  Maclean's Music,d,sprint,27,3,9
+  Maclean's Music,t,sprint,1,0,0
+  Magna Grecia,d,mile,2,0,0
+  Magna Grecia,d,sprint,1,0,0
+  Magna Grecia,t,mile,3,0,0
+  Magna Grecia,t,sprint,1,0,0
+  Make Believe,d,sprint,2,0,0
+  Make Believe,t,sprint,1,0,0
+  Malibu Moon,d,long,1,0,0
+  Malibu Moon,d,middle,1,0,0
+  Malibu Moon,d,mile,20,5,13
+  Malibu Moon,d,sprint,2,0,0
+  Masar,d,mile,2,0,0
+  Masar,t,middle,2,0,0
+  Masar,t,mile,3,0,0
+  Massaat,t,mile,1,0,0
+  Mastercraftsman,d,mile,1,0,0
+  Mastercraftsman,d,sprint,13,0,5
+  Mastercraftsman,t,mile,1,0,0
+  Mastercraftsman,t,sprint,1,0,0
+  Mastery,d,middle,1,0,1
+  Mastery,d,mile,17,5,9
+  Mastery,d,sprint,20,2,5
+  Maxfield,d,middle,1,1,1
+  Maxfield,d,mile,2,1,1
+  Maxfield,d,sprint,1,1,1
+  Maximum Security,d,mile,4,0,1
+  Maximum Security,d,sprint,7,0,0
+  Maximum Security,t,middle,2,0,0
+  Maximum Security,t,mile,2,0,0
+  Maximum Security,t,sprint,1,0,0
+  McKinzie,d,mile,8,0,0
+  McKinzie,d,sprint,12,2,4
+  McKinzie,t,middle,2,0,0
+  McKinzie,t,mile,3,0,0
+  Medaglia d'Oro,d,long,1,0,0
+  Medaglia d'Oro,d,middle,1,0,0
+  Medaglia d'Oro,d,mile,12,1,5
+  Medaglia d'Oro,d,sprint,9,1,2
+  Medaglia d'Oro,t,mile,2,0,0
+  Medaglia d'Oro,t,sprint,1,0,1
+  Mendelssohn,d,middle,7,0,2
+  Mendelssohn,d,mile,42,10,21
+  Mendelssohn,d,sprint,20,3,8
+  Mendelssohn,t,middle,1,0,0
+  Mendelssohn,t,mile,1,0,0
+  Mendelssohn,t,sprint,2,0,0
+  Mitole,d,mile,3,0,0
+  Mitole,d,sprint,23,2,8
+  Mitole,t,middle,2,0,0
+  Mitole,t,mile,1,0,0
+  Mitole,t,sprint,1,0,0
+  Mo Town,d,sprint,1,0,1
+  Mo Town,t,sprint,2,0,0
+  Modernist,d,sprint,2,0,0
+  Modernist,t,sprint,2,0,0
+  Mohaymen,d,long,1,0,0
+  Mohaymen,d,mile,2,0,0
+  Mohaymen,d,sprint,26,2,7
+  Mohaymen,t,sprint,13,0,5
+  Mor Spirit,d,long,1,0,0
+  Mor Spirit,d,middle,3,0,1
+  Mor Spirit,d,mile,18,2,6
+  Mor Spirit,d,sprint,7,2,3
+  More Than Ready,d,long,2,0,0
+  More Than Ready,d,mile,2,0,0
+  More Than Ready,d,sprint,16,1,3
+  More Than Ready,t,mile,3,1,1
+  More Than Ready,t,sprint,13,3,5
+  Munnings,d,sprint,15,3,5
+  Munnings,t,mile,1,0,0
+  Munnings,t,sprint,6,1,2
+  Nathaniel,d,middle,3,0,0
+  Nathaniel,d,mile,6,1,1
+  Nathaniel,d,sprint,2,0,0
+  Nathaniel,t,long,3,0,0
+  Nathaniel,t,middle,6,0,2
+  Nathaniel,t,mile,10,0,0
+  Nathaniel,t,sprint,5,1,1
+  New Approach,d,mile,2,0,0
+  New Approach,d,sprint,10,1,1
+  New Approach,t,mile,5,0,1
+  New Approach,t,sprint,12,0,5
+  New Bay,d,mile,6,0,0
+  New Bay,t,mile,2,0,0
+  New Bay,t,sprint,1,0,0
+  Night of Thunder,d,sprint,5,1,1
+  Night of Thunder,t,mile,7,2,4
+  Night of Thunder,t,sprint,15,7,10
+  No Nay Never,d,mile,4,0,0
+  No Nay Never,d,sprint,14,2,2
+  No Nay Never,t,middle,5,0,3
+  No Nay Never,t,mile,20,4,13
+  No Nay Never,t,sprint,19,3,6
+  Not This Time,d,mile,9,3,6
+  Not This Time,t,mile,1,0,1
+  Nyquist,d,middle,3,1,1
+  Nyquist,d,mile,23,4,13
+  Nyquist,d,sprint,11,1,5
+  Nyquist,t,mile,1,0,0
+  Nyquist,t,sprint,2,0,0
+  Omaha Beach,d,middle,2,0,1
+  Omaha Beach,d,mile,29,2,6
+  Omaha Beach,d,sprint,9,1,2
+  Optimizer,d,mile,1,0,0
+  Optimizer,t,middle,2,0,0
+  Optimizer,t,mile,18,3,7
+  Optimizer,t,sprint,4,1,1
+  Oscar Performance,d,mile,1,0,0
+  Oscar Performance,t,middle,13,1,2
+  Oscar Performance,t,mile,10,2,3
+  Oscar Performance,t,sprint,5,0,0
+  Palace Malice,d,middle,1,0,0
+  Palace Malice,d,mile,24,3,8
+  Palace Malice,d,sprint,26,7,14
+  Palace Malice,t,middle,1,0,1
+  Palace Malice,t,mile,21,8,13
+  Palace Malice,t,sprint,3,0,0
+  Palace Pier,d,sprint,4,0,0
+  Palace Pier,t,long,1,0,0
+  Palace Pier,t,middle,2,0,1
+  Palace Pier,t,mile,4,0,0
+  Palace Pier,t,sprint,7,0,2
+  Pinatubo,t,mile,1,0,0
+  Pinatubo,t,sprint,1,0,0
+  Pioneerof the Nile,d,middle,10,2,3
+  Pioneerof the Nile,d,mile,18,3,9
+  Pivotal,d,sprint,2,0,0
+  Pivotal,t,middle,1,0,0
+  Pivotal,t,mile,5,0,0
+  Pivotal,t,sprint,4,0,0
+  Postponed,d,middle,2,0,0
+  Postponed,t,middle,2,0,0
+  Postponed,t,mile,4,0,0
+  Postponed,t,sprint,2,0,0
+  Practical Joke,d,mile,31,5,13
+  Practical Joke,d,sprint,60,4,10
+  Practical Joke,t,mile,8,0,1
+  Practical Joke,t,sprint,41,5,12
+  Preservationist,d,mile,2,0,0
+  Preservationist,d,sprint,6,1,4
+  Preservationist,t,mile,1,0,0
+  Protectionist,d,sprint,2,0,0
+  Protectionist,t,mile,4,0,0
+  Quality Road,d,middle,2,0,0
+  Quality Road,d,mile,31,4,5
+  Quality Road,d,sprint,44,7,18
+  Quality Road,t,long,4,0,0
+  Quality Road,t,mile,3,0,2
+  Quality Road,t,sprint,3,0,1
+  Race Day,d,mile,8,0,3
+  Race Day,d,sprint,9,3,4
+  Race Day,t,mile,1,0,0
+  Race Day,t,sprint,1,0,0
+  Raven's Pass,d,mile,2,0,0
+  Raven's Pass,d,sprint,1,0,0
+  Raven's Pass,t,mile,1,0,0
+  Rey de Oro,t,middle,1,0,0
+  Rey de Oro,t,mile,1,0,0
+  Rey de Oro,t,sprint,4,0,0
+  Runhappy,d,middle,2,0,0
+  Runhappy,d,mile,15,1,7
+  Runhappy,d,sprint,16,2,7
+  Saxon Warrior,d,long,1,0,0
+  Saxon Warrior,d,middle,2,0,0
+  Saxon Warrior,d,mile,25,1,5
+  Saxon Warrior,d,sprint,24,0,2
+  Saxon Warrior,t,long,4,0,0
+  Saxon Warrior,t,middle,39,3,11
+  Saxon Warrior,t,mile,66,13,29
+  Saxon Warrior,t,sprint,37,5,12
+  Sea The Moon,t,long,1,0,0
+  Sea The Stars,d,middle,3,0,3
+  Sea The Stars,d,mile,2,0,1
+  Sea The Stars,d,sprint,2,0,0
+  Sea The Stars,t,middle,1,0,0
+  Shackleford,d,sprint,14,2,5
+  Shackleford,t,sprint,3,0,0
+  Shalaa,d,sprint,16,6,9
+  Shalaa,t,mile,1,0,0
+  Shalaa,t,sprint,27,3,7
+  Shamardal,t,long,1,0,0
+  Shamardal,t,middle,6,0,1
+  Shamardal,t,mile,6,2,2
+  Shancelot,d,mile,1,0,0
+  Shancelot,d,sprint,8,4,6
+  Sharp Azteca,d,middle,1,0,0
+  Sharp Azteca,d,mile,6,0,0
+  Sharp Azteca,d,sprint,2,0,0
+  Sharp Azteca,t,mile,6,1,2
+  Sharp Azteca,t,sprint,3,0,0
+  Showcasing,d,mile,4,0,2
+  Showcasing,d,sprint,6,1,2
+  Showcasing,t,mile,3,0,2
+  Showcasing,t,sprint,7,1,4
+  Silver State,d,mile,1,0,0
+  Silver State,t,mile,1,0,0
+  Sioux Nation,t,mile,2,0,2
+  Siyouni,t,long,5,0,2
+  Siyouni,t,middle,11,3,7
+  Siyouni,t,mile,23,6,14
+  Siyouni,t,sprint,26,4,7
+  Snitzel,d,sprint,1,0,0
+  Snitzel,t,mile,5,0,3
+  Snitzel,t,sprint,21,3,10
+  Soldier's Call,d,middle,1,0,0
+  Soldier's Call,d,mile,6,3,4
+  Soldier's Call,d,sprint,3,0,0
+  Soldier's Call,t,sprint,1,0,0
+  Sottsass,d,mile,2,0,0
+  Sottsass,d,sprint,1,0,0
+  Sottsass,t,long,2,0,0
+  Sottsass,t,middle,11,2,3
+  Sottsass,t,mile,6,0,1
+  Speightstown,d,long,1,0,0
+  Speightstown,d,mile,4,0,0
+  Speightstown,d,sprint,96,20,40
+  Speightstown,t,sprint,25,1,11
+  St Mark's Basilica,t,long,1,0,0
+  St Mark's Basilica,t,middle,1,0,0
+  St Mark's Basilica,t,mile,5,0,0
+  St Mark's Basilica,t,sprint,13,2,8
+  St Patrick's Day,d,mile,4,0,0
+  St Patrick's Day,d,sprint,17,2,2
+  St Patrick's Day,t,mile,1,0,0
+  St Patrick's Day,t,sprint,1,0,0
+  Stormy Atlantic,d,long,34,6,16
+  Stormy Atlantic,d,sprint,1,0,0
+  Stormy Atlantic,t,mile,4,0,1
+  Stormy Atlantic,t,sprint,10,2,5
+  Street Boss,d,middle,1,0,0
+  Street Boss,d,mile,12,1,4
+  Street Boss,d,sprint,3,1,1
+  Street Boss,t,sprint,3,0,1
+  Study of Man,d,long,3,0,1
+  Study of Man,d,sprint,1,0,0
+  Study of Man,t,long,7,0,2
+  Study of Man,t,middle,8,0,1
+  Study of Man,t,mile,4,1,2
+  Sweynesse,t,sprint,1,0,0
+  Take Charge Indy,d,mile,1,0,0
+  Take Charge Indy,d,sprint,18,4,6
+  Take Charge Indy,t,sprint,3,0,0
+  Tapit,d,long,27,1,10
+  Tapit,d,middle,5,1,1
+  Tapit,d,mile,88,7,22
+  Tapit,d,sprint,12,1,4
+  Tapit,t,long,4,0,0
+  Tapit,t,middle,15,2,5
+  Tapit,t,mile,23,1,8
+  Tapit,t,sprint,3,0,1
+  Teofilo,t,middle,1,0,0
+  Teofilo,t,mile,2,0,1
+  The Autumn Sun,t,middle,1,0,0
+  The Autumn Sun,t,mile,1,0,0
+  Thousand Words,d,mile,3,0,0
+  Thousand Words,d,sprint,3,0,0
+  Thousand Words,t,mile,1,0,0
+  Tiz the Law,d,mile,12,5,7
+  Tiz the Law,d,sprint,14,4,8
+  Tiz the Law,t,middle,1,0,0
+  Tiz the Law,t,mile,1,0,0
+  Tiz the Law,t,sprint,3,0,1
+  Tom's d'Etat,d,middle,1,0,1
+  Tom's d'Etat,d,mile,11,1,5
+  Tom's d'Etat,d,sprint,3,1,2
+  Tom's d'Etat,t,middle,1,0,0
+  Tom's d'Etat,t,mile,2,0,0
+  Too Darn Hot,d,sprint,6,2,2
+  Too Darn Hot,t,mile,2,0,0
+  Too Darn Hot,t,sprint,36,9,14
+  Toronado,t,sprint,2,0,1
+  Trapeze Artist,t,mile,4,0,0
+  Trapeze Artist,t,sprint,4,0,1
+  Twilight Son,t,middle,1,0,0
+  Twilight Son,t,mile,3,0,0
+  Twilight Son,t,sprint,1,0,0
+  Twirling Candy,d,middle,1,0,0
+  Twirling Candy,d,mile,5,0,3
+  Twirling Candy,d,sprint,16,4,8
+  Twirling Candy,t,mile,7,1,3
+  Twirling Candy,t,sprint,8,3,3
+  U S Navy Flag,d,sprint,1,0,0
+  U S Navy Flag,t,sprint,4,0,0
+  Ulysses,d,sprint,5,3,5
+  Ulysses,t,sprint,1,0,0
+  Uncle Mo,d,middle,1,0,1
+  Uncle Mo,d,mile,26,5,10
+  Uncle Mo,d,sprint,7,1,2
+  Uncle Mo,t,mile,2,0,0
+  Uncle Mo,t,sprint,3,0,1
+  Unified,d,sprint,24,4,9
+  Unified,t,sprint,2,0,1
+  Union Rags,d,mile,30,6,14
+  Union Rags,d,sprint,5,2,2
+  Union Rags,t,long,1,0,0
+  Union Rags,t,middle,1,0,0
+  Union Rags,t,mile,1,0,0
+  Upstart,t,mile,1,0,0
+  Upstart,t,sprint,2,0,0
+  Vekoma,d,mile,9,3,4
+  Vekoma,d,sprint,11,0,1
+  Vekoma,t,middle,2,0,0
+  Vekoma,t,mile,3,0,1
+  Victor Ludorum,d,sprint,1,0,0
+  Vino Rosso,d,middle,1,0,0
+  Vino Rosso,d,mile,7,0,0
+  Vino Rosso,d,sprint,4,1,1
+  Vino Rosso,t,sprint,1,0,0
+  Volatile,d,mile,3,0,3
+  Volatile,d,sprint,11,6,7
+  Volatile,t,mile,1,0,0
+  Volatile,t,sprint,2,0,1
+  War Front,d,middle,1,0,0
+  War Front,d,mile,5,0,0
+  War Front,d,sprint,27,7,9
+  War Front,t,mile,8,0,4
+  War Front,t,sprint,11,2,4
+  War of Will,d,mile,4,0,4
+  War of Will,d,sprint,1,0,1
+  Will Take Charge,d,middle,2,0,0
+  Will Take Charge,d,mile,18,3,7
+  Will Take Charge,d,sprint,2,0,0
+  Wootton Bassett,d,long,1,0,0
+  Wootton Bassett,d,mile,4,0,0
+  Wootton Bassett,d,sprint,3,0,0
+  Wootton Bassett,t,long,5,0,0
+  Wootton Bassett,t,middle,6,1,1
+  Wootton Bassett,t,mile,16,0,2
+  Wootton Bassett,t,sprint,1,0,0
+  Written Tycoon,d,sprint,1,0,0
+  Yaupon,d,mile,1,0,0
+  Yaupon,d,sprint,6,1,1
+  Yaupon,t,sprint,2,0,1
+  Yoshida,d,mile,8,0,1
+  Yoshida,d,sprint,4,0,0
+  Yoshida,t,long,3,1,3
+  Yoshida,t,middle,12,3,5
+  Yoshida,t,mile,4,0,1
+  Zarak,d,mile,2,0,0
+  Zarak,t,middle,1,0,0
+  Zarak,t,mile,1,0,0
+  Zoustar,d,mile,4,1,4
+  Zoustar,d,sprint,5,0,1
+  Zoustar,t,mile,7,1,4
+  Zoustar,t,sprint,27,4,7
+  アーネストリー,d,sprint,13,0,0
+  アイファーソング,d,long,1,0,0
+  アイファーソング,d,middle,4,0,1
+  アイファーソング,d,mile,75,6,12
+  アイファーソング,d,sprint,50,3,9
+  アイファーソング,t,middle,1,0,0
+  アイファーソング,t,mile,4,0,0
+  アイファーソング,t,sprint,3,0,0
+  アイルハヴアナザー,d,long,28,2,4
+  アイルハヴアナザー,d,middle,37,4,14
+  アイルハヴアナザー,d,mile,172,14,39
+  アイルハヴアナザー,d,sprint,67,7,19
+  アイルハヴアナザー,t,long,16,1,4
+  アイルハヴアナザー,t,middle,13,0,2
+  アイルハヴアナザー,t,mile,12,1,2
+  アイルハヴアナザー,t,sprint,26,7,14
+  アグニシャイン,d,mile,2,0,1
+  アグニシャイン,d,sprint,3,1,3
+  アジアエクスプレス,d,long,9,0,0
+  アジアエクスプレス,d,middle,27,3,9
+  アジアエクスプレス,d,mile,361,38,92
+  アジアエクスプレス,d,sprint,621,52,177
+  アジアエクスプレス,t,middle,5,0,0
+  アジアエクスプレス,t,mile,67,4,9
+  アジアエクスプレス,t,sprint,127,14,30
+  アスカクリチャン,d,long,1,0,0
+  アスカクリチャン,d,middle,1,0,0
+  アスカクリチャン,d,mile,7,0,0
+  アスカクリチャン,d,sprint,34,3,9
+  アスカクリチャン,t,long,4,0,0
+  アスカクリチャン,t,middle,13,0,1
+  アスカクリチャン,t,mile,12,0,0
+  アスカクリチャン,t,sprint,6,0,0
+  アスクピーターパン,d,sprint,2,0,0
+  アスクピーターパン,t,mile,3,0,0
+  アスクピーターパン,t,sprint,2,0,0
+  アドマイヤコジーン,d,sprint,2,0,0
+  アドマイヤコジーン,t,sprint,19,4,10
+  アドマイヤマーズ,d,middle,12,1,2
+  アドマイヤマーズ,d,mile,92,11,27
+  アドマイヤマーズ,d,sprint,66,6,15
+  アドマイヤマーズ,t,long,6,3,3
+  アドマイヤマーズ,t,middle,61,6,14
+  アドマイヤマーズ,t,mile,173,19,41
+  アドマイヤマーズ,t,sprint,125,18,35
+  アドマイヤマックス,d,long,2,0,0
+  アドマイヤマックス,d,sprint,3,0,0
+  アドマイヤマックス,t,mile,4,0,0
+  アドマイヤマックス,t,sprint,24,2,4
+  アドマイヤムーン,d,long,13,1,7
+  アドマイヤムーン,d,middle,3,0,0
+  アドマイヤムーン,d,mile,30,2,6
+  アドマイヤムーン,d,sprint,105,3,13
+  アドマイヤムーン,t,middle,18,2,3
+  アドマイヤムーン,t,mile,76,2,17
+  アドマイヤムーン,t,sprint,201,15,44
+  アドミラブル,d,long,4,0,1
+  アドミラブル,d,middle,2,0,0
+  アドミラブル,d,mile,60,1,9
+  アドミラブル,d,sprint,22,0,1
+  アドミラブル,t,long,3,0,0
+  アドミラブル,t,middle,19,0,0
+  アドミラブル,t,mile,17,0,0
+  アドミラブル,t,sprint,29,2,6
+  アニマルキングダム,d,long,6,1,2
+  アニマルキングダム,d,middle,10,0,2
+  アニマルキングダム,d,mile,130,8,33
+  アニマルキングダム,d,sprint,81,5,13
+  アニマルキングダム,t,long,4,2,4
+  アニマルキングダム,t,middle,40,2,6
+  アニマルキングダム,t,mile,49,2,8
+  アニマルキングダム,t,sprint,21,0,4
+  アポロキングダム,d,long,4,0,0
+  アポロキングダム,d,middle,14,1,4
+  アポロキングダム,d,mile,35,1,4
+  アポロキングダム,d,sprint,93,7,19
+  アポロキングダム,t,mile,7,0,0
+  アポロキングダム,t,sprint,23,1,4
+  アポロケンタッキー,d,long,5,0,2
+  アポロケンタッキー,d,middle,7,0,1
+  アポロケンタッキー,d,mile,36,1,8
+  アポロケンタッキー,d,sprint,64,3,20
+  アポロケンタッキー,t,sprint,3,0,0
+  アポロソニック,d,long,5,1,1
+  アポロソニック,d,middle,1,0,0
+  アポロソニック,d,mile,3,1,1
+  アポロソニック,d,sprint,8,0,0
+  アポロソニック,t,long,1,0,0
+  アポロソニック,t,middle,1,0,0
+  アポロソニック,t,mile,1,0,0
+  アメリカンペイトリオット,d,long,23,2,7
+  アメリカンペイトリオット,d,middle,21,1,1
+  アメリカンペイトリオット,d,mile,281,19,60
+  アメリカンペイトリオット,d,sprint,263,15,46
+  アメリカンペイトリオット,t,long,13,1,4
+  アメリカンペイトリオット,t,middle,76,3,12
+  アメリカンペイトリオット,t,mile,171,11,35
+  アメリカンペイトリオット,t,sprint,212,22,59
+  アルアイン,d,long,6,0,0
+  アルアイン,d,middle,9,1,1
+  アルアイン,d,mile,113,1,9
+  アルアイン,d,sprint,102,10,18
+  アルアイン,t,long,14,0,2
+  アルアイン,t,middle,129,4,22
+  アルアイン,t,mile,206,10,43
+  アルアイン,t,sprint,161,15,45
+  アルデバラン２,d,middle,2,0,1
+  アルデバラン２,d,mile,5,0,0
+  アルデバラン２,d,sprint,2,0,0
+  アルデバラン２,t,sprint,1,0,0
+  アルバート,d,mile,2,0,1
+  アルバート,d,sprint,11,2,3
+  アルバート,t,middle,2,0,0
+  アルバート,t,mile,2,0,0
+  アルバート,t,sprint,2,0,0
+  アレスバローズ,d,long,1,0,0
+  アレスバローズ,d,middle,1,0,0
+  アレスバローズ,d,mile,6,0,0
+  アレスバローズ,d,sprint,4,0,0
+  アレスバローズ,t,middle,1,0,0
+  アレスバローズ,t,mile,5,0,0
+  アレスバローズ,t,sprint,22,3,6
+  アロマカフェ,d,sprint,25,1,5
+  アンライバルド,d,long,6,0,0
+  アンライバルド,d,mile,8,0,0
+  アンライバルド,d,sprint,11,0,1
+  アンライバルド,t,mile,1,0,0
+  アンライバルド,t,sprint,4,0,0
+  イスラボニータ,d,long,20,3,4
+  イスラボニータ,d,middle,24,0,4
+  イスラボニータ,d,mile,286,25,77
+  イスラボニータ,d,sprint,424,37,118
+  イスラボニータ,t,long,14,2,3
+  イスラボニータ,t,middle,130,15,38
+  イスラボニータ,t,mile,465,54,149
+  イスラボニータ,t,sprint,440,38,128
+  インカンテーション,d,long,1,0,0
+  インカンテーション,d,mile,25,1,2
+  インカンテーション,d,sprint,33,2,6
+  インカンテーション,t,middle,1,0,0
+  インカンテーション,t,mile,1,0,0
+  インカンテーション,t,sprint,3,0,0
+  インディチャンプ,d,middle,2,0,0
+  インディチャンプ,d,mile,14,2,6
+  インディチャンプ,d,sprint,20,1,5
+  インディチャンプ,t,middle,7,1,3
+  インディチャンプ,t,mile,39,3,14
+  インディチャンプ,t,sprint,40,4,9
+  ウインバリアシオン,d,mile,9,0,0
+  ウインバリアシオン,d,sprint,1,0,0
+  ウインバリアシオン,t,long,6,1,1
+  ウインバリアシオン,t,middle,13,3,6
+  ウインバリアシオン,t,mile,3,0,0
+  ウインバリアシオン,t,sprint,1,0,0
+  ウインブライト,d,middle,2,0,0
+  ウインブライト,d,mile,48,2,6
+  ウインブライト,d,sprint,23,2,4
+  ウインブライト,t,long,33,2,11
+  ウインブライト,t,middle,127,4,20
+  ウインブライト,t,mile,210,9,41
+  ウインブライト,t,sprint,60,5,15
+  ウォータービルド,d,middle,3,0,0
+  ウォータービルド,d,mile,4,0,1
+  ウォータービルド,d,sprint,18,1,5
+  ウォータービルド,t,middle,1,0,0
+  ウォータービルド,t,mile,13,2,6
+  ウォータービルド,t,sprint,1,0,0
+  エーシントップ,d,mile,6,1,1
+  エーシントップ,d,sprint,10,0,0
+  エーシントップ,t,mile,4,0,0
+  エーシントップ,t,sprint,26,1,5
+  エイシンヒカリ,d,long,15,1,5
+  エイシンヒカリ,d,middle,20,3,6
+  エイシンヒカリ,d,mile,114,7,26
+  エイシンヒカリ,d,sprint,129,7,45
+  エイシンヒカリ,t,long,6,0,0
+  エイシンヒカリ,t,middle,65,5,12
+  エイシンヒカリ,t,mile,120,8,29
+  エイシンヒカリ,t,sprint,169,15,39
+  エイシンフラッシュ,d,long,77,9,27
+  エイシンフラッシュ,d,middle,9,0,1
+  エイシンフラッシュ,d,mile,117,9,22
+  エイシンフラッシュ,d,sprint,165,6,24
+  エイシンフラッシュ,t,long,20,1,4
+  エイシンフラッシュ,t,middle,121,8,23
+  エイシンフラッシュ,t,mile,168,6,30
+  エイシンフラッシュ,t,sprint,179,11,35
+  エスケンデレヤ,d,long,18,2,7
+  エスケンデレヤ,d,middle,12,4,8
+  エスケンデレヤ,d,mile,89,8,34
+  エスケンデレヤ,d,sprint,23,0,3
+  エスケンデレヤ,t,middle,7,0,0
+  エスケンデレヤ,t,mile,34,1,6
+  エスケンデレヤ,t,sprint,27,2,6
+  エスポワールシチー,d,long,6,0,1
+  エスポワールシチー,d,middle,14,1,4
+  エスポワールシチー,d,mile,199,25,54
+  エスポワールシチー,d,sprint,369,37,100
+  エスポワールシチー,t,middle,1,0,0
+  エスポワールシチー,t,mile,2,0,0
+  エスポワールシチー,t,sprint,4,0,2
+  エタリオウ,d,mile,1,0,0
+  エタリオウ,t,middle,1,0,0
+  エタリオウ,t,mile,4,0,0
+  エピカリス,d,long,1,0,0
+  エピカリス,d,middle,5,0,2
+  エピカリス,d,mile,52,2,9
+  エピカリス,d,sprint,42,2,4
+  エピカリス,t,middle,1,0,0
+  エピカリス,t,mile,5,0,1
+  エピカリス,t,sprint,7,0,1
+  エピファネイア,d,long,60,6,12
+  エピファネイア,d,middle,78,9,23
+  エピファネイア,d,mile,379,30,89
+  エピファネイア,d,sprint,255,15,65
+  エピファネイア,t,long,174,25,57
+  エピファネイア,t,middle,843,106,286
+  エピファネイア,t,mile,1278,161,455
+  エピファネイア,t,sprint,427,41,101
+  エポカドーロ,d,middle,3,0,0
+  エポカドーロ,d,mile,25,0,4
+  エポカドーロ,d,sprint,20,1,1
+  エポカドーロ,t,long,3,0,0
+  エポカドーロ,t,middle,19,0,6
+  エポカドーロ,t,mile,36,1,6
+  エポカドーロ,t,sprint,23,1,1
+  エンパイアメーカー,d,mile,12,1,4
+  エンパイアメーカー,d,sprint,52,4,17
+  エンパイアメーカー,t,middle,1,0,0
+  エンパイアメーカー,t,sprint,1,0,0
+  オーシャンブルー,d,long,1,0,0
+  オーシャンブルー,d,mile,2,0,0
+  オーシャンブルー,d,sprint,3,0,0
+  オーシャンブルー,t,middle,1,0,0
+  オーシャンブルー,t,mile,2,0,1
+  オーシャンブルー,t,sprint,10,0,2
+  オーヴァルエース,d,long,1,0,0
+  オーヴァルエース,d,middle,1,0,0
+  オーヴァルエース,d,mile,19,1,2
+  オーヴァルエース,d,sprint,52,3,10
+  オーヴァルエース,t,mile,2,0,0
+  オーヴァルエース,t,sprint,3,0,0
+  オウケンブルースリ,d,long,3,0,1
+  オウケンブルースリ,d,mile,2,0,0
+  オウケンブルースリ,t,long,11,0,0
+  オウケンブルースリ,t,middle,18,3,5
+  オウケンブルースリ,t,mile,8,1,1
+  オウケンワールド,d,sprint,3,0,2
+  オルフェーヴル,d,long,93,12,35
+  オルフェーヴル,d,middle,99,12,26
+  オルフェーヴル,d,mile,491,45,123
+  オルフェーヴル,d,sprint,233,17,37
+  オルフェーヴル,t,long,199,17,54
+  オルフェーヴル,t,middle,431,36,121
+  オルフェーヴル,t,mile,310,26,53
+  オルフェーヴル,t,sprint,230,18,57
+  オンファイア,d,middle,4,0,0
+  オンファイア,d,mile,60,5,11
+  オンファイア,t,mile,2,0,0
+  カジノドライヴ,d,long,7,1,2
+  カジノドライヴ,d,middle,6,1,3
+  カジノドライヴ,d,mile,13,4,6
+  カジノドライヴ,d,sprint,9,0,0
+  カジノドライヴ,t,sprint,1,0,0
+  カネヒキリ,d,long,1,0,1
+  カネヒキリ,d,mile,29,0,10
+  カネヒキリ,d,sprint,6,0,0
+  カフェラピード,d,mile,3,0,0
+  カフェラピード,d,sprint,2,0,0
+  カフェラピード,t,middle,1,0,0
+  カフェラピード,t,mile,2,0,0
+  カフジテイク,d,sprint,3,0,2
+  カリズマティック,d,long,1,0,0
+  カリズマティック,d,middle,5,0,0
+  カリズマティック,d,mile,13,1,1
+  カリフォルニアクローム,d,long,4,1,1
+  カリフォルニアクローム,d,middle,19,2,5
+  カリフォルニアクローム,d,mile,359,29,80
+  カリフォルニアクローム,d,sprint,253,21,58
+  カリフォルニアクローム,t,long,4,0,0
+  カリフォルニアクローム,t,middle,82,3,10
+  カリフォルニアクローム,t,mile,141,4,20
+  カリフォルニアクローム,t,sprint,112,15,27
+  カルストンライトオ,d,sprint,1,0,0
+  カルストンライトオ,t,sprint,9,0,2
+  カレンブラックヒル,d,long,33,1,4
+  カレンブラックヒル,d,middle,17,2,3
+  カレンブラックヒル,d,mile,301,22,68
+  カレンブラックヒル,d,sprint,334,37,92
+  カレンブラックヒル,t,long,1,0,0
+  カレンブラックヒル,t,middle,31,0,3
+  カレンブラックヒル,t,mile,112,4,20
+  カレンブラックヒル,t,sprint,213,10,35
+  ガルボ,d,long,2,0,0
+  ガルボ,d,middle,2,0,1
+  ガルボ,d,mile,39,3,16
+  ガルボ,d,sprint,47,3,11
+  ガルボ,t,long,24,3,8
+  ガルボ,t,middle,23,0,0
+  ガルボ,t,mile,24,0,4
+  ガルボ,t,sprint,22,0,1
+  キズナ,d,long,182,36,89
+  キズナ,d,middle,190,24,78
+  キズナ,d,mile,909,127,322
+  キズナ,d,sprint,293,33,85
+  キズナ,t,long,337,44,123
+  キズナ,t,middle,947,122,327
+  キズナ,t,mile,1156,159,392
+  キズナ,t,sprint,518,56,160
+  キセキ,d,mile,30,1,5
+  キセキ,d,sprint,16,0,0
+  キセキ,t,long,1,0,0
+  キセキ,t,middle,17,1,3
+  キセキ,t,mile,26,0,2
+  キセキ,t,sprint,5,0,0
+  キタサンブラック,d,long,69,16,32
+  キタサンブラック,d,middle,51,8,14
+  キタサンブラック,d,mile,332,47,115
+  キタサンブラック,d,sprint,124,11,26
+  キタサンブラック,t,long,113,11,34
+  キタサンブラック,t,middle,497,76,193
+  キタサンブラック,t,mile,622,86,209
+  キタサンブラック,t,sprint,287,36,89
+  キタサンミカヅキ,d,mile,3,0,0
+  キタサンミカヅキ,d,sprint,4,0,0
+  キタノコマンドール,d,middle,4,0,0
+  キタノコマンドール,d,mile,4,0,0
+  キタノコマンドール,d,sprint,1,0,0
+  キタノコマンドール,t,sprint,1,0,0
+  キャプテンキング,d,sprint,5,0,0
+  キャプテントゥーレ,d,mile,23,1,2
+  キャプテントゥーレ,d,sprint,20,2,6
+  キャプテントゥーレ,t,middle,1,0,0
+  キングカメハメハ,d,long,75,13,29
+  キングカメハメハ,d,middle,108,22,44
+  キングカメハメハ,d,mile,232,33,83
+  キングカメハメハ,d,sprint,78,7,23
+  キングカメハメハ,t,long,145,20,50
+  キングカメハメハ,t,middle,326,39,107
+  キングカメハメハ,t,mile,257,38,94
+  キングカメハメハ,t,sprint,38,3,11
+  キングズベスト,d,mile,10,1,4
+  キングズベスト,d,sprint,46,2,9
+  キングズベスト,t,mile,2,0,1
+  キングズベスト,t,sprint,23,3,6
+  キングヘイロー,d,long,3,1,2
+  キングヘイロー,d,middle,20,1,5
+  キングヘイロー,d,mile,11,2,2
+  キングヘイロー,d,sprint,2,0,0
+  キングヘイロー,t,long,3,0,1
+  キングヘイロー,t,middle,29,6,16
+  キングヘイロー,t,mile,2,0,0
+  キングリオ,d,long,2,0,0
+  キングリオ,d,mile,14,1,2
+  キンシャサノキセキ,d,long,59,7,17
+  キンシャサノキセキ,d,middle,23,2,7
+  キンシャサノキセキ,d,mile,217,17,55
+  キンシャサノキセキ,d,sprint,597,42,156
+  キンシャサノキセキ,t,long,1,0,0
+  キンシャサノキセキ,t,middle,53,5,14
+  キンシャサノキセキ,t,mile,157,7,37
+  キンシャサノキセキ,t,sprint,395,30,87
+  ギンザグリングラス,t,mile,2,0,0
+  ギンザグリングラス,t,sprint,6,0,0
+  クラウンレガーロ,d,mile,1,0,0
+  クラウンレガーロ,d,sprint,3,0,1
+  クラウンレガーロ,t,mile,6,0,0
+  クラウンレガーロ,t,sprint,4,0,0
+  クリーンエコロジー,d,long,4,0,0
+  クリーンエコロジー,d,mile,1,0,0
+  クリーンエコロジー,d,sprint,20,2,8
+  クリーンエコロジー,t,sprint,21,1,2
+  クリエイター２,d,long,1,0,0
+  クリエイター２,d,middle,14,0,1
+  クリエイター２,d,mile,59,2,10
+  クリエイター２,d,sprint,40,3,11
+  クリエイター２,t,long,1,0,0
+  クリエイター２,t,middle,2,0,0
+  クリエイター２,t,mile,2,0,0
+  クリエイター２,t,sprint,27,0,4
+  クリソベリル,d,middle,9,1,3
+  クリソベリル,d,mile,134,15,41
+  クリソベリル,d,sprint,50,1,7
+  クリソベリル,t,mile,6,0,0
+  クリソベリル,t,sprint,3,0,2
+  クレスコグランド,d,long,1,0,0
+  クレスコグランド,d,middle,3,1,2
+  クレスコグランド,d,mile,14,0,0
+  クレスコグランド,d,sprint,3,0,0
+  クロフネ,d,long,30,2,7
+  クロフネ,d,middle,10,0,2
+  クロフネ,d,mile,70,8,13
+  クロフネ,d,sprint,70,4,13
+  クロフネ,t,middle,3,0,0
+  クロフネ,t,mile,10,2,4
+  クロフネ,t,sprint,42,7,16
+  クワイトファイン,d,sprint,1,0,0
+  クワイトファイン,t,mile,1,0,0
+  グァンチャーレ,d,middle,2,0,0
+  グァンチャーレ,d,mile,5,0,0
+  グァンチャーレ,d,sprint,22,2,5
+  グァンチャーレ,t,middle,5,0,1
+  グァンチャーレ,t,mile,7,0,0
+  グァンチャーレ,t,sprint,5,0,0
+  グラスワンダー,d,long,8,1,4
+  グラスワンダー,d,mile,1,0,0
+  グラスワンダー,t,middle,9,1,4
+  グラスワンダー,t,mile,22,6,12
+  グラスワンダー,t,sprint,17,2,3
+  グランデッツァ,d,mile,1,0,0
+  グランデッツァ,d,sprint,18,1,2
+  グランデッツァ,t,long,1,0,0
+  グランデッツァ,t,middle,18,4,5
+  グランデッツァ,t,mile,4,0,2
+  グランデッツァ,t,sprint,21,0,5
+  グランプリボス,d,long,6,0,0
+  グランプリボス,d,middle,6,0,2
+  グランプリボス,d,mile,64,5,16
+  グランプリボス,d,sprint,63,4,12
+  グランプリボス,t,middle,1,0,0
+  グランプリボス,t,mile,4,1,1
+  グランプリボス,t,sprint,27,2,7
+  グレーターロンドン,d,long,22,2,7
+  グレーターロンドン,d,mile,39,1,6
+  グレーターロンドン,d,sprint,86,12,28
+  グレーターロンドン,t,long,24,4,7
+  グレーターロンドン,t,middle,55,5,12
+  グレーターロンドン,t,mile,166,25,52
+  グレーターロンドン,t,sprint,132,17,33
+  ケープブランコ,d,long,4,0,0
+  ケープブランコ,d,middle,10,0,3
+  ケープブランコ,d,mile,37,5,12
+  ケープブランコ,d,sprint,28,2,6
+  ケープブランコ,t,middle,13,0,5
+  ケープブランコ,t,mile,19,1,1
+  ケープブランコ,t,sprint,20,0,3
+  ケイムホーム,d,long,1,0,0
+  ケイムホーム,d,mile,2,0,0
+  ケイムホーム,d,sprint,34,2,6
+  ケイムホーム,t,mile,1,0,0
+  ケイムホーム,t,sprint,13,1,2
+  コパノチャーリー,t,mile,1,0,0
+  コパノチャーリー,t,sprint,2,0,0
+  コパノリチャード,d,sprint,2,0,0
+  コパノリチャード,t,middle,9,1,4
+  コパノリチャード,t,mile,12,0,4
+  コパノリッキー,d,long,25,6,9
+  コパノリッキー,d,middle,60,4,13
+  コパノリッキー,d,mile,432,34,83
+  コパノリッキー,d,sprint,540,48,125
+  コパノリッキー,t,long,11,0,1
+  コパノリッキー,t,middle,41,3,8
+  コパノリッキー,t,mile,31,0,3
+  コパノリッキー,t,sprint,54,3,8
+  コントレイル,d,middle,4,0,0
+  コントレイル,d,mile,16,3,4
+  コントレイル,d,sprint,7,0,1
+  コントレイル,t,long,7,2,4
+  コントレイル,t,middle,72,8,21
+  コントレイル,t,mile,117,13,40
+  コントレイル,t,sprint,16,1,8
+  ゴールスキー,d,mile,2,0,0
+  ゴールスキー,t,sprint,3,0,0
+  ゴールデンバローズ,d,middle,3,0,2
+  ゴールデンバローズ,d,mile,18,1,3
+  ゴールデンバローズ,d,sprint,19,1,6
+  ゴールデンバローズ,t,mile,1,0,0
+  ゴールデンバローズ,t,sprint,2,0,0
+  ゴールデンマンデラ,d,middle,6,0,0
+  ゴールデンマンデラ,d,mile,20,0,0
+  ゴールデンマンデラ,d,sprint,25,1,3
+  ゴールデンマンデラ,t,middle,2,0,0
+  ゴールデンマンデラ,t,mile,4,0,0
+  ゴールドアクター,d,long,6,1,3
+  ゴールドアクター,d,middle,16,2,4
+  ゴールドアクター,d,mile,72,5,16
+  ゴールドアクター,d,sprint,20,2,2
+  ゴールドアクター,t,long,12,3,5
+  ゴールドアクター,t,middle,61,3,19
+  ゴールドアクター,t,mile,58,3,17
+  ゴールドアクター,t,sprint,37,2,8
+  ゴールドアリュール,d,long,11,1,2
+  ゴールドアリュール,d,mile,40,2,12
+  ゴールドアリュール,d,sprint,37,3,14
+  ゴールドアリュール,t,mile,2,0,0
+  ゴールドアリュール,t,sprint,1,0,0
+  ゴールドシップ,d,long,140,13,43
+  ゴールドシップ,d,middle,49,4,5
+  ゴールドシップ,d,mile,257,16,72
+  ゴールドシップ,d,sprint,31,1,3
+  ゴールドシップ,t,long,448,37,106
+  ゴールドシップ,t,middle,1072,80,272
+  ゴールドシップ,t,mile,604,42,158
+  ゴールドシップ,t,sprint,41,1,4
+  ゴールドドリーム,d,middle,19,1,5
+  ゴールドドリーム,d,mile,169,14,41
+  ゴールドドリーム,d,sprint,216,10,35
+  ゴールドドリーム,t,middle,1,0,0
+  ゴールドドリーム,t,mile,10,1,2
+  ゴールドドリーム,t,sprint,10,0,2
+  ゴールドヘイロー,d,long,24,0,7
+  ゴールドヘイロー,d,mile,6,0,0
+  ゴールドヘイロー,d,sprint,3,0,0
+  ゴールドヘイロー,t,mile,4,0,0
+  ゴールドヘイロー,t,sprint,5,1,1
+  ゴスホークケン,d,mile,1,0,0
+  ゴスホークケン,t,middle,1,0,0
+  ゴスホークケン,t,mile,5,1,2
+  ゴスホークケン,t,sprint,2,0,0
+  ゴルトマイスター,t,sprint,1,0,0
+  サートゥルナーリア,d,long,3,1,3
+  サートゥルナーリア,d,middle,15,2,4
+  サートゥルナーリア,d,mile,140,7,23
+  サートゥルナーリア,d,sprint,91,6,16
+  サートゥルナーリア,t,long,38,5,12
+  サートゥルナーリア,t,middle,196,25,61
+  サートゥルナーリア,t,mile,321,50,105
+  サートゥルナーリア,t,sprint,130,16,36
+  サイモンラムセス,d,sprint,1,0,0
+  サイモンラムセス,t,middle,1,0,0
+  サイモンラムセス,t,mile,3,0,0
+  サウスヴィグラス,d,long,4,0,0
+  サウスヴィグラス,d,mile,28,1,7
+  サウスヴィグラス,d,sprint,203,14,73
+  サウスヴィグラス,t,sprint,4,0,0
+  サクラオリオン,d,mile,1,0,0
+  サクラオリオン,d,sprint,7,0,0
+  サクラオリオン,t,middle,1,0,0
+  サクラオリオン,t,mile,4,0,0
+  サクラオリオン,t,sprint,22,1,1
+  サトノアラジン,d,long,37,2,12
+  サトノアラジン,d,middle,41,5,11
+  サトノアラジン,d,mile,331,30,78
+  サトノアラジン,d,sprint,280,24,84
+  サトノアラジン,t,long,37,1,6
+  サトノアラジン,t,middle,90,6,25
+  サトノアラジン,t,mile,183,13,40
+  サトノアラジン,t,sprint,216,17,49
+  サトノアレス,d,long,10,0,2
+  サトノアレス,d,middle,3,0,0
+  サトノアレス,d,mile,14,0,1
+  サトノアレス,d,sprint,2,0,0
+  サトノアレス,t,middle,5,0,0
+  サトノアレス,t,mile,12,0,2
+  サトノアレス,t,sprint,13,0,1
+  サトノインプレッサ,d,mile,1,0,0
+  サトノインプレッサ,d,sprint,3,0,0
+  サトノインプレッサ,t,middle,1,0,0
+  サトノインプレッサ,t,mile,2,0,0
+  サトノインプレッサ,t,sprint,1,0,0
+  サトノクラウン,d,long,22,3,9
+  サトノクラウン,d,middle,44,4,11
+  サトノクラウン,d,mile,212,11,49
+  サトノクラウン,d,sprint,84,4,15
+  サトノクラウン,t,long,81,6,32
+  サトノクラウン,t,middle,178,12,32
+  サトノクラウン,t,mile,309,14,47
+  サトノクラウン,t,sprint,162,13,31
+  サトノジェネシス,d,mile,6,0,0
+  サトノジェネシス,d,sprint,4,0,0
+  サトノジェネシス,t,middle,10,0,1
+  サトノジェネシス,t,mile,12,0,1
+  サトノジェネシス,t,sprint,5,0,0
+  サトノダイヤモンド,d,long,44,7,17
+  サトノダイヤモンド,d,middle,54,2,17
+  サトノダイヤモンド,d,mile,359,33,100
+  サトノダイヤモンド,d,sprint,126,5,27
+  サトノダイヤモンド,t,long,105,9,20
+  サトノダイヤモンド,t,middle,369,40,100
+  サトノダイヤモンド,t,mile,400,37,101
+  サトノダイヤモンド,t,sprint,221,20,60
+  サムライハート,d,mile,1,0,0
+  サムライハート,t,sprint,1,0,0
+  サングラス,d,mile,3,0,0
+  サングラス,d,sprint,3,0,0
+  サングラス,t,sprint,3,0,0
+  サングレーザー,d,middle,2,0,0
+  サングレーザー,d,mile,16,1,4
+  サングレーザー,d,sprint,8,0,0
+  サングレーザー,t,middle,3,0,0
+  サングレーザー,t,mile,27,1,6
+  サングレーザー,t,sprint,5,0,0
+  サンダースノー,d,long,12,1,5
+  サンダースノー,d,middle,24,3,7
+  サンダースノー,d,mile,344,33,87
+  サンダースノー,d,sprint,308,27,67
+  サンダースノー,t,long,3,0,0
+  サンダースノー,t,middle,35,2,5
+  サンダースノー,t,mile,94,3,12
+  サンダースノー,t,sprint,119,11,22
+  サンライズソア,d,mile,1,0,0
+  サンライズソア,d,sprint,6,0,1
+  サンライズソア,t,sprint,1,0,0
+  ザサンデーフサイチ,d,mile,6,0,0
+  ザサンデーフサイチ,d,sprint,7,0,1
+  ザサンデーフサイチ,t,long,8,0,0
+  ザサンデーフサイチ,t,middle,18,2,3
+  ザサンデーフサイチ,t,mile,21,0,3
+  ザファクター,d,long,7,1,3
+  ザファクター,d,middle,1,0,0
+  ザファクター,d,mile,109,9,32
+  ザファクター,d,sprint,194,17,46
+  ザファクター,t,middle,15,0,0
+  ザファクター,t,mile,47,4,10
+  ザファクター,t,sprint,61,5,23
+  シゲルカガ,d,sprint,14,4,6
+  シゲルカガ,t,mile,2,0,0
+  シスキン,d,middle,2,0,1
+  シスキン,d,mile,9,2,4
+  シスキン,d,sprint,18,2,9
+  シスキン,t,middle,24,3,8
+  シスキン,t,mile,55,13,24
+  シスキン,t,sprint,37,3,9
+  シニスターミニスター,d,long,35,4,10
+  シニスターミニスター,d,middle,80,10,19
+  シニスターミニスター,d,mile,972,123,328
+  シニスターミニスター,d,sprint,790,83,254
+  シニスターミニスター,t,middle,3,0,0
+  シニスターミニスター,t,mile,7,0,0
+  シニスターミニスター,t,sprint,10,0,0
+  シビルウォー,d,long,16,1,3
+  シビルウォー,d,middle,3,1,1
+  シビルウォー,d,mile,21,2,11
+  シビルウォー,t,long,1,0,0
+  シビルウォー,t,mile,1,0,0
+  シャンハイボビー,d,long,9,0,1
+  シャンハイボビー,d,middle,12,0,0
+  シャンハイボビー,d,mile,258,13,50
+  シャンハイボビー,d,sprint,362,27,89
+  シャンハイボビー,t,long,16,0,1
+  シャンハイボビー,t,middle,34,1,5
+  シャンハイボビー,t,mile,79,1,6
+  シャンハイボビー,t,sprint,121,5,25
+  シュウジ,d,mile,4,1,1
+  シュウジ,t,middle,1,0,1
+  シュウジ,t,mile,1,0,0
+  シュヴァルグラン,d,long,5,0,0
+  シュヴァルグラン,d,middle,21,0,1
+  シュヴァルグラン,d,mile,145,8,19
+  シュヴァルグラン,d,sprint,109,6,19
+  シュヴァルグラン,t,long,34,5,14
+  シュヴァルグラン,t,middle,70,5,18
+  シュヴァルグラン,t,mile,88,1,11
+  シュヴァルグラン,t,sprint,81,6,19
+  ショウナンカンプ,d,sprint,1,0,0
+  ショウナンカンプ,t,sprint,34,3,7
+  ショウナンバッハ,d,mile,5,0,0
+  ショウナンバッハ,d,sprint,9,1,2
+  ショウナンバッハ,t,long,3,0,0
+  ショウナンバッハ,t,middle,9,0,1
+  ショウナンバッハ,t,mile,20,0,6
+  ショウナンバッハ,t,sprint,12,1,2
+  シルバーステート,d,long,47,2,11
+  シルバーステート,d,middle,10,0,0
+  シルバーステート,d,mile,211,18,38
+  シルバーステート,d,sprint,294,17,54
+  シルバーステート,t,long,72,7,21
+  シルバーステート,t,middle,333,44,105
+  シルバーステート,t,mile,654,60,196
+  シルバーステート,t,sprint,470,33,117
+  シルポート,d,mile,4,0,0
+  シルポート,d,sprint,9,0,0
+  シルポート,t,middle,8,0,1
+  シルポート,t,mile,12,0,2
+  シルポート,t,sprint,11,0,0
+  シンボリクリスエス,d,long,23,1,6
+  シンボリクリスエス,d,middle,2,0,1
+  シンボリクリスエス,d,mile,90,8,32
+  シンボリクリスエス,d,sprint,8,0,0
+  シンボリクリスエス,t,long,18,1,3
+  シンボリクリスエス,t,middle,5,1,2
+  シンボリクリスエス,t,mile,10,0,1
+  シンボリクリスエス,t,sprint,1,0,0
+  ジャスタウェイ,d,long,93,6,28
+  ジャスタウェイ,d,middle,114,10,25
+  ジャスタウェイ,d,mile,536,57,138
+  ジャスタウェイ,d,sprint,282,24,77
+  ジャスタウェイ,t,long,104,12,36
+  ジャスタウェイ,t,middle,294,32,99
+  ジャスタウェイ,t,mile,373,35,101
+  ジャスタウェイ,t,sprint,206,21,52
+  ジャングルポケット,d,long,25,2,7
+  ジャングルポケット,d,middle,7,0,0
+  ジャングルポケット,d,mile,15,0,0
+  ジャングルポケット,d,sprint,6,0,0
+  ジャングルポケット,t,long,41,2,9
+  ジャングルポケット,t,middle,61,3,19
+  ジャングルポケット,t,mile,53,3,16
+  ジャングルポケット,t,sprint,19,4,8
+  ジョーカプチーノ,d,long,17,6,8
+  ジョーカプチーノ,d,middle,11,2,6
+  ジョーカプチーノ,d,mile,92,9,22
+  ジョーカプチーノ,d,sprint,163,14,37
+  ジョーカプチーノ,t,long,7,0,2
+  ジョーカプチーノ,t,middle,16,1,3
+  ジョーカプチーノ,t,mile,60,2,11
+  ジョーカプチーノ,t,sprint,217,15,52
+  スウェプトオーヴァーボード,d,sprint,1,0,0
+  スウェプトオーヴァーボード,t,mile,4,0,1
+  スウェプトオーヴァーボード,t,sprint,23,3,9
+  スクリーンヒーロー,d,long,27,3,12
+  スクリーンヒーロー,d,middle,16,2,5
+  スクリーンヒーロー,d,mile,250,23,71
+  スクリーンヒーロー,d,sprint,127,9,32
+  スクリーンヒーロー,t,long,44,6,20
+  スクリーンヒーロー,t,middle,238,32,82
+  スクリーンヒーロー,t,mile,343,43,127
+  スクリーンヒーロー,t,sprint,175,15,65
+  スクワートルスクワート,d,mile,1,0,0
+  スクワートルスクワート,d,sprint,3,0,0
+  スクワートルスクワート,t,sprint,9,0,0
+  スズカコーズウェイ,d,long,1,0,0
+  スズカコーズウェイ,d,middle,4,0,0
+  スズカコーズウェイ,d,mile,45,7,15
+  スズカコーズウェイ,d,sprint,140,12,44
+  スズカコーズウェイ,t,long,2,0,0
+  スズカコーズウェイ,t,mile,3,0,0
+  スズカコーズウェイ,t,sprint,2,0,0
+  スズカフェニックス,d,long,1,0,0
+  スズカフェニックス,d,sprint,9,1,3
+  スズカフェニックス,t,middle,1,0,0
+  スズカフェニックス,t,mile,4,0,0
+  スズカフェニックス,t,sprint,26,3,10
+  ステイゴールド,d,long,98,7,32
+  ステイゴールド,t,long,18,1,6
+  ステイゴールド,t,middle,53,7,19
+  ステイゴールド,t,mile,26,0,7
+  ステイゴールド,t,sprint,3,0,0
+  ストーミーシー,d,mile,4,0,0
+  ストーミーシー,d,sprint,7,0,0
+  ストーミーシー,t,long,1,0,0
+  ストーミーシー,t,middle,5,0,0
+  ストーミーシー,t,mile,12,0,0
+  ストーミーシー,t,sprint,1,0,0
+  ストーミングホーム,d,sprint,22,4,11
+  ストーミングホーム,t,sprint,2,0,0
+  ストロングリターン,d,long,58,2,10
+  ストロングリターン,d,middle,13,2,5
+  ストロングリターン,d,mile,153,9,29
+  ストロングリターン,d,sprint,214,9,40
+  ストロングリターン,t,long,2,0,0
+  ストロングリターン,t,middle,14,0,0
+  ストロングリターン,t,mile,60,0,6
+  ストロングリターン,t,sprint,82,4,15
+  スノードラゴン,d,mile,5,0,0
+  スノードラゴン,d,sprint,24,1,2
+  スノードラゴン,t,mile,1,0,0
+  スノードラゴン,t,sprint,33,1,5
+  スピリッツミノル,d,long,1,0,0
+  スピリッツミノル,d,middle,3,0,0
+  スピリッツミノル,d,mile,12,1,2
+  スピリッツミノル,d,sprint,9,1,1
+  スピリッツミノル,t,middle,2,0,0
+  スピルバーグ,d,long,30,0,6
+  スピルバーグ,d,middle,12,0,2
+  スピルバーグ,d,mile,77,8,20
+  スピルバーグ,d,sprint,25,1,3
+  スピルバーグ,t,long,7,0,2
+  スピルバーグ,t,middle,51,7,14
+  スピルバーグ,t,mile,113,12,36
+  スピルバーグ,t,sprint,46,2,11
+  スマートオーディン,d,mile,2,0,0
+  スマートオーディン,d,sprint,19,0,2
+  スマートオーディン,t,middle,1,0,0
+  スマートオーディン,t,mile,17,3,6
+  スマートオーディン,t,sprint,13,2,5
+  スマートファルコン,d,long,1,0,0
+  スマートファルコン,d,middle,5,0,0
+  スマートファルコン,d,mile,43,3,8
+  スマートファルコン,d,sprint,59,4,11
+  スマートファルコン,t,mile,1,0,0
+  スマートファルコン,t,sprint,3,0,0
+  スワーヴリチャード,d,long,12,1,6
+  スワーヴリチャード,d,middle,10,0,2
+  スワーヴリチャード,d,mile,113,9,24
+  スワーヴリチャード,d,sprint,139,9,27
+  スワーヴリチャード,t,long,38,5,9
+  スワーヴリチャード,t,middle,168,22,61
+  スワーヴリチャード,t,mile,357,35,92
+  スワーヴリチャード,t,sprint,195,13,41
+  セイウンコウセイ,d,mile,3,0,0
+  セイウンコウセイ,d,sprint,12,0,0
+  セイウンコウセイ,t,middle,2,0,0
+  セイウンコウセイ,t,mile,4,0,0
+  セイウンコウセイ,t,sprint,27,0,1
+  セイクリムズン,d,sprint,2,0,0
+  セイクリムズン,t,sprint,1,0,0
+  セレスハント,d,mile,14,0,6
+  セレスハント,d,sprint,2,0,0
+  ゼンノロブロイ,d,long,9,0,3
+  ゼンノロブロイ,d,middle,3,0,0
+  ゼンノロブロイ,d,mile,31,4,5
+  ゼンノロブロイ,d,sprint,13,3,6
+  ゼンノロブロイ,t,long,13,0,0
+  ゼンノロブロイ,t,middle,9,0,1
+  ゼンノロブロイ,t,mile,9,1,1
+  ゼンノロブロイ,t,sprint,36,3,6
+  タートルボウル,d,long,1,0,0
+  タートルボウル,d,middle,5,0,2
+  タートルボウル,d,mile,31,5,13
+  タートルボウル,d,sprint,21,0,0
+  タートルボウル,t,long,1,0,0
+  タートルボウル,t,middle,9,2,2
+  タートルボウル,t,mile,3,0,1
+  タートルボウル,t,sprint,18,7,10
+  タイセイレジェンド,d,long,5,1,1
+  タイセイレジェンド,d,middle,1,0,0
+  タイセイレジェンド,d,mile,36,3,14
+  タイセイレジェンド,d,sprint,14,1,5
+  タイムパラドックス,d,middle,3,0,1
+  タイムパラドックス,d,mile,64,2,10
+  タイムパラドックス,d,sprint,17,2,6
+  タイムパラドックス,t,mile,2,0,0
+  タツゴウゲキ,d,sprint,6,0,0
+  タニノギムレット,d,mile,1,0,0
+  タニノギムレット,d,sprint,1,0,0
+  タニノギムレット,t,middle,1,0,0
+  タニノギムレット,t,mile,3,0,1
+  タニノギムレット,t,sprint,3,0,0
+  タニノフランケル,d,mile,4,0,0
+  タニノフランケル,d,sprint,16,1,2
+  タニノフランケル,t,middle,3,0,0
+  タニノフランケル,t,mile,5,0,0
+  タニノフランケル,t,sprint,8,0,2
+  タリスマニック,d,long,23,4,9
+  タリスマニック,d,middle,12,0,1
+  タリスマニック,d,mile,167,13,36
+  タリスマニック,d,sprint,175,14,39
+  タリスマニック,t,long,5,0,0
+  タリスマニック,t,middle,42,7,10
+  タリスマニック,t,mile,64,2,6
+  タリスマニック,t,sprint,110,8,28
+  タワーオブロンドン,d,long,5,0,1
+  タワーオブロンドン,d,middle,2,0,0
+  タワーオブロンドン,d,mile,64,2,17
+  タワーオブロンドン,d,sprint,222,11,42
+  タワーオブロンドン,t,long,1,0,0
+  タワーオブロンドン,t,middle,6,0,1
+  タワーオブロンドン,t,mile,80,1,12
+  タワーオブロンドン,t,sprint,268,21,61
+  ダイシンサンダー,d,mile,8,0,0
+  ダイシンサンダー,d,sprint,1,0,0
+  ダイシンサンダー,t,middle,1,0,0
+  ダイシンサンダー,t,mile,3,0,0
+  ダイシンサンダー,t,sprint,5,0,0
+  ダイシンバルカン,d,sprint,1,0,0
+  ダイシンバルカン,t,middle,2,0,0
+  ダイシンバルカン,t,mile,1,0,0
+  ダイシンバルカン,t,sprint,1,0,0
+  ダイワメジャー,d,long,130,13,38
+  ダイワメジャー,d,middle,26,2,6
+  ダイワメジャー,d,mile,283,20,60
+  ダイワメジャー,d,sprint,367,41,95
+  ダイワメジャー,t,long,15,1,1
+  ダイワメジャー,t,middle,132,12,48
+  ダイワメジャー,t,mile,513,47,156
+  ダイワメジャー,t,sprint,735,65,229
+  ダノンキングリー,d,mile,10,0,1
+  ダノンキングリー,d,sprint,9,1,3
+  ダノンキングリー,t,middle,6,0,1
+  ダノンキングリー,t,mile,28,2,5
+  ダノンキングリー,t,sprint,20,1,4
+  ダノンシャーク,d,long,9,0,3
+  ダノンシャーク,d,middle,2,0,0
+  ダノンシャーク,d,mile,44,2,13
+  ダノンシャーク,d,sprint,25,1,5
+  ダノンシャーク,t,middle,4,0,1
+  ダノンシャーク,t,mile,8,0,0
+  ダノンシャーク,t,sprint,10,1,3
+  ダノンシャンティ,d,long,3,0,0
+  ダノンシャンティ,d,middle,5,0,0
+  ダノンシャンティ,d,mile,48,2,4
+  ダノンシャンティ,d,sprint,24,0,2
+  ダノンシャンティ,t,long,2,0,1
+  ダノンシャンティ,t,middle,9,0,0
+  ダノンシャンティ,t,mile,7,0,0
+  ダノンシャンティ,t,sprint,9,2,2
+  ダノンスマッシュ,d,mile,33,2,7
+  ダノンスマッシュ,d,sprint,29,0,0
+  ダノンスマッシュ,t,middle,8,0,1
+  ダノンスマッシュ,t,mile,42,0,7
+  ダノンスマッシュ,t,sprint,56,5,14
+  ダノンバラード,d,long,18,3,8
+  ダノンバラード,d,middle,10,0,1
+  ダノンバラード,d,mile,184,11,43
+  ダノンバラード,d,sprint,71,5,18
+  ダノンバラード,t,long,25,1,7
+  ダノンバラード,t,middle,255,13,43
+  ダノンバラード,t,mile,461,32,107
+  ダノンバラード,t,sprint,128,7,23
+  ダノンプレミアム,d,middle,2,0,1
+  ダノンプレミアム,d,mile,35,0,3
+  ダノンプレミアム,d,sprint,31,2,4
+  ダノンプレミアム,t,middle,16,0,2
+  ダノンプレミアム,t,mile,62,3,13
+  ダノンプレミアム,t,sprint,48,3,11
+  ダノンレジェンド,d,long,8,0,0
+  ダノンレジェンド,d,middle,23,1,4
+  ダノンレジェンド,d,mile,319,33,100
+  ダノンレジェンド,d,sprint,463,66,147
+  ダノンレジェンド,t,middle,4,0,0
+  ダノンレジェンド,t,mile,37,0,4
+  ダノンレジェンド,t,sprint,115,4,14
+  ダンカーク,d,long,29,2,7
+  ダンカーク,d,middle,56,9,13
+  ダンカーク,d,mile,326,30,82
+  ダンカーク,d,sprint,127,9,31
+  ダンカーク,t,long,7,0,0
+  ダンカーク,t,middle,19,0,0
+  ダンカーク,t,mile,35,1,4
+  ダンカーク,t,sprint,63,8,14
+  ダンスディレクター,d,sprint,1,0,0
+  ダンスディレクター,t,mile,1,0,0
+  ダンスディレクター,t,sprint,2,0,0
+  チェリークラウン,d,middle,2,0,0
+  チェリークラウン,d,mile,10,0,0
+  テーオーヘリオス,d,mile,1,0,0
+  テーオーヘリオス,d,sprint,3,1,2
+  テーオーヘリオス,t,mile,2,0,0
+  テーオーヘリオス,t,sprint,1,0,0
+  ディープインパクト,d,long,115,13,50
+  ディープインパクト,d,middle,55,4,12
+  ディープインパクト,d,mile,118,16,33
+  ディープインパクト,d,sprint,33,0,3
+  ディープインパクト,t,long,160,16,58
+  ディープインパクト,t,middle,539,83,224
+  ディープインパクト,t,mile,696,118,290
+  ディープインパクト,t,sprint,188,19,68
+  ディープエクシード,d,mile,7,0,0
+  ディープエクシード,d,sprint,1,0,0
+  ディープエクシード,t,middle,1,0,0
+  ディープスカイ,d,mile,5,0,0
+  ディープスカイ,d,sprint,8,0,0
+  ディープスカイ,t,middle,1,0,0
+  ディープスカイ,t,mile,1,0,0
+  ディープブリランテ,d,long,29,3,9
+  ディープブリランテ,d,middle,4,0,0
+  ディープブリランテ,d,mile,111,3,21
+  ディープブリランテ,d,sprint,162,12,37
+  ディープブリランテ,t,long,45,1,13
+  ディープブリランテ,t,middle,70,2,14
+  ディープブリランテ,t,mile,215,15,55
+  ディープブリランテ,t,sprint,92,4,21
+  ディーマジェスティ,d,long,14,1,3
+  ディーマジェスティ,d,middle,16,0,5
+  ディーマジェスティ,d,mile,151,12,40
+  ディーマジェスティ,d,sprint,196,14,59
+  ディーマジェスティ,t,long,10,0,2
+  ディーマジェスティ,t,middle,74,5,18
+  ディーマジェスティ,t,mile,185,15,50
+  ディーマジェスティ,t,sprint,134,9,32
+  ディスクリートキャット,d,long,7,1,2
+  ディスクリートキャット,d,middle,9,2,2
+  ディスクリートキャット,d,mile,272,27,74
+  ディスクリートキャット,d,sprint,514,56,145
+  ディスクリートキャット,t,long,3,0,0
+  ディスクリートキャット,t,middle,12,0,0
+  ディスクリートキャット,t,mile,116,8,23
+  ディスクリートキャット,t,sprint,258,23,61
+  デクラレーションオブウォー,d,long,37,2,10
+  デクラレーションオブウォー,d,middle,39,1,8
+  デクラレーションオブウォー,d,mile,391,30,90
+  デクラレーションオブウォー,d,sprint,263,26,60
+  デクラレーションオブウォー,t,long,17,1,5
+  デクラレーションオブウォー,t,middle,149,19,54
+  デクラレーションオブウォー,t,mile,217,18,51
+  デクラレーションオブウォー,t,sprint,146,15,36
+  トーセンジョーダン,d,long,3,0,1
+  トーセンジョーダン,d,middle,16,1,3
+  トーセンジョーダン,d,mile,27,3,7
+  トーセンジョーダン,d,sprint,42,2,13
+  トーセンジョーダン,t,long,12,3,4
+  トーセンジョーダン,t,middle,15,0,2
+  トーセンジョーダン,t,mile,8,1,2
+  トーセンジョーダン,t,sprint,15,0,1
+  トーセンファントム,d,long,3,0,0
+  トーセンファントム,d,mile,4,0,0
+  トーセンファントム,d,sprint,22,2,11
+  トーセンファントム,t,middle,1,0,0
+  トーセンファントム,t,mile,1,0,0
+  トーセンファントム,t,sprint,29,3,8
+  トーセンブライト,d,middle,6,0,0
+  トーセンブライト,d,mile,34,1,7
+  トーセンブライト,d,sprint,5,1,1
+  トーセンブライト,t,middle,1,0,0
+  トーセンブライト,t,sprint,3,0,0
+  トーセンホマレボシ,d,mile,6,2,3
+  トーセンホマレボシ,d,sprint,20,1,8
+  トーセンホマレボシ,t,mile,10,0,3
+  トーセンホマレボシ,t,sprint,1,0,0
+  トーセンラー,d,long,2,0,0
+  トーセンラー,d,middle,3,0,0
+  トーセンラー,d,mile,36,6,10
+  トーセンラー,d,sprint,34,1,8
+  トーセンラー,t,long,37,6,17
+  トーセンラー,t,middle,94,7,26
+  トーセンラー,t,mile,95,9,24
+  トーセンラー,t,sprint,153,17,39
+  トーセンレーヴ,d,mile,1,0,0
+  トーセンレーヴ,d,sprint,5,0,0
+  トーセンレーヴ,t,middle,1,0,0
+  トーセンレーヴ,t,mile,6,0,0
+  トーセンレーヴ,t,sprint,3,0,0
+  トーホウジャッカル,d,mile,15,0,1
+  トーホウジャッカル,d,sprint,22,1,3
+  トーホウジャッカル,t,long,16,0,4
+  トーホウジャッカル,t,middle,28,1,6
+  トーホウジャッカル,t,mile,37,3,9
+  トーホウジャッカル,t,sprint,75,3,17
+  トゥザグローリー,d,long,55,4,9
+  トゥザグローリー,d,middle,17,1,5
+  トゥザグローリー,d,mile,172,11,53
+  トゥザグローリー,d,sprint,109,5,21
+  トゥザグローリー,t,long,7,0,0
+  トゥザグローリー,t,middle,67,7,13
+  トゥザグローリー,t,mile,78,10,16
+  トゥザグローリー,t,sprint,79,0,9
+  トゥザワールド,d,long,34,4,10
+  トゥザワールド,d,middle,8,0,4
+  トゥザワールド,d,mile,83,3,17
+  トゥザワールド,d,sprint,89,8,19
+  トゥザワールド,t,long,7,0,1
+  トゥザワールド,t,middle,20,1,5
+  トゥザワールド,t,mile,29,2,3
+  トゥザワールド,t,sprint,56,1,9
+  トウケイヘイロー,d,long,7,0,0
+  トウケイヘイロー,d,middle,3,0,0
+  トウケイヘイロー,d,mile,16,3,7
+  トウケイヘイロー,d,sprint,11,1,1
+  トウケイヘイロー,t,middle,1,0,0
+  トウケイヘイロー,t,sprint,2,0,0
+  トビーズコーナー,d,long,3,0,0
+  トビーズコーナー,d,middle,20,2,4
+  トビーズコーナー,d,mile,84,8,22
+  トビーズコーナー,d,sprint,71,5,17
+  トビーズコーナー,t,mile,14,1,5
+  トビーズコーナー,t,sprint,19,1,3
+  トランセンド,d,long,14,3,7
+  トランセンド,d,middle,8,0,2
+  トランセンド,d,mile,108,13,31
+  トランセンド,d,sprint,141,13,36
+  トランセンド,t,long,6,0,2
+  トランセンド,t,middle,10,0,2
+  トランセンド,t,mile,16,1,3
+  トランセンド,t,sprint,26,1,7
+  ドゥラメンテ,d,long,73,12,30
+  ドゥラメンテ,d,middle,77,6,22
+  ドゥラメンテ,d,mile,678,86,219
+  ドゥラメンテ,d,sprint,287,25,65
+  ドゥラメンテ,t,long,264,36,95
+  ドゥラメンテ,t,middle,737,82,247
+  ドゥラメンテ,t,mile,931,122,325
+  ドゥラメンテ,t,sprint,248,26,58
+  ドリームジャーニー,d,long,23,2,10
+  ドリームジャーニー,d,middle,15,1,3
+  ドリームジャーニー,d,mile,24,0,4
+  ドリームジャーニー,d,sprint,4,1,1
+  ドリームジャーニー,t,long,26,1,11
+  ドリームジャーニー,t,middle,74,5,23
+  ドリームジャーニー,t,mile,32,3,9
+  ドリームジャーニー,t,sprint,62,6,15
+  ドリームバレンチノ,d,middle,2,0,0
+  ドリームバレンチノ,d,mile,10,2,3
+  ドリームバレンチノ,d,sprint,23,1,2
+  ドリームバレンチノ,t,middle,1,0,0
+  ドリームバレンチノ,t,mile,3,0,1
+  ドリームバレンチノ,t,sprint,5,0,0
+  ドレフォン,d,long,90,5,25
+  ドレフォン,d,middle,137,17,50
+  ドレフォン,d,mile,1257,146,384
+  ドレフォン,d,sprint,1017,116,306
+  ドレフォン,t,long,37,6,12
+  ドレフォン,t,middle,99,7,21
+  ドレフォン,t,mile,370,34,99
+  ドレフォン,t,sprint,374,29,103
+  ナカヤマフェスタ,d,middle,1,0,0
+  ナカヤマフェスタ,d,mile,2,0,0
+  ナカヤマフェスタ,d,sprint,2,0,0
+  ナカヤマフェスタ,t,long,8,0,1
+  ナカヤマフェスタ,t,middle,32,3,5
+  ナカヤマフェスタ,t,mile,7,2,3
+  ナダル,d,long,3,0,0
+  ナダル,d,middle,23,4,8
+  ナダル,d,mile,310,56,120
+  ナダル,d,sprint,209,30,82
+  ナダル,t,middle,5,0,0
+  ナダル,t,mile,31,0,1
+  ナダル,t,sprint,33,3,9
+  ナムラタイタン,d,long,12,0,3
+  ナムラタイタン,d,middle,6,0,2
+  ナムラタイタン,d,mile,22,1,6
+  ナムラタイタン,d,sprint,16,0,3
+  ナムラタイタン,t,middle,1,0,0
+  ナムラタイタン,t,mile,1,0,0
+  ナムラタイタン,t,sprint,7,0,1
+  ニシケンモノノフ,d,long,7,1,1
+  ニシケンモノノフ,d,middle,7,1,1
+  ニシケンモノノフ,d,mile,15,0,1
+  ニシケンモノノフ,d,sprint,44,1,6
+  ニシケンモノノフ,t,long,1,0,0
+  ニシケンモノノフ,t,middle,1,0,0
+  ニシケンモノノフ,t,mile,16,2,4
+  ニシケンモノノフ,t,sprint,13,1,5
+  ニホンピロアワーズ,d,long,1,0,0
+  ニホンピロアワーズ,d,middle,9,1,1
+  ニホンピロアワーズ,d,mile,43,4,13
+  ニホンピロアワーズ,d,sprint,31,4,6
+  ニホンピロアワーズ,t,long,2,0,1
+  ニホンピロアワーズ,t,middle,16,2,3
+  ニホンピロアワーズ,t,mile,11,1,2
+  ニホンピロアワーズ,t,sprint,2,0,0
+  ニューイヤーズデイ,d,long,21,5,7
+  ニューイヤーズデイ,d,middle,44,5,14
+  ニューイヤーズデイ,d,mile,368,46,109
+  ニューイヤーズデイ,d,sprint,381,33,102
+  ニューイヤーズデイ,t,long,5,0,0
+  ニューイヤーズデイ,t,middle,36,6,10
+  ニューイヤーズデイ,t,mile,113,6,29
+  ニューイヤーズデイ,t,sprint,113,14,36
+  ネオユニヴァース,d,long,11,0,1
+  ネオユニヴァース,d,middle,1,0,0
+  ネオユニヴァース,d,mile,31,4,8
+  ネオユニヴァース,d,sprint,20,2,3
+  ネオユニヴァース,t,long,2,0,0
+  ネオユニヴァース,t,middle,33,4,10
+  ネオユニヴァース,t,mile,46,6,17
+  ネオユニヴァース,t,sprint,11,1,2
+  ネロ,d,long,4,0,0
+  ネロ,d,mile,20,0,1
+  ネロ,d,sprint,74,4,13
+  ネロ,t,long,14,4,7
+  ネロ,t,middle,14,1,3
+  ネロ,t,mile,17,1,3
+  ネロ,t,sprint,103,8,31
+  ノーブルミッション,d,long,2,0,0
+  ノーブルミッション,d,middle,9,0,0
+  ノーブルミッション,d,mile,68,1,5
+  ノーブルミッション,d,sprint,55,0,2
+  ノーブルミッション,t,long,4,0,0
+  ノーブルミッション,t,middle,39,1,2
+  ノーブルミッション,t,mile,110,3,11
+  ノーブルミッション,t,sprint,69,1,6
+  ノボジャック,d,mile,10,1,2
+  ノボジャック,d,sprint,15,3,5
+  ノヴェリスト,d,long,18,1,6
+  ノヴェリスト,d,middle,1,0,0
+  ノヴェリスト,d,mile,45,3,8
+  ノヴェリスト,d,sprint,42,4,11
+  ノヴェリスト,t,long,25,2,9
+  ノヴェリスト,t,middle,122,11,31
+  ノヴェリスト,t,mile,108,7,20
+  ノヴェリスト,t,sprint,26,1,3
+  ハーツクライ,d,long,123,11,25
+  ハーツクライ,d,middle,101,8,27
+  ハーツクライ,d,mile,359,38,112
+  ハーツクライ,d,sprint,158,19,36
+  ハーツクライ,t,long,267,26,58
+  ハーツクライ,t,middle,703,81,219
+  ハーツクライ,t,mile,616,68,205
+  ハーツクライ,t,sprint,199,22,59
+  ハービンジャー,d,long,100,20,37
+  ハービンジャー,d,middle,37,2,10
+  ハービンジャー,d,mile,250,18,69
+  ハービンジャー,d,sprint,50,3,7
+  ハービンジャー,t,long,214,13,46
+  ハービンジャー,t,middle,756,85,233
+  ハービンジャー,t,mile,710,76,208
+  ハービンジャー,t,sprint,178,15,41
+  ハギノハイブリッド,d,sprint,3,0,0
+  ハクサンムーン,d,mile,12,2,3
+  ハクサンムーン,d,sprint,51,7,15
+  ハクサンムーン,t,middle,1,0,0
+  ハクサンムーン,t,mile,23,0,2
+  ハクサンムーン,t,sprint,26,4,9
+  ハッピースプリント,d,mile,7,0,0
+  ハッピースプリント,d,sprint,7,0,0
+  ハッピースプリント,t,long,1,0,0
+  ハッピースプリント,t,middle,1,0,0
+  ハッピースプリント,t,mile,2,0,0
+  ハッピースプリント,t,sprint,2,0,0
+  バーディバーディ,d,long,1,0,0
+  バーディバーディ,d,middle,5,0,0
+  バーディバーディ,d,mile,21,2,3
+  バゴ,d,long,20,1,3
+  バゴ,d,middle,8,1,3
+  バゴ,d,mile,94,5,14
+  バゴ,d,sprint,115,5,20
+  バゴ,t,long,39,3,9
+  バゴ,t,middle,149,8,37
+  バゴ,t,mile,207,17,44
+  バゴ,t,sprint,106,9,25
+  バトルプラン,d,middle,4,0,0
+  バトルプラン,d,mile,67,2,7
+  バトルプラン,d,sprint,76,6,14
+  バトルプラン,t,middle,4,0,0
+  バトルプラン,t,mile,20,0,1
+  バトルプラン,t,sprint,71,6,12
+  バンドワゴン,d,middle,22,3,6
+  バンドワゴン,d,mile,41,3,13
+  バンドワゴン,d,sprint,7,0,0
+  バンドワゴン,t,middle,3,0,0
+  バンドワゴン,t,mile,4,0,0
+  バンドワゴン,t,sprint,20,3,7
+  バンブーエール,d,mile,8,0,0
+  バンブーエール,d,sprint,70,6,26
+  バンブーエール,t,mile,1,0,0
+  バンブーエール,t,sprint,2,0,0
+  パイロ,d,long,15,1,5
+  パイロ,d,middle,74,8,27
+  パイロ,d,mile,642,69,205
+  パイロ,d,sprint,532,56,170
+  パイロ,t,long,3,0,0
+  パイロ,t,middle,10,0,0
+  パイロ,t,mile,16,0,0
+  パイロ,t,sprint,59,4,14
+  パドトロワ,d,mile,24,0,1
+  パドトロワ,d,sprint,100,8,19
+  パドトロワ,t,mile,15,1,1
+  パドトロワ,t,sprint,43,2,7
+  ビーチパトロール,d,long,24,0,6
+  ビーチパトロール,d,middle,11,1,2
+  ビーチパトロール,d,mile,144,6,21
+  ビーチパトロール,d,sprint,106,3,13
+  ビーチパトロール,t,long,19,1,2
+  ビーチパトロール,t,middle,127,10,31
+  ビーチパトロール,t,mile,104,3,16
+  ビーチパトロール,t,sprint,82,6,14
+  ビッグアーサー,d,long,18,1,5
+  ビッグアーサー,d,middle,8,0,2
+  ビッグアーサー,d,mile,112,3,18
+  ビッグアーサー,d,sprint,427,23,96
+  ビッグアーサー,t,long,2,0,0
+  ビッグアーサー,t,middle,9,0,0
+  ビッグアーサー,t,mile,118,2,11
+  ビッグアーサー,t,sprint,846,103,264
+  ファインニードル,d,mile,51,4,15
+  ファインニードル,d,sprint,206,16,30
+  ファインニードル,t,long,1,0,0
+  ファインニードル,t,middle,16,1,3
+  ファインニードル,t,mile,114,12,28
+  ファインニードル,t,sprint,345,43,105
+  フィエールマン,d,long,4,0,0
+  フィエールマン,d,middle,1,0,1
+  フィエールマン,d,mile,56,2,11
+  フィエールマン,d,sprint,55,0,7
+  フィエールマン,t,long,32,2,13
+  フィエールマン,t,middle,145,12,41
+  フィエールマン,t,mile,138,13,41
+  フィエールマン,t,sprint,66,2,17
+  フィレンツェファイア,d,mile,17,0,4
+  フィレンツェファイア,d,sprint,43,2,7
+  フィレンツェファイア,t,middle,1,0,0
+  フィレンツェファイア,t,mile,12,0,1
+  フィレンツェファイア,t,sprint,28,4,4
+  フェノーメノ,d,long,46,2,18
+  フェノーメノ,d,middle,25,1,9
+  フェノーメノ,d,mile,52,5,17
+  フェノーメノ,d,sprint,14,1,3
+  フェノーメノ,t,long,19,0,4
+  フェノーメノ,t,middle,31,2,10
+  フェノーメノ,t,mile,42,2,15
+  フェノーメノ,t,sprint,5,0,0
+  フォーウィールドライブ,d,long,1,0,0
+  フォーウィールドライブ,d,mile,62,1,10
+  フォーウィールドライブ,d,sprint,287,24,81
+  フォーウィールドライブ,t,middle,4,0,2
+  フォーウィールドライブ,t,mile,41,5,10
+  フォーウィールドライブ,t,sprint,103,6,26
+  フサイチセブン,d,mile,17,0,2
+  フサイチセブン,d,sprint,25,0,6
+  フサイチセブン,t,middle,1,0,0
+  フサイチセブン,t,mile,2,0,0
+  フサイチセブン,t,sprint,1,0,0
+  フリオーソ,d,long,18,1,1
+  フリオーソ,d,middle,27,1,6
+  フリオーソ,d,mile,220,11,41
+  フリオーソ,d,sprint,165,18,53
+  フリオーソ,t,long,1,0,0
+  フリオーソ,t,middle,2,0,0
+  フリオーソ,t,mile,11,0,0
+  フリオーソ,t,sprint,9,0,2
+  ブラックタイド,d,long,51,10,23
+  ブラックタイド,d,middle,14,1,2
+  ブラックタイド,d,mile,219,26,58
+  ブラックタイド,d,sprint,149,11,38
+  ブラックタイド,t,long,85,5,26
+  ブラックタイド,t,middle,257,24,87
+  ブラックタイド,t,mile,213,16,46
+  ブラックタイド,t,sprint,140,4,22
+  ブリックスアンドモルタル,d,long,40,4,10
+  ブリックスアンドモルタル,d,middle,61,5,14
+  ブリックスアンドモルタル,d,mile,277,16,64
+  ブリックスアンドモルタル,d,sprint,134,9,27
+  ブリックスアンドモルタル,t,long,63,6,12
+  ブリックスアンドモルタル,t,middle,330,26,85
+  ブリックスアンドモルタル,t,mile,514,47,141
+  ブリックスアンドモルタル,t,sprint,210,20,48
+  ブルドッグボス,d,mile,4,0,0
+  ブルドッグボス,d,sprint,48,1,8
+  ブルドッグボス,t,mile,4,0,0
+  ブルドッグボス,t,sprint,1,0,0
+  プリサイスエンド,d,long,1,0,0
+  プリサイスエンド,d,middle,7,0,0
+  プリサイスエンド,d,mile,95,6,36
+  プリサイスエンド,d,sprint,71,6,14
+  プリサイスエンド,t,mile,2,0,0
+  プリサイスエンド,t,sprint,15,0,1
+  ヘニーハウンド,d,long,3,0,0
+  ヘニーハウンド,d,mile,26,2,8
+  ヘニーハウンド,d,sprint,30,5,10
+  ヘニーハウンド,t,mile,2,0,0
+  ヘニーヒューズ,d,long,43,3,6
+  ヘニーヒューズ,d,middle,52,6,14
+  ヘニーヒューズ,d,mile,826,96,305
+  ヘニーヒューズ,d,sprint,1076,139,337
+  ヘニーヒューズ,t,long,3,0,0
+  ヘニーヒューズ,t,middle,1,0,0
+  ヘニーヒューズ,t,mile,17,0,0
+  ヘニーヒューズ,t,sprint,86,5,24
+  ヘンリーバローズ,d,long,3,0,0
+  ヘンリーバローズ,d,mile,20,1,3
+  ヘンリーバローズ,d,sprint,20,1,5
+  ヘンリーバローズ,t,long,1,0,0
+  ヘンリーバローズ,t,middle,26,4,7
+  ヘンリーバローズ,t,mile,43,4,14
+  ヘンリーバローズ,t,sprint,20,1,4
+  ベーカバド,d,long,35,5,8
+  ベーカバド,d,middle,3,0,0
+  ベーカバド,d,mile,32,4,8
+  ベーカバド,d,sprint,25,2,3
+  ベーカバド,t,long,2,1,1
+  ベーカバド,t,middle,9,0,0
+  ベーカバド,t,mile,44,4,10
+  ベーカバド,t,sprint,63,3,17
+  ベストウォーリア,d,long,3,0,0
+  ベストウォーリア,d,middle,1,0,0
+  ベストウォーリア,d,mile,80,3,12
+  ベストウォーリア,d,sprint,196,18,61
+  ベストウォーリア,t,mile,6,0,0
+  ベストウォーリア,t,sprint,14,0,1
+  ベルシャザール,d,middle,17,0,3
+  ベルシャザール,d,mile,96,7,21
+  ベルシャザール,d,sprint,17,1,1
+  ベルシャザール,t,middle,8,1,1
+  ベルシャザール,t,mile,22,4,5
+  ベルシャザール,t,sprint,17,0,5
+  ベンバトル,d,middle,1,0,0
+  ベンバトル,d,mile,18,1,4
+  ベンバトル,d,sprint,15,0,3
+  ベンバトル,t,middle,37,6,10
+  ベンバトル,t,mile,57,4,12
+  ベンバトル,t,sprint,43,4,10
+  ホークビル,d,long,4,0,0
+  ホークビル,d,middle,3,0,0
+  ホークビル,d,mile,55,1,7
+  ホークビル,d,sprint,25,1,2
+  ホークビル,t,long,4,0,1
+  ホークビル,t,middle,38,4,9
+  ホークビル,t,mile,54,2,8
+  ホークビル,t,sprint,27,1,3
+  ホッコータルマエ,d,long,94,7,22
+  ホッコータルマエ,d,middle,185,25,68
+  ホッコータルマエ,d,mile,899,88,252
+  ホッコータルマエ,d,sprint,487,31,109
+  ホッコータルマエ,t,long,2,0,0
+  ホッコータルマエ,t,middle,3,0,0
+  ホッコータルマエ,t,mile,11,0,1
+  ホッコータルマエ,t,sprint,19,0,2
+  ポアゾンブラック,d,mile,18,2,3
+  ポアゾンブラック,d,sprint,21,2,5
+  ポアゾンブラック,t,mile,1,0,0
+  ポエティックフレア,d,mile,14,2,4
+  ポエティックフレア,d,sprint,3,0,0
+  ポエティックフレア,t,middle,5,1,4
+  ポエティックフレア,t,mile,59,12,29
+  ポエティックフレア,t,sprint,11,0,3
+  マインドユアビスケッツ,d,long,32,3,8
+  マインドユアビスケッツ,d,middle,72,6,21
+  マインドユアビスケッツ,d,mile,638,61,166
+  マインドユアビスケッツ,d,sprint,328,23,63
+  マインドユアビスケッツ,t,long,16,2,2
+  マインドユアビスケッツ,t,middle,82,7,19
+  マインドユアビスケッツ,t,mile,135,14,33
+  マインドユアビスケッツ,t,sprint,111,7,19
+  マクフィ,d,long,29,3,10
+  マクフィ,d,middle,26,0,3
+  マクフィ,d,mile,376,28,89
+  マクフィ,d,sprint,439,29,103
+  マクフィ,t,long,7,1,2
+  マクフィ,t,middle,54,4,14
+  マクフィ,t,mile,164,10,34
+  マクフィ,t,sprint,250,18,66
+  マクマホン,d,long,8,1,2
+  マクマホン,d,middle,2,0,0
+  マクマホン,d,mile,7,0,0
+  マクマホン,t,long,2,0,0
+  マクマホン,t,middle,27,1,2
+  マクマホン,t,mile,24,1,3
+  マクマホン,t,sprint,3,0,0
+  マジェスティックウォリアー,d,long,102,7,28
+  マジェスティックウォリアー,d,middle,92,10,25
+  マジェスティックウォリアー,d,mile,826,72,210
+  マジェスティックウォリアー,d,sprint,515,52,125
+  マジェスティックウォリアー,t,long,3,0,0
+  マジェスティックウォリアー,t,middle,37,2,8
+  マジェスティックウォリアー,t,mile,92,5,21
+  マジェスティックウォリアー,t,sprint,77,3,11
+  マスクゾロ,d,mile,3,0,0
+  マスクゾロ,d,sprint,1,0,0
+  マツリダゴッホ,d,long,28,3,10
+  マツリダゴッホ,d,middle,1,0,0
+  マツリダゴッホ,d,mile,22,1,4
+  マツリダゴッホ,d,sprint,46,4,9
+  マツリダゴッホ,t,long,7,1,2
+  マツリダゴッホ,t,middle,11,1,4
+  マツリダゴッホ,t,mile,91,5,23
+  マツリダゴッホ,t,sprint,175,13,37
+  マテラスカイ,d,middle,2,1,1
+  マテラスカイ,d,mile,16,0,2
+  マテラスカイ,d,sprint,71,4,13
+  マテラスカイ,t,middle,3,0,0
+  マテラスカイ,t,mile,4,0,1
+  マテラスカイ,t,sprint,16,2,4
+  マルターズアポジー,d,middle,1,0,0
+  マルターズアポジー,d,mile,6,0,0
+  マルターズアポジー,d,sprint,11,0,3
+  マルターズアポジー,t,middle,1,0,0
+  マルターズアポジー,t,mile,4,0,0
+  マンハッタンカフェ,d,long,29,1,6
+  マンハッタンカフェ,d,mile,15,0,4
+  マンハッタンカフェ,d,sprint,6,0,2
+  マンハッタンカフェ,t,long,14,1,4
+  マンハッタンカフェ,t,middle,27,4,13
+  マンハッタンカフェ,t,mile,6,0,2
+  ミスターメロディ,d,long,3,0,0
+  ミスターメロディ,d,middle,6,1,1
+  ミスターメロディ,d,mile,53,3,8
+  ミスターメロディ,d,sprint,157,13,34
+  ミスターメロディ,t,middle,6,0,0
+  ミスターメロディ,t,mile,56,2,11
+  ミスターメロディ,t,sprint,170,13,33
+  ミスチヴィアスアレックス,d,middle,1,0,0
+  ミスチヴィアスアレックス,d,mile,27,2,5
+  ミスチヴィアスアレックス,d,sprint,67,7,19
+  ミスチヴィアスアレックス,t,mile,10,0,0
+  ミスチヴィアスアレックス,t,sprint,32,1,5
+  ミッキーアイル,d,long,48,4,13
+  ミッキーアイル,d,middle,17,1,3
+  ミッキーアイル,d,mile,294,31,100
+  ミッキーアイル,d,sprint,571,55,159
+  ミッキーアイル,t,long,13,1,2
+  ミッキーアイル,t,middle,71,4,18
+  ミッキーアイル,t,mile,265,21,81
+  ミッキーアイル,t,sprint,606,53,180
+  ミッキーグローリー,d,long,2,2,2
+  ミッキーグローリー,d,middle,18,2,4
+  ミッキーグローリー,d,mile,76,5,18
+  ミッキーグローリー,d,sprint,20,1,1
+  ミッキーグローリー,t,long,1,0,0
+  ミッキーグローリー,t,middle,19,1,1
+  ミッキーグローリー,t,mile,43,2,12
+  ミッキーグローリー,t,sprint,25,0,4
+  ミッキースワロー,d,mile,8,1,3
+  ミッキースワロー,t,long,1,0,0
+  ミッキースワロー,t,middle,18,1,3
+  ミッキースワロー,t,mile,11,0,2
+  ミッキースワロー,t,sprint,2,0,0
+  ミッキーロケット,d,middle,7,1,1
+  ミッキーロケット,d,mile,45,0,6
+  ミッキーロケット,d,sprint,43,3,6
+  ミッキーロケット,t,long,35,6,12
+  ミッキーロケット,t,middle,65,7,24
+  ミッキーロケット,t,mile,91,12,28
+  ミッキーロケット,t,sprint,37,3,10
+  ミュゼスルタン,d,middle,1,0,0
+  ミュゼスルタン,d,mile,39,3,8
+  ミュゼスルタン,d,sprint,5,1,2
+  ミュゼスルタン,t,middle,1,0,1
+  ミュゼスルタン,t,mile,7,1,1
+  ミュゼスルタン,t,sprint,5,0,0
+  ミラアイトーン,t,sprint,3,0,0
+  メイショウサムソン,d,long,10,1,1
+  メイショウサムソン,d,middle,7,0,0
+  メイショウサムソン,d,mile,58,5,18
+  メイショウサムソン,d,sprint,51,4,11
+  メイショウサムソン,t,long,15,1,7
+  メイショウサムソン,t,middle,33,3,11
+  メイショウサムソン,t,mile,26,0,3
+  メイショウサムソン,t,sprint,46,2,11
+  メイショウボーラー,d,long,19,2,3
+  メイショウボーラー,d,middle,25,3,10
+  メイショウボーラー,d,mile,158,11,49
+  メイショウボーラー,d,sprint,146,11,30
+  メイショウボーラー,t,middle,8,0,2
+  メイショウボーラー,t,mile,30,2,9
+  メイショウボーラー,t,sprint,113,4,16
+  メジロダイボサツ,d,mile,7,0,2
+  メジロダイボサツ,d,sprint,2,0,0
+  メジロダイボサツ,t,mile,1,0,0
+  モーニン,d,long,5,1,1
+  モーニン,d,middle,20,1,7
+  モーニン,d,mile,171,14,37
+  モーニン,d,sprint,288,25,71
+  モーニン,t,middle,5,0,0
+  モーニン,t,mile,17,0,2
+  モーニン,t,sprint,12,0,0
+  モーリス,d,long,35,5,11
+  モーリス,d,middle,52,5,18
+  モーリス,d,mile,351,31,93
+  モーリス,d,sprint,442,45,116
+  モーリス,t,long,75,6,11
+  モーリス,t,middle,451,56,126
+  モーリス,t,mile,1151,143,396
+  モーリス,t,sprint,765,87,214
+  モズアスコット,d,middle,4,0,0
+  モズアスコット,d,mile,176,24,57
+  モズアスコット,d,sprint,272,31,89
+  モズアスコット,t,long,3,0,0
+  モズアスコット,t,middle,31,4,6
+  モズアスコット,t,mile,113,8,17
+  モズアスコット,t,sprint,141,12,38
+  モンテロッソ,d,long,10,0,2
+  モンテロッソ,d,middle,2,0,1
+  モンテロッソ,d,mile,33,1,4
+  モンテロッソ,d,sprint,34,4,9
+  モンテロッソ,t,middle,3,0,0
+  モンテロッソ,t,mile,5,0,0
+  モンテロッソ,t,sprint,54,7,14
+  ヤマカツエース,d,long,10,0,3
+  ヤマカツエース,d,middle,2,0,0
+  ヤマカツエース,d,mile,32,0,1
+  ヤマカツエース,d,sprint,28,2,13
+  ヤマカツエース,t,long,9,1,2
+  ヤマカツエース,t,middle,32,4,14
+  ヤマカツエース,t,mile,55,8,17
+  ヤマカツエース,t,sprint,20,0,1
+  ヤマニンセラフィム,d,long,11,0,5
+  ヤマニンセラフィム,d,mile,15,2,5
+  ヤマニンセラフィム,d,sprint,2,0,0
+  ヤマニンセラフィム,t,mile,1,0,0
+  ヤマニンセラフィム,t,sprint,1,0,0
+  ヤングマンパワー,d,mile,10,1,2
+  ヤングマンパワー,d,sprint,12,0,1
+  ヤングマンパワー,t,middle,2,0,0
+  ヤングマンパワー,t,mile,27,2,11
+  ヤングマンパワー,t,sprint,11,1,6
+  ユアーズトゥルーリ,d,middle,2,0,0
+  ユアーズトゥルーリ,d,mile,16,0,0
+  ユアーズトゥルーリ,d,sprint,16,0,2
+  ユアーズトゥルーリ,t,middle,1,0,0
+  ユアーズトゥルーリ,t,mile,2,0,0
+  ユアーズトゥルーリ,t,sprint,2,0,0
+  ラニ,d,long,4,0,1
+  ラニ,d,middle,29,3,6
+  ラニ,d,mile,240,19,67
+  ラニ,d,sprint,83,8,39
+  ラニ,t,long,2,0,0
+  ラニ,t,middle,9,1,1
+  ラニ,t,mile,16,0,2
+  ラニ,t,sprint,4,0,0
+  ラブリーデイ,d,long,37,2,12
+  ラブリーデイ,d,middle,24,2,3
+  ラブリーデイ,d,mile,145,8,26
+  ラブリーデイ,d,sprint,105,6,19
+  ラブリーデイ,t,long,26,0,4
+  ラブリーデイ,t,middle,132,13,34
+  ラブリーデイ,t,mile,174,10,41
+  ラブリーデイ,t,sprint,128,10,39
+  リーチザクラウン,d,long,19,0,3
+  リーチザクラウン,d,middle,10,1,3
+  リーチザクラウン,d,mile,88,13,20
+  リーチザクラウン,d,sprint,45,4,10
+  リーチザクラウン,t,long,5,0,0
+  リーチザクラウン,t,middle,24,0,2
+  リーチザクラウン,t,mile,83,5,23
+  リーチザクラウン,t,sprint,69,5,15
+  リアルインパクト,d,long,26,3,5
+  リアルインパクト,d,middle,25,4,6
+  リアルインパクト,d,mile,277,29,71
+  リアルインパクト,d,sprint,194,19,44
+  リアルインパクト,t,long,8,0,0
+  リアルインパクト,t,middle,55,4,13
+  リアルインパクト,t,mile,233,16,55
+  リアルインパクト,t,sprint,169,18,46
+  リアルスティール,d,long,24,0,2
+  リアルスティール,d,middle,96,16,34
+  リアルスティール,d,mile,496,53,131
+  リアルスティール,d,sprint,414,36,116
+  リアルスティール,t,long,71,8,19
+  リアルスティール,t,middle,353,42,117
+  リアルスティール,t,mile,477,68,155
+  リアルスティール,t,sprint,233,19,63
+  リオンディーズ,d,long,49,5,16
+  リオンディーズ,d,middle,62,4,24
+  リオンディーズ,d,mile,504,52,142
+  リオンディーズ,d,sprint,547,46,139
+  リオンディーズ,t,long,29,3,6
+  リオンディーズ,t,middle,225,13,46
+  リオンディーズ,t,mile,542,47,160
+  リオンディーズ,t,sprint,495,40,134
+  リオンリオン,d,mile,3,0,0
+  リオンリオン,d,sprint,1,0,0
+  リオンリオン,t,long,1,0,0
+  リオンリオン,t,middle,7,1,1
+  リオンリオン,t,mile,6,0,2
+  リオンリオン,t,sprint,1,0,0
+  リヤンドファミユ,d,long,1,0,0
+  リヤンドファミユ,d,middle,5,0,3
+  リヤンドファミユ,d,mile,21,1,9
+  リヤンドファミユ,d,sprint,3,0,1
+  リヤンドファミユ,t,long,1,0,0
+  リヤンドファミユ,t,mile,3,0,0
+  リヤンドファミユ,t,sprint,21,4,11
+  ルーラーシップ,d,long,170,20,45
+  ルーラーシップ,d,middle,108,7,20
+  ルーラーシップ,d,mile,807,64,214
+  ルーラーシップ,d,sprint,359,32,83
+  ルーラーシップ,t,long,203,19,78
+  ルーラーシップ,t,middle,561,52,146
+  ルーラーシップ,t,mile,772,88,231
+  ルーラーシップ,t,sprint,372,32,90
+  ルヴァンスレーヴ,d,long,14,3,8
+  ルヴァンスレーヴ,d,middle,32,1,7
+  ルヴァンスレーヴ,d,mile,505,68,185
+  ルヴァンスレーヴ,d,sprint,282,22,59
+  ルヴァンスレーヴ,t,long,4,0,1
+  ルヴァンスレーヴ,t,middle,11,0,1
+  ルヴァンスレーヴ,t,mile,36,1,8
+  ルヴァンスレーヴ,t,sprint,29,0,3
+  レーヴミストラル,d,middle,1,0,0
+  レーヴミストラル,d,mile,9,0,0
+  レーヴミストラル,d,sprint,6,0,0
+  レーヴミストラル,t,long,2,0,0
+  レーヴミストラル,t,mile,6,0,0
+  レーヴミストラル,t,sprint,18,0,3
+  レイデオロ,d,long,34,0,7
+  レイデオロ,d,middle,39,3,10
+  レイデオロ,d,mile,304,26,81
+  レイデオロ,d,sprint,82,4,15
+  レイデオロ,t,long,125,17,42
+  レイデオロ,t,middle,418,43,111
+  レイデオロ,t,mile,401,38,113
+  レイデオロ,t,sprint,110,14,28
+  レインボーライン,d,long,8,1,3
+  レインボーライン,d,middle,5,0,1
+  レインボーライン,d,mile,17,1,2
+  レインボーライン,d,sprint,41,2,9
+  レインボーライン,t,long,6,0,0
+  レインボーライン,t,middle,18,0,1
+  レインボーライン,t,mile,15,0,0
+  レインボーライン,t,sprint,9,0,0
+  レオアクティブ,t,mile,1,0,0
+  レオアクティブ,t,sprint,12,0,4
+  レガーロ,d,middle,1,1,1
+  レガーロ,d,mile,12,5,7
+  レガーロ,t,mile,1,0,0
+  レッドスパーダ,d,mile,1,0,0
+  レッドスパーダ,d,sprint,3,0,0
+  レッドスパーダ,t,mile,17,0,3
+  レッドスパーダ,t,sprint,78,8,22
+  レッドファルクス,d,long,13,1,1
+  レッドファルクス,d,middle,12,1,4
+  レッドファルクス,d,mile,154,13,43
+  レッドファルクス,d,sprint,226,19,61
+  レッドファルクス,t,long,11,1,2
+  レッドファルクス,t,middle,23,1,1
+  レッドファルクス,t,mile,102,4,27
+  レッドファルクス,t,sprint,183,10,25
+  レッドベルジュール,d,middle,2,0,0
+  レッドベルジュール,d,mile,12,0,3
+  レッドベルジュール,d,sprint,4,0,0
+  レッドベルジュール,t,middle,2,0,0
+  レッドベルジュール,t,mile,30,1,3
+  レッドベルジュール,t,sprint,13,3,8
+  ローエングリン,d,mile,19,2,8
+  ローエングリン,d,sprint,30,3,13
+  ローエングリン,t,middle,4,0,0
+  ローエングリン,t,mile,15,3,3
+  ローエングリン,t,sprint,9,0,2
+  ロージズインメイ,d,long,40,4,11
+  ロージズインメイ,d,middle,17,2,3
+  ロージズインメイ,d,mile,178,16,47
+  ロージズインメイ,d,sprint,186,12,37
+  ロージズインメイ,t,long,10,0,1
+  ロージズインメイ,t,middle,18,1,1
+  ロージズインメイ,t,mile,33,1,7
+  ロージズインメイ,t,sprint,7,0,0
+  ローズキングダム,d,long,26,6,14
+  ローズキングダム,d,mile,1,0,0
+  ローズキングダム,t,long,11,0,1
+  ローズキングダム,t,middle,29,3,7
+  ローズキングダム,t,mile,33,5,11
+  ローズキングダム,t,sprint,23,2,8
+  ロードカナロア,d,long,87,15,31
+  ロードカナロア,d,middle,62,6,18
+  ロードカナロア,d,mile,660,80,192
+  ロードカナロア,d,sprint,1036,126,319
+  ロードカナロア,t,long,49,3,11
+  ロードカナロア,t,middle,342,49,109
+  ロードカナロア,t,mile,1364,189,487
+  ロードカナロア,t,sprint,1216,153,383
+  ロードバリオス,d,sprint,5,0,0
+  ロードバリオス,t,sprint,2,0,0
+  ローレルゲレイロ,d,sprint,1,0,0
+  ローレルゲレイロ,t,middle,1,0,0
+  ローレルゲレイロ,t,mile,3,0,0
+  ロゴタイプ,d,long,20,1,7
+  ロゴタイプ,d,middle,13,1,3
+  ロゴタイプ,d,mile,176,20,47
+  ロゴタイプ,d,sprint,141,6,23
+  ロゴタイプ,t,long,9,0,0
+  ロゴタイプ,t,middle,50,0,6
+  ロゴタイプ,t,mile,168,9,33
+  ロゴタイプ,t,sprint,131,10,28
+  ロジャーバローズ,d,long,11,1,1
+  ロジャーバローズ,d,middle,19,0,4
+  ロジャーバローズ,d,mile,131,5,20
+  ロジャーバローズ,d,sprint,97,5,13
+  ロジャーバローズ,t,long,13,1,1
+  ロジャーバローズ,t,middle,69,3,18
+  ロジャーバローズ,t,mile,134,9,31
+  ロジャーバローズ,t,sprint,100,10,28
+  ロジユニヴァース,d,long,1,0,0
+  ロジユニヴァース,d,middle,1,0,0
+  ロジユニヴァース,d,mile,9,0,0
+  ロジユニヴァース,d,sprint,19,2,7
+  ロジユニヴァース,t,long,6,1,1
+  ロジユニヴァース,t,middle,9,1,3
+  ロジユニヴァース,t,mile,10,0,3
+  ロジユニヴァース,t,sprint,5,1,2
+  ロンギングダンサー,t,long,2,0,0
+  ロンギングダンサー,t,middle,5,0,0
+  ワークフォース,d,long,7,2,4
+  ワークフォース,d,middle,1,0,1
+  ワークフォース,d,mile,4,0,0
+  ワークフォース,t,long,8,0,1
+  ワークフォース,t,middle,35,4,14
+  ワークフォース,t,mile,22,1,7
+  ワールドエース,d,long,51,3,15
+  ワールドエース,d,middle,24,2,5
+  ワールドエース,d,mile,224,8,54
+  ワールドエース,d,sprint,110,4,25
+  ワールドエース,t,long,32,3,14
+  ワールドエース,t,middle,100,9,26
+  ワールドエース,t,mile,204,15,51
+  ワールドエース,t,sprint,109,7,25
+  ワールドプレミア,d,mile,4,0,0
+  ワールドプレミア,d,sprint,1,0,0
+  ワールドプレミア,t,middle,9,3,4
+  ワールドプレミア,t,mile,6,0,1
+  ワンアンドオンリー,d,long,27,3,9
+  ワンアンドオンリー,d,middle,26,2,14
+  ワンアンドオンリー,d,mile,19,2,4
+  ワンアンドオンリー,d,sprint,2,0,0
+  ワンアンドオンリー,t,long,3,0,1
+  ワンアンドオンリー,t,middle,33,2,10
+  ワンアンドオンリー,t,mile,24,3,6
+  ワンアンドオンリー,t,sprint,6,0,0
+  ワンダーアキュート,d,long,28,0,0
+  ワンダーアキュート,d,middle,5,0,1
+  ワンダーアキュート,d,mile,24,0,3
+  ワンダーアキュート,d,sprint,2,0,0
+  ヴァンキッシュラン,d,long,8,0,2
+  ヴァンキッシュラン,d,sprint,4,0,0
+  ヴァンキッシュラン,t,middle,10,0,0
+  ヴァンキッシュラン,t,mile,28,3,7
+  ヴァンキッシュラン,t,sprint,21,1,5
+  ヴァンゴッホ,d,middle,3,0,1
+  ヴァンゴッホ,d,mile,33,1,6
+  ヴァンゴッホ,d,sprint,19,0,1
+  ヴァンゴッホ,t,long,1,0,0
+  ヴァンゴッホ,t,middle,6,1,3
+  ヴァンゴッホ,t,mile,17,0,0
+  ヴァンゴッホ,t,sprint,11,0,2
+  ヴァンセンヌ,d,long,11,0,5
+  ヴァンセンヌ,d,middle,8,2,3
+  ヴァンセンヌ,d,mile,69,5,16
+  ヴァンセンヌ,d,sprint,31,1,1
+  ヴァンセンヌ,t,long,10,1,3
+  ヴァンセンヌ,t,middle,48,6,15
+  ヴァンセンヌ,t,mile,72,4,12
+  ヴァンセンヌ,t,sprint,69,5,18
+  ヴィクトワールピサ,d,long,49,6,24
+  ヴィクトワールピサ,d,middle,6,0,2
+  ヴィクトワールピサ,d,mile,90,8,20
+  ヴィクトワールピサ,d,sprint,79,5,11
+  ヴィクトワールピサ,t,long,19,2,5
+  ヴィクトワールピサ,t,middle,92,9,23
+  ヴィクトワールピサ,t,mile,219,27,63
+  ヴィクトワールピサ,t,sprint,220,17,68
+  ヴィットリオドーロ,d,mile,4,0,0
+  ヴィットリオドーロ,d,sprint,18,2,3
+  ヴィットリオドーロ,t,mile,1,0,0
+  ヴィットリオドーロ,t,sprint,1,0,1

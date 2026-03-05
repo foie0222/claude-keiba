@@ -42,12 +42,19 @@ class CouncilProcess:
                 f"\n\n【データ】事前取得済みデータが {prefetch_path}/ ディレクトリにあります。"
                 f"各セクションは {prefetch_path}/<セクション名>.json として保存されています"
                 f"（例: race_info.json, horse_detail.json, past_results.json 等）。"
+                f"産駒成績データは {prefetch_path}/sire_stats.toon にあります（存在する場合）。"
                 f"Readツールで必要なファイルを読み、そのデータを使って分析してください。"
                 f"追加データが必要な場合のみBashでAPIを呼んでください。"
             )
 
+        bloodline_instruction = (
+            f"{data_instruction}\n\n"
+            f"【種牡馬系統マスタ】data/bloodline/sire_lines.toon をReadツールで読み込み、"
+            f"系統分類の参照元としてください。"
+        )
+
         return await self.runner.run_parallel([
-            ("bloodline",  f"以下のレースの血統分析をせよ: {rid}{data_instruction}"),
+            ("bloodline",  f"以下のレースの血統分析をせよ: {rid}{bloodline_instruction}"),
             ("training",   f"以下のレースの調教分析をせよ: {rid}{data_instruction}"),
             ("jockey",     f"以下のレースの騎手・厩舎分析をせよ: {rid}{data_instruction}"),
             ("past_races", f"以下のレースの過去走分析をせよ: {rid}{data_instruction}"),

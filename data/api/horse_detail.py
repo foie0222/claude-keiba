@@ -3,7 +3,8 @@
 Usage: python data/api/horse_detail.py <race_id>
   race_id format: YYYYMMDD_venue_RR  (例: 20260301_nakayama_11)
 
-race_info.pyで取得したBLDNOを使い、HORSEテーブルから4代血統を取得する。
+race_info.pyで取得したBLDNOを使い、HORSEテーブルから血統情報を取得する。
+父(sire)・母(dam)・母父(dam_sire)・母母(dam_dam)の4項目。
 """
 import json
 import sys
@@ -81,21 +82,9 @@ def _build_pedigree(h: dict, brd_map: dict) -> dict:
         b = brd_map.get(brdno, {})
         return b.get("HSNM", "").strip() or ""
 
-    def _brd_parent(brdno: str, field: str) -> str:
-        b = brd_map.get(brdno, {})
-        parent_brdno = b.get(field, "").strip()
-        if parent_brdno:
-            return _brd_name(parent_brdno)
-        return ""
-
-    sire_brdno = _horse_field("FBRDNO")
-    dam_brdno = _horse_field("MBRDNO")
-
     return {
-        "sire": _horse_field("FHSNM") or _brd_name(sire_brdno),
-        "dam": _horse_field("MHSNM") or _brd_name(dam_brdno),
-        "sire_sire": _horse_field("FFHSNM") or _brd_parent(sire_brdno, "FBRDNO"),
-        "sire_dam": _horse_field("FMHSNM") or _brd_parent(sire_brdno, "MBRDNO"),
+        "sire": _horse_field("FHSNM") or _brd_name(_horse_field("FBRDNO")),
+        "dam": _horse_field("MHSNM") or _brd_name(_horse_field("MBRDNO")),
         "dam_sire": _horse_field("MFHSNM") or _brd_name(_horse_field("MFBRDNO")),
         "dam_dam": _horse_field("MMHSNM") or _brd_name(_horse_field("MMBRDNO")),
     }
