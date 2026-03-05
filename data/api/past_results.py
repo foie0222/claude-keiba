@@ -34,7 +34,7 @@ def get_past_results(race_id: str) -> dict:
         f"SELECT D.BLDNO, D.OPDT, D.RCOURSECD, D.RNO, D.UMANO, D.WAKNO, "
         f"D.FIXPLC, D.RUNTM, D.FTNWGHT, D.WGHT, D.ZOGENSIGN, D.ZOGENDIFF, "
         f"D.JKYNM4, D.TANODDS, D.TANNINKI, D.ABNMLCD, D.SH3FL, D.DIFFTM, "
-        f"M.RNMHON, M.DIST, M.TRACKCD, M.TSTATCD, M.DSTATCD, M.WEATHERCD, M.ENTNUM "
+        f"M.KAI, M.NITIME, M.RNMHON, M.DIST, M.TRACKCD, M.TSTATCD, M.DSTATCD, M.WEATHERCD, M.ENTNUM "
         f"FROM RACEDTL D "
         f"JOIN RACEMST M ON D.OPDT=M.OPDT AND D.RCOURSECD=M.RCOURSECD AND D.RNO=M.RNO "
         f"WHERE D.BLDNO IN ({bldno_list}) AND D.OPDT<'{date}' "
@@ -78,6 +78,8 @@ def get_past_results(race_id: str) -> dict:
                 "jockey": p.get("JKYNM4", "").strip(),
                 "odds": int(p.get("TANODDS", 0)) / 10 if p.get("TANODDS", "").strip() else None,
                 "popularity": int(p.get("TANNINKI", 0)) if p.get("TANNINKI", "").strip() else None,
+                "kai": p.get("KAI", "").strip(),
+                "nichiji": p.get("NITIME", "").strip(),
             })
 
         horses.append({

@@ -20,6 +20,7 @@ from horse_detail import get_horse_details
 from jockey_stats import get_jockey_stats
 from trainer_stats import get_trainer_stats
 from past_results import get_past_results
+from race_laps import get_race_laps
 from training import get_training
 from odds import get_odds
 from balance import get_balance
@@ -82,6 +83,7 @@ async def prefetch_async(race_id: str) -> dict:
         ("jockey_stats", lambda: get_jockey_stats(race_id)),
         ("trainer_stats", lambda: get_trainer_stats(race_id)),
         ("past_results", lambda: get_past_results(race_id)),
+        ("race_laps", lambda: get_race_laps(race_id)),
     ]
     kbdb_task = asyncio.to_thread(_run_kbdb_all_sync, kbdb_apis)
 
