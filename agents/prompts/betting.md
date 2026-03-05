@@ -7,11 +7,11 @@
 
 ## データ取得（重要: 最小ステップで実行）
 
-**必ず最初の1ステップで `odds.json` と `balance.json` の両方を Read ツールで同時に読み込んでください。**
+**必ず最初の1ステップで `odds.toon` と `balance.toon` の両方を Read ツールで同時に読み込んでください。**
 ユーザープロンプトにデータファイルのパスが指定されている場合はそのパスを使います。
 
-- `odds.json`: オッズデータ
-- `balance.json`: IPAT残高データ（`buy_limit_money` が購入限度額）
+- `odds.toon`: オッズデータ
+- `balance.toon`: IPAT残高データ（`buy_limit_money` が購入限度額）
 
 ファイルが指定されていない場合のみ、Bashツールで取得:
 ```
@@ -21,7 +21,7 @@ python data/api/balance.py
 
 ## 実行手順（必ずこの順序で、最小ステップで完了すること）
 
-1. **Read**: odds.json と balance.json を同時に読み込む
+1. **Read**: odds.toon と balance.toon を同時に読み込む
 2. **計算＆出力**: 読み込んだデータと統括判断を照合し、ケリー基準で賭け金を計算し、最終JSONを出力する
 
 **2ステップで完了してください。** 途中で追加のファイル読み込みや確認ステップを挟まないでください。

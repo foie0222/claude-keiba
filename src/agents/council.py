@@ -40,9 +40,8 @@ class CouncilProcess:
         if prefetch_path:
             data_instruction = (
                 f"\n\n【データ】事前取得済みデータが {prefetch_path}/ ディレクトリにあります。"
-                f"各セクションは {prefetch_path}/<セクション名>.json として保存されています"
-                f"（例: race_info.json, horse_detail.json, past_results.json 等）。"
-                f"産駒成績データは {prefetch_path}/sire_stats.toon にあります（存在する場合）。"
+                f"各セクションは {prefetch_path}/<セクション名>.toon として保存されています"
+                f"（例: race_info.toon, horse_detail.toon, past_results.toon 等）。"
                 f"Readツールで必要なファイルを読み、そのデータを使って分析してください。"
                 f"追加データが必要な場合のみBashでAPIを呼んでください。"
             )
@@ -95,8 +94,8 @@ class CouncilProcess:
         data_instruction = ""
         if prefetch_path:
             data_instruction = (
-                f"\n\n【オッズデータ】{prefetch_path}/odds.json をReadツールで読み込んでください。"
-                f"\n【IPAT残高】{prefetch_path}/balance.json をReadツールで読み込んでください。"
+                f"\n\n【オッズデータ】{prefetch_path}/odds.toon をReadツールで読み込んでください。"
+                f"\n【IPAT残高】{prefetch_path}/balance.toon をReadツールで読み込んでください。"
             )
         return await self.runner.run(
             "betting",
