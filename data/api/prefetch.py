@@ -20,6 +20,7 @@ from horse_detail import get_horse_details
 from jockey_stats import get_jockey_stats
 from trainer_stats import get_trainer_stats
 from past_results import get_past_results
+from race_laps import get_race_laps
 from training import get_training
 from odds import get_odds
 from balance import get_balance
@@ -64,15 +65,18 @@ async def prefetch_async(race_id: str) -> dict:
 
     構成:
       直列(メインスレッド): race_info → horse_detail → jockey_stats → trainer_stats → past_results
-      並列(別スレッド):     odds + training + balance (非KBDB、上記と同時実行)
+      並列(別スレッド):     odds + training + balance + race_laps (非KBDB、上記と同時実行)
     """
     results = {}
 
     # 非KBDB系を別スレッドで並列実行開始
+    # race_lapsは初回にKBDB 2クエリ → その後netkeiba scraping の流れ。
+    # KBDBレートリミッタ(ファイルロック)で自動シリアライズされるため並列グループで安全。
     non_kbdb_task = asyncio.gather(
         _run_api_thread("odds", lambda: get_odds(race_id)),
         _run_api_thread("training", lambda: get_training(race_id)),
         _run_api_thread("balance", get_balance),
+        _run_api_thread("race_laps", lambda: get_race_laps(race_id)),
     )
 
     # KBDB系をメインスレッドで直列実行（同時セッション制限を回避）
