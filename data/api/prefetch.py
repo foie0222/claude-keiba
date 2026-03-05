@@ -120,6 +120,9 @@ def save_cache(race_id: str, data: dict) -> Path:
     """セクション別にファイルを分割保存する"""
     race_dir = CACHE_DIR / race_id
     race_dir.mkdir(parents=True, exist_ok=True)
+    # 旧形式(.json)のキャッシュを削除
+    for old in race_dir.glob("*.json"):
+        old.unlink()
     for name, section_data in data.items():
         path = race_dir / f"{name}.toon"
         path.write_text(toon.encode(section_data), encoding="utf-8")
