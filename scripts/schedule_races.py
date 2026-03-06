@@ -19,7 +19,7 @@ def fetch_race_schedule(date: str) -> list[dict]:
     )
     races = []
     for row in rows:
-        venue = CODE_TO_VENUE.get(row["RCOURSECD"])
+        venue = CODE_TO_VENUE.get(row["RCOURSECD"].strip())
         if venue is None:
             continue
         races.append({

@@ -25,6 +25,20 @@ def test_fetch_race_schedule_returns_race_list():
     assert races[1] == {"venue": "hanshin", "race_no": 2, "post_time": "1005"}
 
 
+def test_fetch_race_schedule_skips_unknown_venue():
+    rows = [
+        _make_race_row("09", 1, "0935"),
+        _make_race_row("99", 2, "1005"),  # unknown venue code
+    ]
+    with patch("schedule_races.KBDBClient") as MockClient:
+        MockClient.return_value.query.return_value = rows
+        from schedule_races import fetch_race_schedule
+        races = fetch_race_schedule("20260307")
+
+    assert len(races) == 1
+    assert races[0]["venue"] == "hanshin"
+
+
 def test_fetch_race_schedule_empty():
     with patch("schedule_races.KBDBClient") as MockClient:
         MockClient.return_value.query.return_value = []
