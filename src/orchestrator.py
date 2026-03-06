@@ -104,6 +104,21 @@ class Orchestrator:
             result["bet_result"] = {"skipped": True, "reason": "見送り or 馬券なし"}
             print(f"\n  投票見送り", file=sys.stderr, flush=True)
 
+        # X投稿（本番のみ）
+        if live:
+            try:
+                from src.notifiers.card_image import generate_card_image
+                from src.notifiers.x_poster import post_to_x, build_tweet_text
+
+                race_info = prefetch_data.get("race_info", {})
+                is_pass = not bets or bet_decision.get("pass_races", False)
+                card_path = generate_card_image(race_info, bet_decision)
+                tweet_text = build_tweet_text(race_info, is_pass=is_pass)
+                tweet_id = post_to_x(tweet_text, card_path)
+                result["tweet_id"] = tweet_id
+            except Exception as e:
+                print(f"  ✗ X投稿処理エラー: {e}", file=sys.stderr, flush=True)
+
         return result
 
 
