@@ -54,13 +54,16 @@ class Orchestrator:
         print(f"  [{time.strftime('%H:%M:%S')}] 待機完了", file=sys.stderr, flush=True)
 
     @staticmethod
-    def _refresh_odds(race_id: str, prefetch_path: Path) -> None:
+    def _refresh_odds(race_id: str, prefetch_path: Path, prefetch_data: dict) -> None:
         """オッズを再取得してprefetchキャッシュを更新する。"""
         import toon
         from data.api.odds import get_odds
+        from data.api.prefetch import _build_netkeiba_race_id
 
         print(f"  オッズ再取得: {race_id}...", file=sys.stderr, flush=True)
-        odds_data = get_odds(race_id)
+        race_info = prefetch_data.get("race_info", {})
+        nk_race_id = _build_netkeiba_race_id(race_id, race_info)
+        odds_data = get_odds(race_id, netkeiba_race_id=nk_race_id)
         (prefetch_path / "odds.toon").write_text(
             toon.encode(odds_data), encoding="utf-8"
         )
@@ -96,7 +99,11 @@ class Orchestrator:
         # 本番: 発走3分前まで待機 → オッズ再取得
         if live:
             self._wait_until_before_post(prefetch_data)
-            self._refresh_odds(rid, prefetch_path)
+            try:
+                self._refresh_odds(rid, prefetch_path, prefetch_data)
+            except Exception as e:
+                print(f"  ⚠ オッズ再取得失敗、prefetch時のオッズで続行: {e}",
+                      file=sys.stderr, flush=True)
 
         # betting（機械的ケリー基準）
         judge = result.get("council", {}).get("judge", {})

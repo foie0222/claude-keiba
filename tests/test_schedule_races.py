@@ -67,7 +67,7 @@ def test_generate_units():
     service, timer = generate_units("20260307", race)
 
     assert "run.py 20260307 hanshin 11" in service
-    assert "TimeoutStartSec=2400" in service
+    assert "TimeoutStartSec=3000" in service
     assert "OnCalendar=2026-03-07 15:00:00" in timer
     assert "AccuracySec=1s" in timer
 

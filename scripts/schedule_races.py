@@ -26,7 +26,7 @@ Type=oneshot
 WorkingDirectory={project_dir}
 ExecStart={python} run.py {date} {venue} {race_no}
 Environment=PATH={venv_bin}:/usr/bin
-TimeoutStartSec=2400
+TimeoutStartSec=3000
 """
 
 TIMER_TEMPLATE = """\
