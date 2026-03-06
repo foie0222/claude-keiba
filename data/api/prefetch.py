@@ -24,10 +24,26 @@ from past_results import get_past_results
 from race_laps import get_race_laps
 from training import get_training
 from odds import get_odds
+from odds import VENUE_TO_CODE as ODDS_VENUE_TO_CODE
 from balance import get_balance
 from sire_stats_filter import filter_for_race
 
 CACHE_DIR = ROOT / ".cache" / "prefetch"
+
+
+def _build_netkeiba_race_id(race_id: str, race_info: dict) -> str | None:
+    """race_infoの結果からnetkeiba 12桁レースIDを組み立てる。"""
+    race = race_info.get("race", {})
+    kai = race.get("kai", "")
+    nitime = race.get("nitime", "")
+    if not kai or not nitime:
+        return None
+    parts = race_id.split("_")
+    year = parts[0][:4]
+    venue = parts[1]
+    race_no = int(parts[2])
+    course_cd = ODDS_VENUE_TO_CODE.get(venue, venue)
+    return f"{year}{course_cd}{kai.zfill(2)}{nitime.zfill(2)}{race_no:02d}"
 
 
 def _run_api_sync(name: str, fn) -> tuple[str, dict]:
@@ -65,24 +81,33 @@ async def prefetch_async(race_id: str) -> dict:
     次を開始する必要がある（submit/wait/fetch_csvの全工程が認証を消費）。
 
     構成:
-      直列(メインスレッド): race_info → horse_detail → jockey_stats → trainer_stats → past_results
-      並列(別スレッド):     odds + training + balance + race_laps (非KBDB、上記と同時実行)
+      Phase 1: race_info (KBDB直列) → netkeiba_race_idを解決
+      Phase 2: 残りKBDB直列 + 非KBDB並列（oddsはnetkeiba_race_id解決済みでKBDB不要）
     """
     results = {}
 
-    # 非KBDB系を別スレッドで並列実行開始
+    # Phase 1: race_info を先行実行（oddsが必要とするKAI/NITIMEを取得）
+    _, race_info_data = await asyncio.to_thread(
+        _run_api_sync, "race_info", lambda: get_race_info(race_id)
+    )
+    results["race_info"] = race_info_data
+
+    # netkeiba_race_id を組み立て（oddsのKBDB依存を排除）
+    nk_race_id = _build_netkeiba_race_id(race_id, race_info_data)
+
+    # Phase 2: 残りを並列実行
+    # 非KBDB系（oddsは解決済みnetkeiba_race_idを使用）
     # race_lapsは初回にKBDB 2クエリ → その後netkeiba scraping の流れ。
     # KBDBレートリミッタ(ファイルロック)で自動シリアライズされるため並列グループで安全。
     non_kbdb_task = asyncio.gather(
-        _run_api_thread("odds", lambda: get_odds(race_id)),
+        _run_api_thread("odds", lambda: get_odds(race_id, netkeiba_race_id=nk_race_id)),
         _run_api_thread("training", lambda: get_training(race_id)),
         _run_api_thread("balance", get_balance),
         _run_api_thread("race_laps", lambda: get_race_laps(race_id)),
     )
 
-    # KBDB系をメインスレッドで直列実行（同時セッション制限を回避）
+    # KBDB系（race_infoは完了済みなので残り4つ）
     kbdb_apis = [
-        ("race_info", lambda: get_race_info(race_id)),
         ("horse_detail", lambda: get_horse_details(race_id)),
         ("jockey_stats", lambda: get_jockey_stats(race_id)),
         ("trainer_stats", lambda: get_trainer_stats(race_id)),

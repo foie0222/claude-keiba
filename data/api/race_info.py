@@ -101,6 +101,8 @@ def get_race_info(race_id: str, *, include_result: bool = False) -> dict:
         "post_time": rm.get("POSTTM", "").strip(),
         "entry_count": _safe_int(rm.get("ENTNUM")),
         "run_count": _safe_int(rm.get("RUNNUM")),
+        "kai": rm.get("KAI", "").strip(),
+        "nitime": rm.get("NITIME", "").strip(),
     }
 
     horses = []

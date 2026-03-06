@@ -179,10 +179,13 @@ def _parse_pair_odds(raw_odds: dict, type_key: str, key_len: int) -> list:
     return result
 
 
-def get_odds(race_id: str) -> dict:
-    """全馬券種のオッズを取得。"""
+def get_odds(race_id: str, *, netkeiba_race_id: str | None = None) -> dict:
+    """全馬券種のオッズを取得。
+
+    netkeiba_race_id が渡された場合、KBDB問い合わせをスキップする。
+    """
     try:
-        nk_id = _resolve_netkeiba_race_id(race_id)
+        nk_id = netkeiba_race_id or _resolve_netkeiba_race_id(race_id)
     except (ValueError, RuntimeError) as e:
         return {"race_id": race_id, "error": str(e)}
 
