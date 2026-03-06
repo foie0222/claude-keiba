@@ -11,6 +11,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import toon
 
 from src.orchestrator import Orchestrator
 from data.api.race_info import get_race_info
@@ -250,6 +251,27 @@ def save_json(date: str, venue: str, results: list[dict]):
     return out_path
 
 
+# ─── 残高シミュレーション ─────────────────────────────────
+
+INITIAL_BALANCE = 100_000
+CACHE_DIR = Path(".cache/prefetch")
+
+
+def override_balance(race_id: str, balance: int) -> None:
+    """prefetchキャッシュのbalance.toonをシミュレーション残高で上書きする。"""
+    balance_data = {
+        "buy_limit_money": balance,
+        "day_buy_money": 0,
+        "total_buy_money": 0,
+        "day_refund_money": 0,
+        "total_refund_money": 0,
+        "buy_possible_count": 99,
+    }
+    balance_path = CACHE_DIR / race_id / "balance.toon"
+    balance_path.parent.mkdir(parents=True, exist_ok=True)
+    balance_path.write_text(toon.encode(balance_data), encoding="utf-8")
+
+
 # ─── main ──────────────────────────────────────────────────
 
 async def main():
@@ -273,12 +295,18 @@ async def main():
     races = race_numbers or list(range(1, 13))
     total = len(races)
     all_results = []
+    balance = INITIAL_BALANCE
+
+    print(f"  初期残高: {balance:,}円", file=sys.stderr, flush=True)
 
     for i, race_no in enumerate(races, 1):
         race_id = f"{date}_{venue}_{race_no}"
         print(f"\n{'='*60}", file=sys.stderr, flush=True)
-        print(f"  バックテスト: {race_id} ({i}/{total})", file=sys.stderr, flush=True)
+        print(f"  バックテスト: {race_id} ({i}/{total}) 残高: {balance:,}円", file=sys.stderr, flush=True)
         print(f"{'='*60}", file=sys.stderr, flush=True)
+
+        # 残高をbalance.toonに反映
+        override_balance(race_id, balance)
 
         # 予想
         try:
@@ -303,12 +331,19 @@ async def main():
         race_results = evaluate_predictions([pred])
         all_results.extend(race_results)
 
+        # 残高更新
+        r = race_results[0]
+        if not r["error"] and not r["pass_races"]:
+            balance = balance - r["total_stake"] + r["total_payout"]
+            print(f"  → 残高: {balance:,}円", file=sys.stderr, flush=True)
+
         # レース結果表示
         print_summary(date, venue, race_results, [race_no])
 
     # 全体サマリー
     if total > 1:
         print_summary(date, venue, all_results, race_numbers)
+        print(f"最終残高: {balance:,}円 (初期: {INITIAL_BALANCE:,}円 → 損益: {balance - INITIAL_BALANCE:+,}円)")
 
     # JSON保存
     save_json(date, venue, all_results)
