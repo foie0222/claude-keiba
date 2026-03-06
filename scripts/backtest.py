@@ -11,7 +11,6 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import toon
 
 from src.orchestrator import Orchestrator
 from data.api.race_info import get_race_info
@@ -251,25 +250,7 @@ def save_json(date: str, venue: str, results: list[dict]):
     return out_path
 
 
-# ─── 残高シミュレーション ─────────────────────────────────
-
 INITIAL_BALANCE = 100_000
-CACHE_DIR = Path(".cache/prefetch")
-
-
-def override_balance(race_id: str, balance: int) -> None:
-    """prefetchキャッシュのbalance.toonをシミュレーション残高で上書きする。"""
-    balance_data = {
-        "buy_limit_money": balance,
-        "day_buy_money": 0,
-        "total_buy_money": 0,
-        "day_refund_money": 0,
-        "total_refund_money": 0,
-        "buy_possible_count": 99,
-    }
-    balance_path = CACHE_DIR / race_id / "balance.toon"
-    balance_path.parent.mkdir(parents=True, exist_ok=True)
-    balance_path.write_text(toon.encode(balance_data), encoding="utf-8")
 
 
 # ─── main ──────────────────────────────────────────────────
@@ -305,12 +286,9 @@ async def main():
         print(f"  バックテスト: {race_id} ({i}/{total}) 残高: {balance:,}円", file=sys.stderr, flush=True)
         print(f"{'='*60}", file=sys.stderr, flush=True)
 
-        # 残高をbalance.toonに反映
-        override_balance(race_id, balance)
-
-        # 予想
+        # 予想（残高をoverride）
         try:
-            result = await orchestrator.predict_and_bet(date, venue, race_no, live=False)
+            result = await orchestrator.predict_and_bet(date, venue, race_no, live=False, balance_override=balance)
             bet_decision = result.get("bet_decision", {})
             pred = {
                 "race_number": race_no,

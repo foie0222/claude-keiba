@@ -22,7 +22,7 @@ class Orchestrator:
         self.council = CouncilProcess(self.runner)
         self.logger = RaceLogger(base_dir=logs_dir)
 
-    async def predict_and_bet(self, date: str, venue: str, race_number: int, *, live: bool = False) -> dict:
+    async def predict_and_bet(self, date: str, venue: str, race_number: int, *, live: bool = False, balance_override: int | None = None) -> dict:
         race_id = RaceId(date=date, venue=venue, race_number=race_number)
         rid = str(race_id)
 
@@ -40,6 +40,22 @@ class Orchestrator:
         prefetch_data = await prefetch_async(rid)
         prefetch_path = save_prefetch(rid, prefetch_data)
         print(f"  → {prefetch_path}\n", file=sys.stderr, flush=True)
+
+        # バックテスト用: 残高を上書き
+        if balance_override is not None:
+            import toon
+            balance_data = {
+                "buy_limit_money": balance_override,
+                "day_buy_money": 0,
+                "total_buy_money": 0,
+                "day_refund_money": 0,
+                "total_refund_money": 0,
+                "buy_possible_count": 99,
+            }
+            (prefetch_path / "balance.toon").write_text(
+                toon.encode(balance_data), encoding="utf-8"
+            )
+            print(f"  残高上書き: {balance_override:,}円", file=sys.stderr, flush=True)
 
         result = await self.council.execute(race_id, prefetch_path=prefetch_path, live=live)
 
