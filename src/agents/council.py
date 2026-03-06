@@ -87,27 +87,48 @@ class CouncilProcess:
             "judge": judge_result,
         }
 
-    async def run_betting_layer(
+    def run_betting_layer(
         self, judgment: dict, prefetch_path: Path | None = None,
+        *, balance_override: int | None = None,
     ) -> dict:
-        """レイヤー3: 投票判断"""
-        _phase("レイヤー3: 投票判断 (betting)")
-        data_instruction = ""
-        if prefetch_path:
-            data_instruction = (
-                f"\n\n【オッズデータ】{prefetch_path}/odds.toon をReadツールで読み込んでください。"
-                f"\n【IPAT残高】{prefetch_path}/balance.toon をReadツールで読み込んでください。"
-            )
-        return await self.runner.run(
-            "betting",
-            f"以下の統括判断結果を基に、オッズと残高を照合し、馬券種・買い目・金額を決定してください:\n\n{json.dumps(judgment, ensure_ascii=False, indent=2)}{data_instruction}",
-        )
+        """レイヤー3: 投票判断（機械的ケリー基準）"""
+        from src.betting.kelly import compute_from_prefetch
+        import toon
 
-    async def execute(self, race_id: RaceId, prefetch_path: Path | None = None, *, live: bool = False) -> dict:
+        _phase("レイヤー3: 投票判断 (kelly)")
+
+        # 残高取得
+        if balance_override is not None:
+            balance = balance_override
+        elif prefetch_path and (prefetch_path / "balance.toon").exists():
+            balance_data = toon.decode(
+                (prefetch_path / "balance.toon").read_text(encoding="utf-8")
+            )
+            balance = balance_data.get("buy_limit_money", 100_000)
+        else:
+            balance = 100_000
+
+        if prefetch_path is None:
+            return {
+                "balance": balance, "max_bet_for_race": 0,
+                "bets": [], "total_amount": 0,
+                "reasoning": "prefetchパスなし", "pass_races": True,
+            }
+
+        result = compute_from_prefetch(judgment, prefetch_path, balance)
+        # ログ出力
+        if result["pass_races"]:
+            print(f"  → 見送り: {result['reasoning']}", file=sys.stderr, flush=True)
+        else:
+            print(f"  → {len(result['bets'])}点 合計{result['total_amount']:,}円",
+                  file=sys.stderr, flush=True)
+        return result
+
+    async def execute(self, race_id: RaceId, prefetch_path: Path | None = None, *, live: bool = False, balance_override: int | None = None) -> dict:
         """全レイヤーを通して実行"""
         analyses = await self.run_analysis_layer(race_id, prefetch_path=prefetch_path, live=live)
         council = await self.run_council_layer(analyses)
-        bet_decision = await self.run_betting_layer(council["judge"], prefetch_path=prefetch_path)
+        bet_decision = self.run_betting_layer(council["judge"], prefetch_path=prefetch_path, balance_override=balance_override)
         return {
             "race_id": str(race_id),
             "analyses": analyses,

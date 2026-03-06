@@ -3,8 +3,13 @@
 Usage: python scripts/backtest.py <date> <venue> [race_number]
   例: python scripts/backtest.py 20260301 kokura        # 全12レース
       python scripts/backtest.py 20260222 hanshin 8     # 8Rのみ
+
+ログから betting 再実行:
+  python scripts/backtest.py --from-log logs/20260301/hanshin_3/full_result.json
+  python scripts/backtest.py --from-log logs/20260301/hanshin_*/full_result.json
 """
 import asyncio
+import glob as globmod
 import json
 import sys
 import time
@@ -171,6 +176,7 @@ def evaluate_predictions(predictions: list[dict]) -> list[dict]:
 # ─── Phase 4: サマリー出力 ─────────────────────────────────
 
 TYPE_LABEL = {"win": "単勝", "place": "複勝", "quinella": "馬連", "wide": "ワイド"}
+TYPE_ORDER = {"win": 0, "place": 1, "wide": 2, "quinella": 3}
 
 
 def print_summary(date: str, venue: str, results: list[dict], race_numbers: list[int] | None = None):
@@ -209,7 +215,7 @@ def print_summary(date: str, venue: str, results: list[dict], race_numbers: list
         hit_label = "的中!" if payout > 0 else "ハズレ"
         print(f"\n{rn}R: 投入 {stake:,}円 → 回収 {payout:,}円 ({hit_label})")
 
-        for bd in r["bets_detail"]:
+        for bd in sorted(r["bets_detail"], key=lambda b: (TYPE_ORDER.get(b["type"], 99), b["horses"])):
             t = TYPE_LABEL.get(bd["type"], bd["type"])
             horses_str = "-".join(str(h) for h in bd["horses"])
             mark = "○" if bd["hit"] else "×"
@@ -252,14 +258,157 @@ def save_json(date: str, venue: str, results: list[dict]):
 
 INITIAL_BALANCE = 100_000
 
+PREFETCH_CACHE_DIR = Path(__file__).resolve().parents[1] / ".cache" / "prefetch"
+
+
+# ─── from-log: ログからbetting再実行 ─────────────────────────
+
+def _parse_race_id(race_id: str) -> tuple[str, str, int]:
+    """race_id文字列 → (date, venue, race_number)"""
+    parts = race_id.split("_")
+    return parts[0], parts[1], int(parts[2])
+
+
+def _prepare_prefetch_for_rebetting(race_id: str, balance: int) -> Path:
+    """betting再実行用にprefetchキャッシュのodds/balanceを更新する。"""
+    import toon
+
+    cache_dir = PREFETCH_CACHE_DIR / race_id
+    cache_dir.mkdir(parents=True, exist_ok=True)
+
+    # オッズ再取得
+    print(f"  オッズ再取得: {race_id}...", file=sys.stderr, flush=True)
+    odds_data = get_odds(race_id)
+    (cache_dir / "odds.toon").write_text(toon.encode(odds_data), encoding="utf-8")
+
+    # 残高上書き
+    balance_data = {
+        "buy_limit_money": balance,
+        "day_buy_money": 0,
+        "total_buy_money": 0,
+        "day_refund_money": 0,
+        "total_refund_money": 0,
+        "buy_possible_count": 99,
+    }
+    (cache_dir / "balance.toon").write_text(toon.encode(balance_data), encoding="utf-8")
+
+    return cache_dir
+
+
+def run_from_logs(log_paths: list[Path]):
+    """既存ログからbetting以降を再実行してバックテストする。"""
+    from src.betting.kelly import compute_from_prefetch
+
+    # ログを読み込み、race_number順にソート
+    logs = []
+    for p in log_paths:
+        with open(p) as f:
+            data = json.load(f)
+        logs.append((p, data))
+    logs.sort(key=lambda x: _parse_race_id(x[1]["race_id"])[2])
+
+    # date/venue を最初のログから取得
+    first_race_id = logs[0][1]["race_id"]
+    date, venue, _ = _parse_race_id(first_race_id)
+
+    t0 = time.time()
+    print(f"\n{'#'*60}", file=sys.stderr, flush=True)
+    print(f"  バックテスト(from-log): {date} {venue} {len(logs)}レース", file=sys.stderr, flush=True)
+    print(f"  {time.strftime('%Y-%m-%d %H:%M:%S')}", file=sys.stderr, flush=True)
+    print(f"{'#'*60}\n", file=sys.stderr, flush=True)
+
+    all_results = []
+    balance = INITIAL_BALANCE
+    print(f"  初期残高: {balance:,}円", file=sys.stderr, flush=True)
+
+    for i, (log_path, log_data) in enumerate(logs, 1):
+        race_id = log_data["race_id"]
+        _, _, race_no = _parse_race_id(race_id)
+        judge = log_data.get("council", {}).get("judge", {})
+
+        print(f"\n{'='*60}", file=sys.stderr, flush=True)
+        print(f"  betting再実行: {race_id} ({i}/{len(logs)}) 残高: {balance:,}円", file=sys.stderr, flush=True)
+        print(f"  ソース: {log_path}", file=sys.stderr, flush=True)
+        print(f"{'='*60}", file=sys.stderr, flush=True)
+
+        if not judge:
+            print(f"  !! judge結果なし、スキップ", file=sys.stderr, flush=True)
+            all_results.append({
+                "race_number": race_no, "race_id": race_id,
+                "error": "judge結果なし", "pass_races": True,
+                "bets_detail": [], "total_stake": 0, "total_payout": 0,
+            })
+            continue
+
+        try:
+            prefetch_path = _prepare_prefetch_for_rebetting(race_id, balance)
+            bet_decision = compute_from_prefetch(judge, prefetch_path, balance)
+
+            if bet_decision["pass_races"]:
+                print(f"  → 見送り: {bet_decision['reasoning']}", file=sys.stderr, flush=True)
+            else:
+                print(f"  → {len(bet_decision['bets'])}点 合計{bet_decision['total_amount']:,}円",
+                      file=sys.stderr, flush=True)
+
+            pred = {
+                "race_number": race_no,
+                "race_id": race_id,
+                "bet_decision": bet_decision,
+                "error": None,
+            }
+        except Exception as e:
+            print(f"  !! {race_no}R エラー: {e}", file=sys.stderr, flush=True)
+            pred = {
+                "race_number": race_no,
+                "race_id": race_id,
+                "bet_decision": {},
+                "error": str(e),
+            }
+
+        race_results = evaluate_predictions([pred])
+        all_results.extend(race_results)
+
+        r = race_results[0]
+        if not r["error"] and not r["pass_races"]:
+            balance = balance - r["total_stake"] + r["total_payout"]
+            print(f"  → 残高: {balance:,}円", file=sys.stderr, flush=True)
+
+        print_summary(date, venue, race_results, [race_no])
+
+    if len(logs) > 1:
+        print_summary(date, venue, all_results)
+        print(f"最終残高: {balance:,}円 (初期: {INITIAL_BALANCE:,}円 → 損益: {balance - INITIAL_BALANCE:+,}円)")
+
+    save_json(date, venue, all_results)
+
+    elapsed = time.time() - t0
+    print(f"\n  総所要時間: {elapsed:.0f}s ({elapsed/60:.1f}min)", file=sys.stderr, flush=True)
+
 
 # ─── main ──────────────────────────────────────────────────
 
 async def main():
+    # --from-log モード
+    if len(sys.argv) >= 3 and sys.argv[1] == "--from-log":
+        patterns = sys.argv[2:]
+        log_paths = []
+        for pattern in patterns:
+            matched = globmod.glob(pattern)
+            log_paths.extend(Path(p) for p in matched)
+        if not log_paths:
+            print(f"ログファイルが見つかりません: {patterns}", file=sys.stderr)
+            sys.exit(1)
+        log_paths = sorted(set(log_paths))
+        run_from_logs(log_paths)
+        return
+
     if len(sys.argv) < 3:
         print("Usage: python scripts/backtest.py <date> <venue> [race_number]")
         print("  例: python scripts/backtest.py 20260301 kokura        # 全12レース")
         print("      python scripts/backtest.py 20260222 hanshin 8     # 8Rのみ")
+        print()
+        print("ログからbetting再実行:")
+        print("  python scripts/backtest.py --from-log logs/20260301/hanshin_3/full_result.json")
         sys.exit(1)
 
     date, venue = sys.argv[1], sys.argv[2]

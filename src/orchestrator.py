@@ -41,23 +41,7 @@ class Orchestrator:
         prefetch_path = save_prefetch(rid, prefetch_data)
         print(f"  → {prefetch_path}\n", file=sys.stderr, flush=True)
 
-        # バックテスト用: 残高を上書き
-        if balance_override is not None:
-            import toon
-            balance_data = {
-                "buy_limit_money": balance_override,
-                "day_buy_money": 0,
-                "total_buy_money": 0,
-                "day_refund_money": 0,
-                "total_refund_money": 0,
-                "buy_possible_count": 99,
-            }
-            (prefetch_path / "balance.toon").write_text(
-                toon.encode(balance_data), encoding="utf-8"
-            )
-            print(f"  残高上書き: {balance_override:,}円", file=sys.stderr, flush=True)
-
-        result = await self.council.execute(race_id, prefetch_path=prefetch_path, live=live)
+        result = await self.council.execute(race_id, prefetch_path=prefetch_path, live=live, balance_override=balance_override)
 
         elapsed = time.time() - t0
         print(f"\n{'#'*60}", file=sys.stderr, flush=True)
@@ -108,13 +92,11 @@ class Orchestrator:
         if live:
             try:
                 from src.notifiers.card_image import generate_card_image
-                from src.notifiers.x_poster import post_to_x, build_tweet_text
+                from src.notifiers.x_poster import post_to_x
 
                 race_info = prefetch_data.get("race_info", {})
-                is_pass = not bets or bet_decision.get("pass_races", False)
                 card_path = generate_card_image(race_info, bet_decision)
-                tweet_text = build_tweet_text(race_info, is_pass=is_pass)
-                tweet_id = post_to_x(tweet_text, card_path)
+                tweet_id = post_to_x(card_path)
                 result["tweet_id"] = tweet_id
             except Exception as e:
                 print(f"  ✗ X投稿処理エラー: {e}", file=sys.stderr, flush=True)
