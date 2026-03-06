@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 import sys
 import time
+from pathlib import Path
 from src.agents.runner import AgentRunner
 from src.models import RaceId
 
@@ -29,7 +30,7 @@ class CouncilProcess:
         self.runner = runner
 
     async def run_analysis_layer(
-        self, race_id: RaceId, prefetch_path: str | None = None,
+        self, race_id: RaceId, prefetch_path: Path | None = None,
         *, live: bool = False,
     ) -> dict[str, dict]:
         """レイヤー1: 5つの分析エージェントを並列実行"""
@@ -87,7 +88,7 @@ class CouncilProcess:
         }
 
     async def run_betting_layer(
-        self, judgment: dict, prefetch_path: str | None = None,
+        self, judgment: dict, prefetch_path: Path | None = None,
     ) -> dict:
         """レイヤー3: 投票判断"""
         _phase("レイヤー3: 投票判断 (betting)")
@@ -102,7 +103,7 @@ class CouncilProcess:
             f"以下の統括判断結果を基に、オッズと残高を照合し、馬券種・買い目・金額を決定してください:\n\n{json.dumps(judgment, ensure_ascii=False, indent=2)}{data_instruction}",
         )
 
-    async def execute(self, race_id: RaceId, prefetch_path: str | None = None, *, live: bool = False) -> dict:
+    async def execute(self, race_id: RaceId, prefetch_path: Path | None = None, *, live: bool = False) -> dict:
         """全レイヤーを通して実行"""
         analyses = await self.run_analysis_layer(race_id, prefetch_path=prefetch_path, live=live)
         council = await self.run_council_layer(analyses)
