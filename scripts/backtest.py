@@ -100,43 +100,7 @@ def judge_bet(bet: dict, result_map: dict[int, int], confirmed_odds: dict) -> di
     return {"hit": False, "payout": 0, "odds_used": None, "detail": f"未対応券種: {bet_type}"}
 
 
-# ─── Phase 1: 全レース予想 ─────────────────────────────────
-
-async def run_predictions(date: str, venue: str, race_numbers: list[int] | None = None) -> list[dict]:
-    """指定レースの予想を実行し、結果を返す。race_numbers未指定なら全12レース。"""
-    orchestrator = Orchestrator()
-    predictions = []
-    races = race_numbers or list(range(1, 13))
-    total = len(races)
-
-    for i, race_no in enumerate(races, 1):
-        race_id = f"{date}_{venue}_{race_no}"
-        print(f"\n{'='*60}", file=sys.stderr, flush=True)
-        print(f"  バックテスト: {race_id} ({i}/{total})", file=sys.stderr, flush=True)
-        print(f"{'='*60}", file=sys.stderr, flush=True)
-
-        try:
-            result = await orchestrator.predict_and_bet(date, venue, race_no, live=False)
-            bet_decision = result.get("bet_decision", {})
-            predictions.append({
-                "race_number": race_no,
-                "race_id": race_id,
-                "bet_decision": bet_decision,
-                "error": None,
-            })
-        except Exception as e:
-            print(f"  !! {race_no}R エラー: {e}", file=sys.stderr, flush=True)
-            predictions.append({
-                "race_number": race_no,
-                "race_id": race_id,
-                "bet_decision": {},
-                "error": str(e),
-            })
-
-    return predictions
-
-
-# ─── Phase 2-3: 結果照合・的中判定 ────────────────────────
+# ─── 結果照合・的中判定 ───────────────────────────────────
 
 def evaluate_predictions(predictions: list[dict]) -> list[dict]:
     """全予想に対して結果を取得し、的中判定を行う。"""
@@ -305,20 +269,49 @@ async def main():
     print(f"  {time.strftime('%Y-%m-%d %H:%M:%S')}", file=sys.stderr, flush=True)
     print(f"{'#'*60}\n", file=sys.stderr, flush=True)
 
-    # Phase 1: 予想
-    predictions = await run_predictions(date, venue, race_numbers)
+    orchestrator = Orchestrator()
+    races = race_numbers or list(range(1, 13))
+    total = len(races)
+    all_results = []
 
-    # Phase 2-3: 結果照合・的中判定
-    print(f"\n{'#'*60}", file=sys.stderr, flush=True)
-    print(f"  結果照合フェーズ", file=sys.stderr, flush=True)
-    print(f"{'#'*60}", file=sys.stderr, flush=True)
-    results = evaluate_predictions(predictions)
+    for i, race_no in enumerate(races, 1):
+        race_id = f"{date}_{venue}_{race_no}"
+        print(f"\n{'='*60}", file=sys.stderr, flush=True)
+        print(f"  バックテスト: {race_id} ({i}/{total})", file=sys.stderr, flush=True)
+        print(f"{'='*60}", file=sys.stderr, flush=True)
 
-    # Phase 4: サマリー出力
-    print_summary(date, venue, results, race_numbers)
+        # 予想
+        try:
+            result = await orchestrator.predict_and_bet(date, venue, race_no, live=False)
+            bet_decision = result.get("bet_decision", {})
+            pred = {
+                "race_number": race_no,
+                "race_id": race_id,
+                "bet_decision": bet_decision,
+                "error": None,
+            }
+        except Exception as e:
+            print(f"  !! {race_no}R エラー: {e}", file=sys.stderr, flush=True)
+            pred = {
+                "race_number": race_no,
+                "race_id": race_id,
+                "bet_decision": {},
+                "error": str(e),
+            }
 
-    # Phase 5: JSON保存
-    save_json(date, venue, results)
+        # 結果照合・的中判定
+        race_results = evaluate_predictions([pred])
+        all_results.extend(race_results)
+
+        # レース結果表示
+        print_summary(date, venue, race_results, [race_no])
+
+    # 全体サマリー
+    if total > 1:
+        print_summary(date, venue, all_results, race_numbers)
+
+    # JSON保存
+    save_json(date, venue, all_results)
 
     elapsed = time.time() - t0
     print(f"\n  総所要時間: {elapsed:.0f}s ({elapsed/60:.1f}min)", file=sys.stderr, flush=True)

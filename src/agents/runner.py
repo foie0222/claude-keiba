@@ -58,6 +58,7 @@ class AgentRunner:
             system_prompt = self.load_prompt(agent_name)
 
         options = ClaudeAgentOptions(
+            model="claude-sonnet-4-6",
             system_prompt=system_prompt,
             max_turns=max_turns,
             permission_mode="bypassPermissions",
