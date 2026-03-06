@@ -110,7 +110,8 @@ def generate_card_image(
             odds = bet.get("odds", 0)
             ev = bet.get("expected_value", 0)
             amount = bet.get("amount", 0)
-            detail_line = f"  {amount:,}円 @{odds} EV{ev:.2f}"
+            est_payout = int(amount * odds) if odds else 0
+            detail_line = f"  {amount:,}円 @{odds} → {est_payout:,}円"
             lines.append((detail_line, font_amount, _MUTED_COLOR))
 
         lines.append(("", font_body, _TEXT_COLOR))  # 空行

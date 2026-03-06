@@ -6,27 +6,7 @@ from unittest.mock import patch, MagicMock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from src.notifiers.x_poster import post_to_x, build_tweet_text
-
-
-def test_build_tweet_text_with_bets():
-    race_info = {
-        "race": {"venue": "hanshin", "race_number": 11, "name": "毎日杯(GII)"},
-    }
-    text = build_tweet_text(race_info, is_pass=False)
-    assert "阪神11R" in text
-    assert "毎日杯" in text
-    assert "#AI競馬" in text
-
-
-def test_build_tweet_text_pass():
-    race_info = {
-        "race": {"venue": "nakayama", "race_number": 5, "name": ""},
-    }
-    text = build_tweet_text(race_info, is_pass=True)
-    assert "中山5R" in text
-    assert "見送り" in text
-    assert "#AI競馬" in text
+from src.notifiers.x_poster import post_to_x
 
 
 def test_post_to_x_skips_when_no_api_key():
@@ -38,13 +18,13 @@ def test_post_to_x_skips_when_no_api_key():
         "X_ACCESS_TOKEN_SECRET": "",
     }
     with patch.dict(os.environ, env, clear=False):
-        result = post_to_x("test", Path("/tmp/dummy.png"))
+        result = post_to_x(Path("/tmp/dummy.png"))
     assert result is None
 
 
 @patch("src.notifiers.x_poster.tweepy")
 def test_post_to_x_success(mock_tweepy, tmp_path):
-    """APIキー設定時は投稿が実行される。"""
+    """APIキー設定時は画像のみで投稿が実行される。"""
     env = {
         "X_API_KEY": "key",
         "X_API_SECRET": "secret",
@@ -69,10 +49,10 @@ def test_post_to_x_success(mock_tweepy, tmp_path):
     img_path.write_bytes(b"fake png")
 
     with patch.dict(os.environ, env, clear=False):
-        result = post_to_x("test tweet", img_path)
+        result = post_to_x(img_path)
 
     assert result == "999"
     mock_api.media_upload.assert_called_once_with(filename=str(img_path))
     mock_client.create_tweet.assert_called_once_with(
-        text="test tweet", media_ids=[12345]
+        text="", media_ids=[12345]
     )
