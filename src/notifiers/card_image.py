@@ -93,7 +93,9 @@ def generate_card_image(
     if is_pass:
         lines.append(("見送り", font_title, _PASS_COLOR))
     else:
-        for bet in bets:
+        # 券種ごとにグループ化し、各グループ内で馬番順にソート
+        sorted_bets = sorted(bets, key=lambda b: (b["type"], b["horses"]))
+        for bet in sorted_bets:
             bet_type = TYPE_LABEL.get(bet["type"], bet["type"])
             horse_nums = bet["horses"]
 
