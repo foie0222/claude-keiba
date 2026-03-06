@@ -88,7 +88,10 @@ def test_cleanup_old_units(tmp_path):
     # 関係ないファイルは残っていること
     assert (tmp_path / "other.service").exists()
     # timer停止のコマンドが呼ばれたこと
-    mock_run.assert_called()
+    mock_run.assert_called_once_with(
+        ["systemctl", "--user", "stop", "keiba-20260306-hanshin-11.timer"],
+        capture_output=True,
+    )
 
 
 def test_install_units(tmp_path):
@@ -104,3 +107,7 @@ def test_install_units(tmp_path):
     # daemon-reload が呼ばれたこと
     reload_calls = [c for c in mock_run.call_args_list if "daemon-reload" in str(c)]
     assert len(reload_calls) == 1
+    # timer start が呼ばれたこと
+    start_calls = [c for c in mock_run.call_args_list
+                   if "start" in str(c) and "keiba-20260307-hanshin-11.timer" in str(c)]
+    assert len(start_calls) == 1
