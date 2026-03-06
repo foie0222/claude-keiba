@@ -3,11 +3,14 @@ import asyncio
 import json
 import sys
 import time
+from datetime import datetime, timedelta
 from pathlib import Path
 from src.models import RaceId
 from src.agents.runner import AgentRunner
 from src.agents.council import CouncilProcess
 from src.logging import RaceLogger
+
+BETTING_MINUTES_BEFORE = 3  # 発走何分前にbettingを実行するか
 
 
 class Orchestrator:
@@ -21,6 +24,48 @@ class Orchestrator:
         self.runner = AgentRunner(prompts_dir=prompts_dir)
         self.council = CouncilProcess(self.runner)
         self.logger = RaceLogger(base_dir=logs_dir)
+
+    def _wait_until_before_post(self, prefetch_data: dict) -> None:
+        """発走BETTING_MINUTES_BEFORE分前まで待機する。"""
+        post_time_str = prefetch_data.get("race_info", {}).get("race", {}).get("post_time", "")
+        if not post_time_str or len(post_time_str) < 4:
+            print(f"  ⚠ 発走時刻不明、待機スキップ", file=sys.stderr, flush=True)
+            return
+
+        hh, mm = int(post_time_str[:2]), int(post_time_str[2:4])
+        now = datetime.now()
+        post_dt = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
+        target = post_dt - timedelta(minutes=BETTING_MINUTES_BEFORE)
+        wait_seconds = (target - now).total_seconds()
+
+        if wait_seconds <= 0:
+            print(f"  発走{BETTING_MINUTES_BEFORE}分前を既に過ぎています、即実行",
+                  file=sys.stderr, flush=True)
+            return
+
+        print(f"\n{'='*60}", file=sys.stderr, flush=True)
+        print(f"  [{time.strftime('%H:%M:%S')}] 発走 {hh:02d}:{mm:02d} の{BETTING_MINUTES_BEFORE}分前まで待機",
+              file=sys.stderr, flush=True)
+        print(f"  → {target.strftime('%H:%M:%S')} まで {wait_seconds:.0f}秒",
+              file=sys.stderr, flush=True)
+        print(f"{'='*60}", file=sys.stderr, flush=True)
+
+        time.sleep(wait_seconds)
+        print(f"  [{time.strftime('%H:%M:%S')}] 待機完了", file=sys.stderr, flush=True)
+
+    @staticmethod
+    def _refresh_odds(race_id: str, prefetch_path: Path) -> None:
+        """オッズを再取得してprefetchキャッシュを更新する。"""
+        import toon
+        from data.api.odds import get_odds
+
+        print(f"  オッズ再取得: {race_id}...", file=sys.stderr, flush=True)
+        odds_data = get_odds(race_id)
+        (prefetch_path / "odds.toon").write_text(
+            toon.encode(odds_data), encoding="utf-8"
+        )
+        source = odds_data.get("odds_source", "")
+        print(f"  ✓ オッズ更新完了 (source={source})", file=sys.stderr, flush=True)
 
     async def predict_and_bet(self, date: str, venue: str, race_number: int, *, live: bool = False, balance_override: int | None = None) -> dict:
         race_id = RaceId(date=date, venue=venue, race_number=race_number)
@@ -41,19 +86,28 @@ class Orchestrator:
         prefetch_path = save_prefetch(rid, prefetch_data)
         print(f"  → {prefetch_path}\n", file=sys.stderr, flush=True)
 
-        result = await self.council.execute(race_id, prefetch_path=prefetch_path, live=live, balance_override=balance_override)
+        result = await self.council.execute(race_id, prefetch_path=prefetch_path, live=live)
 
         elapsed = time.time() - t0
         print(f"\n{'#'*60}", file=sys.stderr, flush=True)
-        print(f"  予想完了: {rid} ({elapsed:.0f}s = {elapsed/60:.1f}min)", file=sys.stderr, flush=True)
+        print(f"  分析・合議完了: {rid} ({elapsed:.0f}s = {elapsed/60:.1f}min)", file=sys.stderr, flush=True)
         print(f"{'#'*60}\n", file=sys.stderr, flush=True)
+
+        # 本番: 発走3分前まで待機 → オッズ再取得
+        if live:
+            self._wait_until_before_post(prefetch_data)
+            self._refresh_odds(rid, prefetch_path)
+
+        # betting（機械的ケリー基準）
+        judge = result.get("council", {}).get("judge", {})
+        bet_decision = self.council.run_betting_layer(
+            judge, prefetch_path=prefetch_path, balance_override=balance_override,
+        )
+        result["bet_decision"] = bet_decision
 
         self.logger.save(rid, result)
         for agent_name, agent_result in result.get("analyses", {}).items():
             self.logger.save_agent_log(rid, agent_name, agent_result)
-
-        # 投票
-        bet_decision = result.get("bet_decision", {})
         bets = bet_decision.get("bets", [])
         if bets and not bet_decision.get("pass_races", False):
             from data.api.bet import place_bet

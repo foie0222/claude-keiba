@@ -124,14 +124,16 @@ class CouncilProcess:
                   file=sys.stderr, flush=True)
         return result
 
-    async def execute(self, race_id: RaceId, prefetch_path: Path | None = None, *, live: bool = False, balance_override: int | None = None) -> dict:
-        """全レイヤーを通して実行"""
+    async def execute(self, race_id: RaceId, prefetch_path: Path | None = None, *, live: bool = False) -> dict:
+        """レイヤー1・2を実行し、betting用データを返す。
+
+        bettingレイヤーはオッズ取得タイミングを制御するため
+        orchestratorが別途 run_betting_layer() を呼ぶ。
+        """
         analyses = await self.run_analysis_layer(race_id, prefetch_path=prefetch_path, live=live)
         council = await self.run_council_layer(analyses)
-        bet_decision = self.run_betting_layer(council["judge"], prefetch_path=prefetch_path, balance_override=balance_override)
         return {
             "race_id": str(race_id),
             "analyses": analyses,
             "council": council,
-            "bet_decision": bet_decision,
         }
