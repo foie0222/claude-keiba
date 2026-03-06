@@ -70,3 +70,37 @@ def test_generate_units():
     assert "TimeoutStartSec=2400" in service
     assert "OnCalendar=2026-03-07 15:00:00" in timer
     assert "AccuracySec=1s" in timer
+
+
+def test_cleanup_old_units(tmp_path):
+    from schedule_races import cleanup_old_units
+    # keiba- で始まるファイルを作成
+    (tmp_path / "keiba-20260306-hanshin-11.service").touch()
+    (tmp_path / "keiba-20260306-hanshin-11.timer").touch()
+    (tmp_path / "other.service").touch()  # 関係ないファイル
+
+    with patch("schedule_races.subprocess.run") as mock_run:
+        cleanup_old_units(tmp_path)
+
+    # keiba- ファイルが削除されていること
+    assert not (tmp_path / "keiba-20260306-hanshin-11.service").exists()
+    assert not (tmp_path / "keiba-20260306-hanshin-11.timer").exists()
+    # 関係ないファイルは残っていること
+    assert (tmp_path / "other.service").exists()
+    # timer停止のコマンドが呼ばれたこと
+    mock_run.assert_called()
+
+
+def test_install_units(tmp_path):
+    from schedule_races import install_units
+    races = [
+        {"venue": "hanshin", "race_no": 11, "post_time": "1540"},
+    ]
+    with patch("schedule_races.subprocess.run") as mock_run:
+        install_units("20260307", races, tmp_path)
+
+    assert (tmp_path / "keiba-20260307-hanshin-11.service").exists()
+    assert (tmp_path / "keiba-20260307-hanshin-11.timer").exists()
+    # daemon-reload が呼ばれたこと
+    reload_calls = [c for c in mock_run.call_args_list if "daemon-reload" in str(c)]
+    assert len(reload_calls) == 1
